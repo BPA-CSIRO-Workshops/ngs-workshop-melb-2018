@@ -1,9 +1,6 @@
 [submodule "style"]
 	path = style
 	url = https://github.com/BPA-CSIRO-Workshops/btp-handout-style.git
-[submodule "modules/chip-seq"]
-	path = modules/chip-seq
-	url = https://github.com/BPA-CSIRO-Workshops/btp-module-chip-seq.git
 [submodule "modules/rna-seq"]
 	path = modules/rna-seq
 	url = https://github.com/BPA-CSIRO-Workshops/btp-module-rna-seq.git
@@ -16,9 +13,6 @@
 [submodule "modules/de-novo"]
 	path = modules/de-novo
 	url = https://github.com/BPA-CSIRO-Workshops/btp-module-velvet.git
-[submodule "orchestration"]
-	path = orchestration
-	url = https://github.com/BPA-CSIRO-Workshops/btp-orchestration.git
 [submodule "modules/cli"]
 	path = modules/cli
 	url = https://github.com/BPA-CSIRO-Workshops/btp-module-ngs-cli.git
