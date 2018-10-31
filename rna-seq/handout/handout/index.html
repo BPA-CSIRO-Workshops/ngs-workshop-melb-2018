@@ -1,0 +1,1738 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="This contains all material for the Introduction to NGS workshop.">
+      
+      
+      
+        <meta name="author" content="Authors">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>RNA-Seq - Introduction to NGS Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../css/details.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#key-learning-outcomes" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="Introduction to NGS Workshop" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Introduction to NGS Workshop
+              </span>
+              <span class="md-header-nav__topic">
+                RNA-Seq
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="Introduction to NGS Workshop" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Introduction to NGS Workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../trainers/trainers/" title="The Trainers" class="md-nav__link">
+      The Trainers
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../preamble/preamble/" title="Workshop Information" class="md-nav__link">
+      Workshop Information
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Hands-on Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Hands-on Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cli/handout/handout/" title="Introduction to Command Line" class="md-nav__link">
+      Introduction to Command Line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../qc/handout/handout/" title="Quality Control" class="md-nav__link">
+      Quality Control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../alignment/handout/handout/" title="Read Alignment" class="md-nav__link">
+      Read Alignment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        RNA-Seq
+      </label>
+    
+    <a href="./" title="RNA-Seq" class="md-nav__link md-nav__link--active">
+      RNA-Seq
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-learning-outcomes" title="Key Learning Outcomes" class="md-nav__link">
+    Key Learning Outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-youll-be-using" title="Resources You’ll be Using" class="md-nav__link">
+    Resources You’ll be Using
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools-used" title="Tools Used" class="md-nav__link">
+    Tools Used
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sources-of-data" title="Sources of Data" class="md-nav__link">
+    Sources of Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-the-environment" title="Prepare the Environment" class="md-nav__link">
+    Prepare the Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alignment" title="Alignment" class="md-nav__link">
+    Alignment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alignment-visualisation-in-igv" title="Alignment Visualisation in IGV" class="md-nav__link">
+    Alignment Visualisation in IGV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-gene-counts" title="Generating Gene Counts" class="md-nav__link">
+    Generating Gene Counts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isoform-expression-and-transcriptome-assembly" title="Isoform Expression and Transcriptome Assembly" class="md-nav__link">
+    Isoform Expression and Transcriptome Assembly
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differential-gene-expression-analysis-using-edger" title="Differential Gene Expression Analysis using edgeR" class="md-nav__link">
+    Differential Gene Expression Analysis using edgeR
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experiment-design" title="Experiment Design" class="md-nav__link">
+    Experiment Design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-the-environment_1" title="Prepare the Environment" class="md-nav__link">
+    Prepare the Environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-in-data" title="Read in Data" class="md-nav__link">
+    Read in Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-gene-annotation" title="Add Gene annotation" class="md-nav__link">
+    Add Gene annotation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-checks" title="Data checks" class="md-nav__link">
+    Data checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-for-differential-expression" title="Testing for Differential Expression" class="md-nav__link">
+    Testing for Differential Expression
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differential-expression-using-the-voom-function-and-the-limma-package" title="Differential expression using the Voom function and the limma package" class="md-nav__link">
+    Differential expression using the Voom function and the limma package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-visualisation" title="Data Visualisation" class="md-nav__link">
+    Data Visualisation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differential-expression-using-cuffdiff" title="Differential Expression using cuffdiff" class="md-nav__link">
+    Differential Expression using cuffdiff
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualising-the-cuffdiff-expression-analysis" title="Visualising the CuffDiff expression analysis" class="md-nav__link">
+    Visualising the CuffDiff expression analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../chip-seq/handout/handout/" title="ChIP-Seq" class="md-nav__link">
+      ChIP-Seq
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../de-novo/handout/handout/" title="De Novo" class="md-nav__link">
+      De Novo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-learning-outcomes" title="Key Learning Outcomes" class="md-nav__link">
+    Key Learning Outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-youll-be-using" title="Resources You’ll be Using" class="md-nav__link">
+    Resources You’ll be Using
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools-used" title="Tools Used" class="md-nav__link">
+    Tools Used
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sources-of-data" title="Sources of Data" class="md-nav__link">
+    Sources of Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-the-environment" title="Prepare the Environment" class="md-nav__link">
+    Prepare the Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alignment" title="Alignment" class="md-nav__link">
+    Alignment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alignment-visualisation-in-igv" title="Alignment Visualisation in IGV" class="md-nav__link">
+    Alignment Visualisation in IGV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-gene-counts" title="Generating Gene Counts" class="md-nav__link">
+    Generating Gene Counts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isoform-expression-and-transcriptome-assembly" title="Isoform Expression and Transcriptome Assembly" class="md-nav__link">
+    Isoform Expression and Transcriptome Assembly
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differential-gene-expression-analysis-using-edger" title="Differential Gene Expression Analysis using edgeR" class="md-nav__link">
+    Differential Gene Expression Analysis using edgeR
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#experiment-design" title="Experiment Design" class="md-nav__link">
+    Experiment Design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepare-the-environment_1" title="Prepare the Environment" class="md-nav__link">
+    Prepare the Environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-in-data" title="Read in Data" class="md-nav__link">
+    Read in Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-gene-annotation" title="Add Gene annotation" class="md-nav__link">
+    Add Gene annotation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-checks" title="Data checks" class="md-nav__link">
+    Data checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-for-differential-expression" title="Testing for Differential Expression" class="md-nav__link">
+    Testing for Differential Expression
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differential-expression-using-the-voom-function-and-the-limma-package" title="Differential expression using the Voom function and the limma package" class="md-nav__link">
+    Differential expression using the Voom function and the limma package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-visualisation" title="Data Visualisation" class="md-nav__link">
+    Data Visualisation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differential-expression-using-cuffdiff" title="Differential Expression using cuffdiff" class="md-nav__link">
+    Differential Expression using cuffdiff
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualising-the-cuffdiff-expression-analysis" title="Visualising the CuffDiff expression analysis" class="md-nav__link">
+    Visualising the CuffDiff expression analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>RNA-Seq</h1>
+                
+                <h2 id="key-learning-outcomes">Key Learning Outcomes</h2>
+<p>After completing this practical the trainee should be able to:</p>
+<ul>
+<li>
+<p>Understand and perform a simple RNA-Seq analysis workflow.</p>
+</li>
+<li>
+<p>Perform spliced alignments to an indexed reference genome using
+    TopHat.</p>
+</li>
+<li>
+<p>Visualize spliced transcript alignments in a genome browser such as
+    IGV.</p>
+</li>
+<li>
+<p>Be able to identify differential gene expression between two
+    experimental conditions.</p>
+</li>
+<li>
+<p>Be familiar with R environment and be able to run R based RNA-seq
+    packages.</p>
+</li>
+</ul>
+<p>We also have bonus exercises where you can learn to:</p>
+<ul>
+<li>
+<p>Perform transcript assembly using Cufflinks.</p>
+</li>
+<li>
+<p>Run cuffdiff, a Cufflinks utility for differential expression
+    analysis.</p>
+</li>
+<li>
+<p>Visualize transcript alignments and annotation in a genome browser
+    such as IGV.</p>
+</li>
+</ul>
+<h2 id="resources-youll-be-using">Resources You’ll be Using</h2>
+<h3 id="tools-used">Tools Used</h3>
+<p>Tophat
+:   \
+    <a href="https://ccb.jhu.edu/software/tophat/index.shtml">https://ccb.jhu.edu/software/tophat/index.shtml</a></p>
+<p>Cufflinks
+:   \
+    <a href="http://cole-trapnell-lab.github.io/cufflinks/">http://cole-trapnell-lab.github.io/cufflinks/</a></p>
+<p>Samtools
+:   \
+    <a href="http://www.htslib.org/">http://www.htslib.org/</a></p>
+<p>BEDTools
+:   \
+    <a href="https://github.com/arq5x/bedtools2">https://github.com/arq5x/bedtools2</a></p>
+<p>UCSC tools
+:   \
+    <a href="http://hgdownload.cse.ucsc.edu/admin/exe/">http://hgdownload.cse.ucsc.edu/admin/exe/</a></p>
+<p>IGV
+:   \
+    <a href="http://www.broadinstitute.org/igv/">http://www.broadinstitute.org/igv/</a></p>
+<p>FeatureCount
+:   \
+    <a href="http://subread.sourceforge.net/">http://subread.sourceforge.net/</a></p>
+<p>edgeR pakcage
+:   \
+    <a href="https://bioconductor.org/packages/release/bioc/html/edgeR.html">https://bioconductor.org/packages/release/bioc/html/edgeR.html</a></p>
+<p>CummeRbund manual
+:   \
+    <a href="http://www.bioconductor.org/packages/release/bioc/vignettes/cummeRbund/inst/doc/cummeRbund-manual.pdf">http://www.bioconductor.org/packages/release/bioc/vignettes/cummeRbund/inst/doc/cummeRbund-manual.pdf</a></p>
+<h3 id="sources-of-data">Sources of Data</h3>
+<p><a href="http://www.ebi.ac.uk/ena/data/view/ERR022484">http://www.ebi.ac.uk/ena/data/view/ERR022484</a>\
+<a href="http://www.ebi.ac.uk/ena/data/view/ERR022485">http://www.ebi.ac.uk/ena/data/view/ERR022485</a>\
+<a href="http://www.pnas.org/content/suppl/2008/12/16/0807121105.DCSupplemental">http://www.pnas.org/content/suppl/2008/12/16/0807121105.DCSupplemental</a></p>
+<h2 id="introduction">Introduction</h2>
+<p>The goal of this hands-on session is to perform some basic tasks in the
+downstream analysis of RNA-seq data.\</p>
+<p>First we will use RNA-seq data from zebrafish. You will align one set of
+reads to the zebrafish using Tophat2. You will then view the aligned
+reads using the IGV viewer. We will also demonstrate how gene counts can
+be derived from this data. You will go on to assembly a transcriptome
+from the read data using cufflinks. We will show you how this type of
+data may be analysed for differential expression.</p>
+<p>The second part of the tutorial will focus on RNA-seq data from a human
+experiment (cancer cell line versus normal cells). You will use the
+Bioconductor packages edgeR and voom (limma) to determine differential
+gene expression. The results from this analysis will then be used in the
+final session which introduces you to some of the tools used to gain
+biological insight into the results of a differential expression
+analysis</p>
+<h2 id="prepare-the-environment">Prepare the Environment</h2>
+<p>We will use a dataset derived from sequencing of mRNA from <code class="codehilite">Danio rerio</code>
+embryos in two different developmental stages. Sequencing was performed
+on the Illumina platform and generated 76bp paired-end sequence data
+using polyA selected RNA. Due to the time constraints of the practical
+we will only use a subset of the reads.</p>
+<p>The data files are contained in the subdirectory called <code class="codehilite">data</code> and are
+the following:</p>
+<p><code class="codehilite">2cells_1.fastq</code> and <code class="codehilite">2cells_2.fastq</code>
+:   \
+    These files are based on RNA-seq data of a 2-cell zebrafish embryo</p>
+<p><code class="codehilite">6h_1.fastq</code> and <code class="codehilite">6h_2.fastq</code>
+:   \
+    These files are based on RNA-seq data of zebrafish embryos 6h post
+    fertilization</p>
+<p>Open the Terminal and go to the <code class="codehilite">rnaseq</code> working directory:</p>
+<div class="codehilite"><pre><span></span>cd /home/trainee/rnaseq/
+</pre></div>
+
+
+<p>All commands entered into the terminal for this tutorial should be from
+within the <strong><code class="codehilite">/home/trainee/rnaseq</code></strong> directory.</p>
+<p>Check that the <code class="codehilite">data</code> directory contains the above-mentioned files by
+typing:</p>
+<div class="codehilite"><pre><span></span>ls data
+</pre></div>
+
+
+<h2 id="alignment">Alignment</h2>
+<p>There are numerous tools for performing short read alignment and the
+choice of aligner should be carefully made according to the analysis
+goals/requirements. Here we will use Tophat2, a widely used ultrafast
+aligner that performs spliced alignments.</p>
+<p>Tophat2 is based on the Bowtie2 aligner and uses an indexed genome for
+the alignment to speed up the alignment and keep its memory footprint
+small. The the index for the <code class="codehilite">Danio rerio</code> genome has been created for
+you.</p>
+<p>The command to create an index is as follows. You DO NOT need to run
+this command yourself - we have done this for you.</p>
+<div class="codehilite"><pre><span></span>bowtie2-build genome/Danio_rerio.Zv9.66.dna.fa genome/ZV9
+</pre></div>
+
+
+<p>Tophat2 has a number of parameters in order to perform the alignment. To
+view them all type:</p>
+<div class="codehilite"><pre><span></span>tophat2 --help
+</pre></div>
+
+
+<p>The general format of the tophat2 command is:</p>
+<div class="codehilite"><pre><span></span>tophat2 [options]* &amp;lt;index_base&amp;gt; &amp;lt;reads_1&amp;gt; &amp;lt;reads_2&amp;gt;
+</pre></div>
+
+
+<p>Where the last two arguments are the <code class="codehilite"><span class="na">.fastq</span></code> files of the paired end
+reads, and the argument before is the basename of the indexed genome.</p>
+<p>The quality values in the FASTQ files used in this hands-on session are
+Phred+33 encoded. We explicitly tell tophat of this fact by using the
+command line argument <code class="codehilite">–solexa-quals</code>.</p>
+<p>You can look at the first few reads in the file <code class="codehilite">data/2cells_1.fastq</code>
+with:</p>
+<div class="codehilite"><pre><span></span>head -n 20 data/2cells_1.fastq
+</pre></div>
+
+
+<p>Some other parameters that we are going to use to run Tophat are listed
+below:</p>
+<p>-g
+:   Maximum number of multihits allowed. Short reads are likely to map
+    to more than one location in the genome even though these reads can
+    have originated from only one of these regions. In RNA-seq we allow
+    for a limited number of multihits, and in this case we ask Tophat to
+    report only reads that map at most onto 2 different loci.</p>
+<p>–library-type
+:   Before performing any type of RNA-seq analysis you need to know a
+    few things about the library preparation. Was it done using a
+    strand-specific protocol or not? If yes, which strand? In our data
+    the protocol was NOT strand specific.</p>
+<p>-j
+:   Improve spliced alignment by providing Tophat with annotated splice
+    junctions. Pre-existing genome annotation is an advantage when
+    analysing RNA-seq data. This file contains the coordinates of
+    annotated splice junctions from Ensembl. These are stored under the
+    sub-directory <code class="codehilite">annotation</code> in a file called <code class="codehilite">ZV9.spliceSites</code>.</p>
+<p>-o
+:   This specifies in which subdirectory Tophat should save the output
+    files. Given that for every run the name of the output files is the
+    same, we specify different directories for each run.</p>
+<p>It takes some time (approx. 20 min) to perform tophat spliced
+alignments, even for this subset of reads. Therefore, we have
+pre-aligned the <code class="codehilite">2cells</code> data for you using the following command:</p>
+<p>You DO NOT need to run this command yourself - we have done this for
+you.</p>
+<div class="codehilite"><pre><span></span>tophat2 --solexa-quals -g 2 --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_2cells genome/ZV9 data/2cells_1.fastq data/2cells_2.fastq
+</pre></div>
+
+
+<p>Align the <code class="codehilite">6h</code> data yourself using the following command:</p>
+<div class="codehilite"><pre><span></span># Takes approx. 20mins
+tophat2 --solexa-quals -g 2 --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_6h genome/ZV9 data/6h_1.fastq data/6h_2.fastq
+</pre></div>
+
+
+<p>The <code class="codehilite">6h</code> read alignment will take approx. 20 min to complete. Therefore,
+we’ll take a look at some of the files, generated by tophat, for the
+pre-computed <code class="codehilite">2cells</code> data.</p>
+<p>Tophat generates several files in the specified output directory. The
+most important files are listed below.</p>
+<p>accepted_hits.bam
+:   This file contains the list of read alignments in BAM format.</p>
+<p>align_summary.txt
+:   Provides a detailed summary of the read-alignments.</p>
+<p>unmapped.bam
+:   This file contains the unmapped reads.</p>
+<p>The complete documentation can be found at:
+<a href="https://ccb.jhu.edu/software/tophat/manual.shtml">https://ccb.jhu.edu/software/tophat/manual.shtml</a></p>
+<h3 id="alignment-visualisation-in-igv">Alignment Visualisation in IGV</h3>
+<p>The Integrative Genomics Viewer (IGV) is able to provide a visualisation
+of read alignments given a reference sequence and a BAM file. We’ll
+visualise the information contained in the <code class="codehilite">accepted_hits.bam</code> and
+<code class="codehilite">junctions.bed</code> files for the pre-computed <code class="codehilite">2cells</code> data. The former,
+contains the tophat spliced alignments of the reads to the reference
+while the latter stores the coordinates of the splice junctions present
+in the data set.</p>
+<p>Open the <code class="codehilite">rnaseq</code> directory on your Desktop and double-click the
+<code class="codehilite">tophat</code> subdirectory and then the <code class="codehilite">ZV9_2cells</code> directory.</p>
+<ol>
+<li>
+<p>Launch IGV by double-clicking the “IGV 2.3.*” icon on the Desktop
+    (ignore any warnings that you may get as it opens). <em>NOTE: IGV may
+    take several minutes to load for the first time, please be patient.</em></p>
+</li>
+<li>
+<p>Choose “Zebrafish (Zv9)” from the drop-down box in the top left of
+    the IGV window. Else you can also load the genome fasta file.</p>
+</li>
+<li>
+<p>Load the <code class="codehilite">accepted_hits.sorted.bam</code> file by clicking the “File”
+    menu, selecting “Load from File” and navigating to the
+    <code class="codehilite">Desktop/rnaseq/tophat/ZV9_2cells</code> directory.</p>
+</li>
+<li>
+<p>Rename the track by right-clicking on its name and choosing “Rename
+    Track”. Give it a meaningful name like “2cells BAM”.</p>
+</li>
+<li>
+<p>Load the <code class="codehilite">junctions.bed</code> from the same directory and rename the
+    track “2cells Junctions BED”.</p>
+</li>
+<li>
+<p>Load the Ensembl annotations file <code class="codehilite">Danio_rerio.Zv9.66.gtf</code> stored in
+    the <code class="codehilite">rnaseq/annotation</code> directory.</p>
+</li>
+<li>
+<p>Navigate to a region on chromosome 12 by typing
+    <code class="codehilite"><span class="n">chr12</span><span class="o">:</span><span class="mi">20</span><span class="o">,</span><span class="mi">270</span><span class="o">,</span><span class="mi">921</span><span class="o">-</span><span class="mi">20</span><span class="o">,</span><span class="mi">300</span><span class="o">,</span><span class="mi">943</span></code> into the search box at the top of the
+    IGV window.</p>
+</li>
+</ol>
+<p>Keep zooming to view the bam file alignments</p>
+<p>Some useful IGV manuals can be found below</p>
+<p><a href="http://www.broadinstitute.org/software/igv/interpreting_insert_size">http://www.broadinstitute.org/software/igv/interpreting_insert_size</a>\
+<a href="http://www.broadinstitute.org/software/igv/alignmentdata">http://www.broadinstitute.org/software/igv/alignmentdata</a></p>
+<p>Does the file ’align_summary.txt’ look interesting? What information
+does it provide?</p>
+<p>As the name suggests, the file provides a details summary of the
+alignment statistics.</p>
+<p>One other important file is ’unmapped.bam’. This file contains the
+unampped reads.</p>
+<p>Can you identify the splice junctions from the BAM file?</p>
+<p>Splice junctions can be identified in the alignment BAM files. These are
+the aligned RNA-Seq reads that have skipped-bases from the reference
+genome (most likely introns).</p>
+<p>Are the junctions annotated for <code class="codehilite">CBY1</code> consistent with the annotation?</p>
+<p>Read alignment supports an extended length in exon 5 to the gene model
+(cby1-001)</p>
+<p>Once tophat finishes aligning the 6h data you will need to sort the
+alignments found in the BAM file and then index the sorted BAM file.</p>
+<div class="codehilite"><pre><span></span>samtools sort tophat/ZV9_6h/accepted_hits.bam tophat/ZV9_6h/accepted_hits.sorted
+samtools index tophat/ZV9_6h/accepted_hits.sorted.bam
+</pre></div>
+
+
+<p>Load the sorted BAM file into IGV, as described previously, and rename
+the track appropriately.</p>
+<h3 id="generating-gene-counts">Generating Gene Counts</h3>
+<p>In RNAseq experiments the digital gene expression is recorded as the
+gene counts or number of reads aligning to a known gene feature. If you
+have a well annotated genome, you can use the gene structure file in a
+standard gene annotation format (GTF or GFF)) along with the spliced
+alignment file to quantify the known genes. We will demonstrate a
+utility called <code class="codehilite">FeatureCounts</code> that comes with the <code class="codehilite">Subread</code> package.</p>
+<div class="codehilite"><pre><span></span>mkdir gene_counts
+featureCounts -a annotation/Danio_rerio.Zv9.66.gtf -t exon -g gene_id -o gene_counts/gene_counts.txt tophat/ZV9_6h/accepted_hits.sorted.bam tophat/ZV9_2cells/accepted_hits.sorted.bam
+</pre></div>
+
+
+<h2 id="isoform-expression-and-transcriptome-assembly">Isoform Expression and Transcriptome Assembly</h2>
+<p>For non-model organisms and genomes with draft assemblies and incomplete
+annotations, it is a common practice to take and assembly based approach
+to generate gene structures followed by the quantification step. There
+are a number of reference based transcript assemblers available that can
+be used for this purpose such as, cufflinks, stringy. These assemblers
+can give gene or isoform level assemblies that can be used to perform a
+gene/isoform level quantification. These assemblers require an alignment
+of reads with a reference genome or transcriptome as an input. The
+second optional input is a known gene structure in <code class="codehilite">GTF</code> or <code class="codehilite">GFF</code>
+format.</p>
+<p>There are a number of tools that perform reconstruction of the
+transcriptome and for this workshop we are going to use Cufflinks.
+Cufflinks can do transcriptome assembly either <code class="codehilite">ab initio</code> or using a
+reference annotation. It also quantifies the isoform expression in
+Fragments Per Kilobase of exon per Million fragments mapped (FPKM).</p>
+<p>Cufflinks has a number of parameters in order to perform transcriptome
+assembly and quantification. To view them all type:</p>
+<div class="codehilite"><pre><span></span>cufflinks --help
+</pre></div>
+
+
+<p>We aim to reconstruct the transcriptome for both samples by using the
+Ensembl annotation both strictly and as a guide. In the first case
+Cufflinks will only report isoforms that are included in the annotation,
+while in the latter case it will report novel isoforms as well.</p>
+<p>The Ensembl annotation for <code class="codehilite">Danio rerio</code> is available in
+<code class="codehilite">annotation/Danio_rerio.Zv9.66.gtf</code>.</p>
+<p>The general format of the <code class="codehilite">cufflinks</code> command is:</p>
+<div class="codehilite"><pre><span></span>cufflinks [options]* &amp;lt;aligned_reads.(sam|bam)&amp;gt;
+</pre></div>
+
+
+<p>Where the input is the aligned reads (either in SAM or BAM format).</p>
+<p>Some of the available parameters for Cufflinks that we are going to use
+to run Cufflinks are listed below:</p>
+<p>-o
+:   Output directory.</p>
+<p>-G
+:   Tells Cufflinks to use the supplied GTF annotations strictly in
+    order to estimate isoform annotation.</p>
+<p>-b
+:   Instructs Cufflinks to run a bias detection and correction algorithm
+    which can significantly improve accuracy of transcript abundance
+    estimates. To do this Cufflinks requires a multi-fasta file with the
+    genomic sequences against which we have aligned the reads.</p>
+<p>-u
+:   Tells Cufflinks to do an initial estimation procedure to more
+    accurately weight reads mapping to multiple locations in the genome
+    (multi-hits).</p>
+<p>–library-type
+:   Before performing any type of RNA-seq analysis you need to know a
+    few things about the library preparation. Was it done using a
+    strand-specific protocol or not? If yes, which strand? In our data
+    the protocol was NOT strand specific.</p>
+<p>Perform transcriptome assembly, strictly using the supplied GTF
+annotations, for the <code class="codehilite">2cells</code> and <code class="codehilite">6h</code> data using cufflinks:</p>
+<div class="codehilite"><pre><span></span># 2cells data (takes approx. 5mins):
+cufflinks -o cufflinks/ZV9_2cells_gtf -G annotation/Danio_rerio.Zv9.66.gtf -b genome/Danio_rerio.Zv9.66.dna.fa -u --library-type fr-unstranded tophat/ZV9_2cells/accepted_hits.bam
+# 6h data (takes approx. 5mins):
+cufflinks -o cufflinks/ZV9_6h_gtf -G annotation/Danio_rerio.Zv9.66.gtf -b genome/Danio_rerio.Zv9.66.dna.fa -u --library-type fr-unstranded tophat/ZV9_6h/accepted_hits.bam
+</pre></div>
+
+
+<p>Cufflinks generates several files in the specified output directory.
+Here’s a short description of these files:</p>
+<p>genes.fpkm_tracking
+:   Contains the estimated gene-level expression values.</p>
+<p>isoforms.fpkm_tracking
+:   Contains the estimated isoform-level expression values.</p>
+<p>skipped.gtf
+:   Contains loci skipped as a result of exceeding the maximum number of
+    fragments.</p>
+<p>transcripts.gtf
+:   This GTF file contains Cufflinks’ assembled isoforms.</p>
+<p>The complete documentation can be found at:</p>
+<p><a href="http://cole-trapnell-lab.github.io/cufflinks/file_formats/#output-formats-used-in-the-cufflinks-suite">http://cole-trapnell-lab.github.io/cufflinks/file_formats/#output-formats-used-in-the-cufflinks-suite</a></p>
+<p>So far we have forced cufflinks, by using the <code class="codehilite">-G</code> option, to strictly
+use the GTF annotations provided and thus novel transcripts will not be
+reported. We can get cufflinks to perform a GTF-guided transcriptome
+assembly by using the <code class="codehilite">-g</code> option instead. Thus, novel transcripts will
+be reported.</p>
+<p>GTF-guided transcriptome assembly is more computationally intensive than
+strictly using the GTF annotations. Therefore, we have pre-computed
+these GTF-guided assemblies for you and have placed the results under
+subdirectories:</p>
+<p><code class="codehilite">cufflinks/ZV9_2cells_gtf_guided</code> and <code class="codehilite">cufflinks/ZV9_6h_gft_guided</code>.</p>
+<p>You DO NOT need to run these commands. We provide them so you know how
+we generated the the GTF-guided transcriptome assemblies:</p>
+<div class="codehilite"><pre><span></span># 2cells guided transcriptome assembly (takes approx. 30mins):
+cufflinks -o cufflinks/ZV9_2cells_gtf_guided -g annotation/Danio_rerio.Zv9.66.gtf -b genome/Danio_rerio.Zv9.66.dna.fa -u --library-type fr-unstranded tophat/ZV9_2cells/accepted_hits.bam
+# 6h guided transcriptome assembly (takes approx. 30mins):
+cufflinks -o cufflinks/ZV9_6h_gtf_guided -g annotation/Danio_rerio.Zv9.66.gtf -b genome/Danio_rerio.Zv9.66.dna.fa -u --library-type fr-unstranded tophat/ZV9_6h/accepted_hits.bam
+</pre></div>
+
+
+<ol>
+<li>
+<p>Go back to IGV and load the pre-computed, GTF-guided transcriptome
+    assembly for the <code class="codehilite">2cells</code> data
+    (<code class="codehilite">cufflinks/ZV9_2cells_gtf_guided/transcripts.gtf</code>).</p>
+</li>
+<li>
+<p>Rename the track as “2cells GTF-Guided Transcripts”.</p>
+</li>
+<li>
+<p>In the search box type <code class="codehilite">ENSDART00000082297</code> in order for the browser
+    to zoom in to the gene of interest.</p>
+</li>
+</ol>
+<p>Do you observe any difference between the Ensembl GTF annotations and
+the GTF-guided transcripts assembled by cufflinks (the “2cells
+GTF-Guided Transcripts” track)?</p>
+<p>Yes. It appears that the Ensembl annotations may have truncated the last
+exon. However, our data also doesn’t contain reads that span between the
+last two exons.</p>
+<h2 id="differential-gene-expression-analysis-using-edger">Differential Gene Expression Analysis using edgeR</h2>
+<h3 id="experiment-design">Experiment Design</h3>
+<p>The example we are working through today follows a case Study set out in
+the edgeR Users Guide (4.3 Androgen-treated prostate cancer cells
+(RNA-Seq, two groups) which is based on an experiment conducted by Li et
+al. (2008, Proc Natl Acad Sci USA, 105, 20179-84).</p>
+<p>The researches used a prostate cancer cell line (LNCaP cells). These
+cells are sensitive to stimulation by male hormones (androgens). Three
+replicate RNA samples were collected from LNCaP cells treated with an
+androgen hormone (DHT). Four replicates were collected from cells
+treated with an inactive compound. Each of the seven samples was run on
+a lane (7 lanes) of an Illumina flow cell to produce 35 bp reads. The
+experimental design was therefore:</p>
+<p>[H]</p>
+<p>rrr</p>
+<p><strong>Lane</strong> &amp; <strong>Treatment</strong> &amp; <strong>Label</strong>\
+1 &amp; Control &amp; Con1\
+2 &amp; Control &amp; Con2\
+3 &amp; Control &amp; Con3\
+4 &amp; Control &amp; Con4\
+5 &amp; DHT &amp; DHT1\
+6 &amp; DHT &amp; DHT2\
+7 &amp; DHT &amp; DHT3\</p>
+<p>[tab:experimental<sub>d</sub>esign]</p>
+<p>This workflow requires raw gene count files and these can be generated
+using a utility called featureCounts as demonstrated above. We are using
+a pre-computed gene counts data (stored in <code class="codehilite">pnas_expression.txt</code>) for
+this exercise.</p>
+<h3 id="prepare-the-environment_1">Prepare the Environment</h3>
+<p>Prepare the environment and load R:</p>
+<div class="codehilite"><pre><span></span>cd /home/trainee/rnaseq/edgeR
+R (press enter)
+</pre></div>
+
+
+<p>Once on the R prompt. Load libraries:</p>
+<div class="codehilite"><pre><span></span>library(edgeR)
+library(biomaRt)
+library(gplots)
+library(&quot;limma&quot;)
+library(&quot;RColorBrewer&quot;)
+library(&quot;org.Hs.eg.db&quot;)
+</pre></div>
+
+
+<h3 id="read-in-data">Read in Data</h3>
+<p>Read in count table and experimental design:</p>
+<div class="codehilite"><pre><span></span>data &amp;lt;- read.delim(&quot;pnas_expression.txt&quot;, row.names=1, header=T)
+targets &amp;lt;- read.delim(&quot;Targets.txt&quot;, header=T)
+colnames(data) &amp;lt;-targets$Label
+head(data, n=20)
+</pre></div>
+
+
+<h3 id="add-gene-annotation">Add Gene annotation</h3>
+<p>The data set only includes the Ensembl gene id and the counts. It is
+useful to have other annotations such as the gene symbol and entrez id.
+Next we will add in these annotations. We will use the BiomaRt package
+to do this.</p>
+<p>We start by using the useMart function of BiomaRt to access the human
+data base of ensemble gene ids.</p>
+<div class="codehilite"><pre><span></span>human&amp;lt;-useMart(host=&quot;www.ensembl.org&quot;, &quot;ENSEMBL_MART_ENSEMBL&quot;, dataset=&quot;hsapiens_gene_ensembl&quot;) attributes=c(&quot;ensembl_gene_id&quot;, &quot;entrezgene&quot;,&quot;hgnc_symbol&quot;)
+</pre></div>
+
+
+<p>We create a vector of our ensemble gene ids.</p>
+<div class="codehilite"><pre><span></span>ensembl_names&amp;lt;-rownames(data)
+head(ensembl_names)
+</pre></div>
+
+
+<p>We then use the function getBM to get the gene symbol data we want.This
+takes about a minute.</p>
+<div class="codehilite"><pre><span></span>genemap&amp;lt;-getBM(attributes, filters=&quot;ensembl_gene_id&quot;, values=ensembl_names, mart=human)
+</pre></div>
+
+
+<p>Have a look at the start of the genemap dataframe.</p>
+<div class="codehilite"><pre><span></span>head(genemap)
+</pre></div>
+
+
+<p>We then match the data we have retrieved to our dataset.</p>
+<div class="codehilite"><pre><span></span>idx &amp;lt;-match(ensembl_names, genemap$ensembl_gene_id)
+data$entrezgene &amp;lt;-genemap$entrezgene [ idx ]
+data$hgnc_symbol &amp;lt;-genemap$hgnc_symbol [ idx ]
+Ann &amp;lt;- cbind(rownames(data), data$hgnc_symbol, data$entrezgene)
+colnames(Ann)&amp;lt;-c(&quot;Ensembl&quot;, &quot;Symbol&quot;, &quot;Entrez&quot;)
+Ann&amp;lt;-as.data.frame(Ann)
+</pre></div>
+
+
+<p>Let’s check and see that this additional information is there.</p>
+<div class="codehilite"><pre><span></span>head(data)
+</pre></div>
+
+
+<h3 id="data-checks">Data checks</h3>
+<p>Create DGEList object:</p>
+<div class="codehilite"><pre><span></span>treatment &amp;lt;-factor(c(rep(&quot;Control&quot;,4), rep(&quot;DHT&quot;,3)), levels=c(&quot;Control&quot;, &quot;DHT&quot;))
+y &amp;lt;-DGEList(counts=data[,1:7], group=treatment, genes=Ann)
+</pre></div>
+
+
+<p>Check the dimensions of the object:</p>
+<div class="codehilite"><pre><span></span>dim(y)
+</pre></div>
+
+
+<p>We see we have 37435 rows (i.e. genes) and 7 columns (samples).</p>
+<p>Now we will filter out genes with low counts by only keeping those rows
+where the count per million (cpm) is at least 1 in at least three
+samples:</p>
+<div class="codehilite"><pre><span></span>keep &amp;lt;-rowSums( cpm(y)&amp;gt;1) &amp;gt;=3
+y &amp;lt;- y[keep, ]
+</pre></div>
+
+
+<p>How many rows (genes) are retained now</p>
+<p>dim(y) would give you 16494</p>
+<p>How many genes were filtered out?</p>
+<p>do 37435-16494.</p>
+<p>As we have removed the lowly expressed genes the total number of counts
+per sample has not changed greatly. Let us check the total number of
+reads per sample in the original data (data) and now after filtering.</p>
+<p>Before:</p>
+<div class="codehilite"><pre><span></span>colSums(data[,1:7])
+After filtering:
+colSums(y$counts)
+</pre></div>
+
+
+<p>We will now perform normalization to take account of different library
+size:</p>
+<div class="codehilite"><pre><span></span>y&amp;lt;-calcNormFactors(y)
+</pre></div>
+
+
+<p>We will check the calculated normalization factors:</p>
+<div class="codehilite"><pre><span></span>y$samples
+</pre></div>
+
+
+<p>Lets have a look at whether the samples cluster by condition. (You
+should produce a plot as shown in Figure 4):</p>
+<div class="codehilite"><pre><span></span>plotMDS(y, col=as.numeric(y$samples$group))
+</pre></div>
+
+
+<p>[H] <img alt="image" src="../MDS.png" /> [fig:MDS plot]</p>
+<p>Does the MDS plot indicate a difference in gene expression between the
+Controls and the DHT treated samples?</p>
+<p>The MDS plot shows us that the controls are separated from the DHT
+treated cells. This indicates that there is a difference in gene
+expression between the conditions.</p>
+<p>We will now estimate the dispersion. We start by estimating the common
+dispersion. The common dispersion estimates the overall Biological
+Coefficient of Variation (BCV) of the dataset averaged over all genes.</p>
+<p>By using verbose we get the Disp and BCV values printed on the screen</p>
+<div class="codehilite"><pre><span></span>y &amp;lt;- estimateCommonDisp(y, verbose=T)
+</pre></div>
+
+
+<p>What value to you see for BCV?</p>
+<p>We now estimate gene-specific dispersion.</p>
+<div class="codehilite"><pre><span></span>y &amp;lt;- estimateTagwiseDisp(y)
+</pre></div>
+
+
+<p>We will plot the tagwise dispersion and the common dispersion (You
+should obtain a plot as shown in the Figure 5):</p>
+<div class="codehilite"><pre><span></span>plotBCV(y)
+</pre></div>
+
+
+<p>[H] <img alt="image" src="../BCV.png" /> [fig:BCV plot]</p>
+<p>We see here that the common dispersion estimates the overall Biological
+Coefficient of Variation (BCV) of the dataset averaged over all genes.
+The common dispersion is <code class="codehilite">0.02</code> and the BCV is the square root of the
+common dispersion (sqrt[0.02] = 0.14). A BCV of 14% is typical for cell
+line experiment.</p>
+<p>As you can see from the plot the BCV of some genes (generally those with
+low expression) can be much higher than the common dispersion. For
+example we see genes with a reasonable level of expression with tagwise
+dispersion of 0.4 indicating 40% variation between samples.</p>
+<p>If we used the common dispersion for these genes instead of the tagwise
+dispersion what effect would this have?</p>
+<p>If we simply used the common dispersion for these genes we would
+underestimate biological variability, which in turn affects whether
+these genes would be identified as being differentially expressed
+between conditions.It is recommended to use the tagwise dispersion,
+which takes account of gene-to-gene variability.</p>
+<p>Now that we have normalized our data and also calculated the variability
+of gene expression between samples we are in a position to perform
+differential expression testing.As this is a simple comparison between
+two conditions, androgen treatment and placebo treatment we can use the
+exact test for the negative binomial distribution (Robinson and Smyth,
+2008).</p>
+<h3 id="testing-for-differential-expression">Testing for Differential Expression</h3>
+<p>We now test for differentially expressed BCV genes:</p>
+<div class="codehilite"><pre><span></span>et &amp;lt;- exactTest(y)
+</pre></div>
+
+
+<p>Now we will use the topTags function to adjust for multiple testing. We
+will use the Benjimini Hochberg (&ldquo;BH&rdquo;) method and we will produce a
+table of results:</p>
+<div class="codehilite"><pre><span></span>res &amp;lt;- topTags(et, n=nrow(y$counts), adjust.method=&quot;BH&quot;)$table
+</pre></div>
+
+
+<p>Let’s have a look at the first rows of the table:</p>
+<div class="codehilite"><pre><span></span>head(res)
+</pre></div>
+
+
+<p>To get a summary of the number of differentially expressed genes we can
+use the decideTestsDGE function.</p>
+<div class="codehilite"><pre><span></span>summary(de &amp;lt;- decideTestsDGE(et))
+</pre></div>
+
+
+<p>This tells us that 2096 genes are downregulated and 2339 genes are
+upregulated at 5% FDR.We will now make subsets of the most significant
+upregulated and downregulated genes.</p>
+<div class="codehilite"><pre><span></span>alpha=0.05
+lfc=1.5
+edgeR_res_sig&amp;lt;-res[res$FDR&amp;lt;alpha,]
+edgeR_res_sig_lfc &amp;lt;-edgeR_res_sig[abs(edgeR_res_sig$logFC) &amp;gt;= lfc,]head(edgeR_res_sig, n=20)nrow(edgeR_res_sig)nrow(edgeR_res_sig_lfc)
+</pre></div>
+
+
+<p>We can write out these results to our current directory.</p>
+<div class="codehilite"><pre><span></span>write.table(edgeR_res_sig , &quot;edgeR_res_sig.txt&quot;, sep=&quot;\t&quot;, col.names=NA, quote=F)
+write.table(edgeR_res_sig_lfc , &quot;edgeR_res_sig_lfc.txt&quot;, sep=&quot;\t&quot;, col.names=NA, quote=F)
+</pre></div>
+
+
+<p>How many differentially expressed genes are there?</p>
+<p>4435</p>
+<p>How many upregulated genes and downregulated genes do we have?</p>
+<p>2339 2096</p>
+<h2 id="differential-expression-using-the-voom-function-and-the-limma-package">Differential expression using the Voom function and the limma package</h2>
+<p>We will now show an alternative approach to differential expression
+which uses the <code class="codehilite">limma</code> package.This is based on linear models. The first
+step is to create a design matrix. In this case we have a simple design
+where we have only one condition (treated vs non-treated). However, you
+may be dealing with more complex experimental designs, for example
+looking at treatment and other covariates, such as age, gender, batch.</p>
+<div class="codehilite"><pre><span></span>design &amp;lt;-model.matrix(~treatment)
+check design
+print(design)
+</pre></div>
+
+
+<p>We now use voom to transform the data into a form which is appropriate
+for linear modelling.</p>
+<div class="codehilite"><pre><span></span>v &amp;lt;-voom(y, design)
+</pre></div>
+
+
+<p>Next we will fit linear model to each gene in the dataset using the
+function lmFit. Following this we use the function eBayes to test each
+gene to find whether foldchange between the conditions being tested is
+statistically significant.We filter our results by using the same values
+of alpha (0.05) and log fold change (1.5) used previously.</p>
+<div class="codehilite"><pre><span></span>fit_v &amp;lt;-lmFit(v, design)
+
+fit_v &amp;lt;- eBayes(fit_v)
+
+voom_res&amp;lt;-topTable(fit_v, coef=2,adjust.method=&quot;BH&quot;, sort.by=&quot;P&quot;, n=nrow(y$counts))
+
+voom_res_sig &amp;lt;-voom_res[voom_res$adj.P.Val &amp;lt;alpha,]
+
+voom_res_sig_lfc &amp;lt;-voom_res_sig[abs(voom_res_sig$logFC) &amp;gt;= lfc,]
+</pre></div>
+
+
+<p>How many differentially expressed genes are identified?</p>
+<div class="codehilite"><pre><span></span>nrow(voom_res_sig)nrow(voom_res_sig_lfc)
+</pre></div>
+
+
+<p>We will write out these results.</p>
+<div class="codehilite"><pre><span></span>write.table(voom_res_sig, &quot;voom_res_sig.txt&quot;, sep=&quot;\t&quot;, col.names=NA, quote=F)
+write.table(voom_res_sig_lfc, &quot;voom_res_sig_lfc.txt&quot;, sep=&quot;\t&quot;, col.names=NA, quote=F)
+write.table(voom_res, &quot;voom_res.txt&quot;, sep=&quot;\t&quot;, col.names=NA, quote=F)
+</pre></div>
+
+
+<h2 id="data-visualisation">Data Visualisation</h2>
+<p>Now let’s visualize some of this data. First we will make a volcano plot
+using the <code class="codehilite">volcanoplot</code> function available in <code class="codehilite">limma</code>. This creates a
+plot which displays fold changes versus a measure of statistical
+significance of the change.</p>
+<div class="codehilite"><pre><span></span>volcanoplot(fit_v, coef=2, highlight=5)
+</pre></div>
+
+
+<p>[H] <img alt="image" src="../Volcano.png" /> [fig:Volcano plot]</p>
+<p>Next we will create a heatmap of the top differentially expressed genes.
+We use the heatmap.2 function available in the gplots package.</p>
+<div class="codehilite"><pre><span></span>select_top  &amp;lt;- p.adjust(fit_v$p.value[, 2]) &amp;lt;1e-2
+Exp_top &amp;lt;- v$E [select_top, ]
+heatmap.2(Exp_top, scale=&quot;row&quot;, density.info=&quot;none&quot;, trace=&quot;none&quot;, main=&quot;Top DEGs&quot;, labRow=&quot;&quot;, cexRow=0.4, cexCol=0.8)
+</pre></div>
+
+
+<p>[H] <img alt="image" src="../Heatmap.png" /> [fig:Heatmap]</p>
+<p>You can now quit the R prompt</p>
+<div class="codehilite"><pre><span></span>q()
+</pre></div>
+
+
+<p>You can save your workspace by typing <code class="codehilite">Y</code> on prompt.</p>
+<p>Please note that the output files you are creating are saved in your
+present working directory. If you are not sure where you are in the file
+system try typing <code class="codehilite">pwd</code> on your command prompt to find out.</p>
+<h2 id="differential-expression-using-cuffdiff">Differential Expression using cuffdiff</h2>
+<p>This is optional exercise and will be run if time permits.</p>
+<p>One of the stand-alone tools that perform differential expression
+analysis is Cuffdiff. We use this tool to compare between two
+conditions; for example different conditions could be control and
+disease, or wild-type and mutant, or various developmental stages.</p>
+<p>In our case we want to identify genes that are differentially expressed
+between two developmental stages; a <code class="codehilite">2cells</code> embryo and <code class="codehilite">6h</code> post
+fertilization.</p>
+<p>The general format of the cuffdiff command is:</p>
+<div class="codehilite"><pre><span></span>cuffdiff [options]* &amp;lt;transcripts.gtf&amp;gt; &amp;lt;sample1_replicate1.sam[,...,sample1_replicateM]&amp;gt; &amp;lt;sample2_replicate1.sam[,...,sample2_replicateM.sam]&amp;gt;
+</pre></div>
+
+
+<p>Where the input includes a <code class="codehilite">transcripts.gtf</code> file, which is an
+annotation file of the genome of interest or the cufflinks assembled
+transcripts, and the aligned reads (either in SAM or BAM format) for the
+conditions. Some of the Cufflinks options that we will use to run the
+program are:</p>
+<p>-o
+:   Output directory.</p>
+<p>-L
+:   Labels for the different conditions</p>
+<p>-T
+:   Tells Cuffdiff that the reads are from a time series experiment.</p>
+<p>-b
+:   Instructs Cufflinks to run a bias detection and correction algorithm
+    which can significantly improve accuracy of transcript abundance
+    estimates. To do this Cufflinks requires a multi-fasta file with the
+    genomic sequences against which we have aligned the reads.</p>
+<p>-u
+:   Tells Cufflinks to do an initial estimation procedure to more
+    accurately weight reads mapping to multiple locations in the genome
+    (multi-hits).</p>
+<p>–library-type
+:   Before performing any type of RNA-seq analysis you need to know a
+    few things about the library preparation. Was it done using a
+    strand-specific protocol or not? If yes, which strand? In our data
+    the protocol was NOT strand specific.</p>
+<p>-C
+:   Biological replicates and multiple group contrast can be defined
+    here</p>
+<p>Run cuffdiff on the tophat generated BAM files for the 2cells vs. 6h
+data sets:</p>
+<div class="codehilite"><pre><span></span>cuffdiff -o cuffdiff/ -L ZV9_2cells,ZV9_6h -T -b genome/Danio_rerio.Zv9.66.dna.fa -u --library-type fr-unstranded annotation/Danio_rerio.Zv9.66.gtf tophat/ZV9_2cells/accepted_hits.bam tophat/ZV9_6h/accepted_hits.bam
+</pre></div>
+
+
+<p>We are interested in the differential expression at the gene level. The
+results are reported by Cuffdiff in the file <code class="codehilite">cuffdiff/gene_exp.diff</code>.
+Look at the first few lines of the file using the following command:</p>
+<div class="codehilite"><pre><span></span>head -n 20 cuffdiff/gene_exp.diff
+</pre></div>
+
+
+<p>We would like to see which are the most significantly differentially
+expressed genes. Therefore we will sort the above file according to the
+q value (corrected p value for multiple testing). The result will be
+stored in a different file called <code class="codehilite">gene_exp_qval.sorted.diff</code>.</p>
+<div class="codehilite"><pre><span></span>sort -t$&#39;\t&#39; -g -k 13 cuffdiff/gene_exp.diff &amp;gt; cuffdiff/gene_exp_qval.sorted.diff
+</pre></div>
+
+
+<p>Look again at the top 20 lines of the sorted file by typing:</p>
+<div class="codehilite"><pre><span></span>head -n 20 cuffdiff/gene_exp_qval.sorted.diff
+</pre></div>
+
+
+<p>Copy an Ensembl transcript identifier from the first two columns for one
+of these genes (e.g. <code class="codehilite">ENSDARG00000045067</code>). Now go back to the IGV
+browser and paste it in the search box.</p>
+<p>What are the various outputs generated by cuffdiff? Hint: Please refer
+to the <code class="codehilite">Cuffdiff output</code> section of the cufflinks manual online.</p>
+<p>Do you see any difference in the read coverage between the <code class="codehilite">2cells</code> and
+<code class="codehilite">6h</code> conditions that might have given rise to this transcript being
+called as differentially expressed?</p>
+<p>The coverage on the Ensembl browser is based on raw reads and no
+normalisation has taken place contrary to the FPKM values.</p>
+<p>The read coverage of this transcript (<code class="codehilite">ENSDARG00000045067</code>) in the 6h
+data set is much higher than in the 2cells data set.</p>
+<h2 id="visualising-the-cuffdiff-expression-analysis">Visualising the CuffDiff expression analysis</h2>
+<p>We will use an R-Bioconductor package called <code class="codehilite">cummeRbund</code> to visualise,
+manipulate and explore Cufflinks RNA-seq output. We will load an R
+environment and look at few quick tips to generate simple graphical
+output of the cufflinks analysis we have just run.</p>
+<p><code class="codehilite">CummeRbund</code> takes the cuffdiff output and populates a SQLite database
+with various type of output generated by cuffdiff e.g, genes,
+transcripts, transcription start site, isoforms and CDS regions. The
+data from this database can be accessed and processed easily. This
+package comes with a number of in-built plotting functions that are
+commonly used for visualising the expression data. We strongly recommend
+reading through the bioconductor manual and user guide of CummeRbund to
+learn about functionality of the tool. The reference is provided in the
+resource section.</p>
+<p>Prepare the environment. Go to the <code class="codehilite">cuffdiff</code> output folder and copy the
+transcripts file there.</p>
+<div class="codehilite"><pre><span></span>cd /home/trainee/rnaseq/cuffdiff
+cp /home/trainee/rnaseq/annotation/Danio_rerio.Zv9.66.gtf /home/trainee/rnaseq/cuffdiff
+ls -l
+</pre></div>
+
+
+<p>Load the R environment</p>
+<div class="codehilite"><pre><span></span>R (press enter)
+</pre></div>
+
+
+<p>Load the require R package.</p>
+<div class="codehilite"><pre><span></span>library(cummeRbund)
+</pre></div>
+
+
+<p>Read in the cuffdiff output</p>
+<div class="codehilite"><pre><span></span>cuff&amp;lt;-readCufflinks(dir=&quot;/home/trainee/Desktop/rnaseq/cuffdiff&quot;, \
+gtfFile=&#39;Danio_rerio.Zv9.66.gtf&#39;,genome=&quot;Zv9&quot;, rebuild=T)
+</pre></div>
+
+
+<p>Assess the distribution of FPKM scores across samples</p>
+<div class="codehilite"><pre><span></span>pdf(file = &quot;SCV.pdf&quot;, height = 6, width = 6)
+dens&amp;lt;-csDensity(genes(cuff))
+dens
+dev.off()
+</pre></div>
+
+
+<p>Box plots of the FPKM values for each samples</p>
+<div class="codehilite"><pre><span></span>pdf(file = &quot;BoxP.pdf&quot;, height = 6, width = 6)
+b&amp;lt;-csBoxplot(genes(cuff))
+b
+dev.off()
+</pre></div>
+
+
+<p>Accessing the data</p>
+<div class="codehilite"><pre><span></span>sigGeneIds&amp;lt;-getSig(cuff,alpha=0.05,level=&quot;genes&quot;)
+head(sigGeneIds)
+sigGenes&amp;lt;-getGenes(cuff,sigGeneIds)
+sigGenes
+head(fpkm(sigGenes))
+head(fpkm(isoforms(sigGenes)))
+</pre></div>
+
+
+<p>Plotting a heatmap of the differentially expressed genes</p>
+<div class="codehilite"><pre><span></span>pdf(file = &quot;heatmap.pdf&quot;, height = 6, width = 6)
+h&amp;lt;-csHeatmap(sigGenes,cluster=&quot;both&quot;)
+h
+dev.off()
+</pre></div>
+
+
+<p>What options would you use to draw a density or boxplot for different
+replicates if available ? (Hint: look at the manual at Bioconductor
+website)</p>
+<div class="codehilite"><pre><span></span>densRep&amp;lt;-csDensity(genes(cuff),replicates=T)
+brep&amp;lt;-csBoxplot(genes(cuff),replicates=T)
+</pre></div>
+
+
+<p>How many differentially expressed genes did you observe?</p>
+<p>type ’summary(sigGenes)’ on the R prompt to see.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Trapnell, C., Pachter, L. &amp; Salzberg, S. L. TopHat: discovering
+    splice junctions with RNA-Seq. Bioinformatics 25, 1105-1111 (2009).</p>
+</li>
+<li>
+<p>Trapnell, C. et al. Transcript assembly and quantification by
+    RNA-Seq reveals unannotated transcripts and isoform switching during
+    cell differentiation. Nat. Biotechnol. 28, 511-515 (2010).</p>
+</li>
+<li>
+<p>Langmead, B., Trapnell, C., Pop, M. &amp; Salzberg, S. L. Ultrafast and
+    memory-efficient alignment of short DNA sequences to the human
+    genome. Genome Biol. 10, R25 (2009).</p>
+</li>
+<li>
+<p>Roberts, A., Pimentel, H., Trapnell, C. &amp; Pachter, L. Identification
+    of novel transcripts in annotated genomes using RNA-Seq.
+    Bioinformatics 27, 2325-2329 (2011).</p>
+</li>
+<li>
+<p>Roberts, A., Trapnell, C., Donaghey, J., Rinn, J. L. &amp; Pachter, L.
+    Improving RNA-Seq expression estimates by correcting for fragment
+    bias. Genome Biol. 12, R22 (2011).</p>
+</li>
+<li>
+<p>Robinson MD, McCarthy DJ and Smyth GK. edgeR: a Bioconductor package
+    for differential expression analysis of digital gene expression
+    data. Bioinformatics, 26 (2010).</p>
+</li>
+<li>
+<p>Robinson MD and Smyth GK Moderated statistical tests for assessing
+    differences in tag abundance. Bioinformatics, 23, pp. -6.</p>
+</li>
+<li>
+<p>Robinson MD and Smyth GK (2008). Small-sample estimation of negative
+    binomial dispersion, with applications to SAGE data.” Biostatistics,
+    9.</p>
+</li>
+<li>
+<p>McCarthy, J. D, Chen, Yunshun, Smyth and K. G (2012). Differential
+    expression analysis of multifactor RNA-Seq experiments with respect
+    to biological variation. Nucleic Acids Research, 40(10), pp. -9.</p>
+</li>
+</ol>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../../alignment/handout/handout/" title="Read Alignment" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Read Alignment
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../../chip-seq/handout/handout/" title="ChIP-Seq" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                ChIP-Seq
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; The authors; 2017-
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../../../js/details.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

@@ -1,0 +1,51 @@
+cd
+ls
+cd qc
+pwd
+
+#fastQC pre-trimming
+fastqc -h
+
+fastqc -f fastq qcdemo_R1.fastq.gz
+fastqc -f fastq qcdemo_R2.fastq.gz
+
+
+firefox qcdemo_R2_fastqc.html &
+firefox qcdemo_R1_fastqc.html &
+
+
+# Quality trimming
+cd /home/trainee/qc 
+skewer -t 4 -l 50 -q 30 -Q 25 -m pe qcdemo_R1.fastq.gz qcdemo_R2.fastq.gz
+
+ls -ltr
+
+# fastQC post-trimming
+fastqc -f fastq qcdemo_R1.fastq-trimmed-pair1.fastq
+fastqc -f fastq qcdemo_R1.fastq-trimmed-pair2.fastq
+
+firefox qcdemo_R1.fastq-trimmed-pair1_fastqc.html &
+firefox qcdemo_R1.fastq-trimmed-pair2_fastqc.html &
+
+# Adapter trimming
+cd /home/trainee/qc
+fastqc -f fastq adaptorQC.fastq.gz
+skewer -x TGGAATTCTCGGGTGCCAAGGT -t 20 -l 10 -L 35 -q 30 adaptorQC.fastq.gz
+
+# fastQC post adapter trimming
+fastqc adaptorQC.fastq-trimmed.fastq
+firefox adaptorQC.fastq-trimmed_fastqc.html &
+
+# Fixed length trimming
+cd /home/trainee/qc
+fastqc -f fastq bad_example.fastq
+
+
+fastx_trimmer -h
+fastx_trimmer -Q 33 -f 1 -l 80 -i bad_example.fastq -o bad_example_trimmed01.fastq
+
+fastqc -f fastq bad_example_trimmed01.fastq
+firefox bad_example_trimmed01_fastqc.html &
+
+
+

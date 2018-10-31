@@ -1,0 +1,1083 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="This contains all material for the Introduction to NGS workshop.">
+      
+      
+      
+        <meta name="author" content="Authors">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>chip seq draft SL ST - Introduction to NGS Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../css/details.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#key-learning-outcomes" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="Introduction to NGS Workshop" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Introduction to NGS Workshop
+              </span>
+              <span class="md-header-nav__topic">
+                chip seq draft SL ST
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="Introduction to NGS Workshop" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Introduction to NGS Workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../trainers/trainers/" title="The Trainers" class="md-nav__link">
+      The Trainers
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../preamble/preamble/" title="Workshop Information" class="md-nav__link">
+      Workshop Information
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Hands-on Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Hands-on Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cli/handout/handout/" title="Introduction to Command Line" class="md-nav__link">
+      Introduction to Command Line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../qc/handout/handout/" title="Quality Control" class="md-nav__link">
+      Quality Control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../alignment/handout/handout/" title="Read Alignment" class="md-nav__link">
+      Read Alignment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../rna-seq/handout/handout/" title="RNA-Seq" class="md-nav__link">
+      RNA-Seq
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../handout/" title="ChIP-Seq" class="md-nav__link">
+      ChIP-Seq
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../de-novo/handout/handout/" title="De Novo" class="md-nav__link">
+      De Novo
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-learning-outcomes" title="Key Learning Outcomes" class="md-nav__link">
+    Key Learning Outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-youll-be-using" title="Resources You’ll be Using" class="md-nav__link">
+    Resources You’ll be Using
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools-used" title="Tools Used" class="md-nav__link">
+    Tools Used
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sources-of-data" title="Sources of Data" class="md-nav__link">
+    Sources of Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-the-environment" title="Prepare the Environment" class="md-nav__link">
+    Prepare the Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-enriched-areas-using-spp" title="Finding enriched areas using SPP" class="md-nav__link">
+    Finding enriched areas using SPP
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step1-loading-data-and-quality-filter-the-informative-tags" title="STEP1 Loading data and quality filter the informative tags" class="md-nav__link">
+    STEP1 Loading data and quality filter the informative tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step2-calculating-genome-wide-tag-density-and-tag-enrichmentdepletion-profiles" title="STEP2 Calculating genome-wide tag density and tag enrichment/depletion profiles" class="md-nav__link">
+    STEP2 Calculating genome-wide tag density and tag enrichment/depletion profiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step3-comparing-binding-sites-to-annotations-using-the-biomart-package" title="STEP3 Comparing Binding Sites to Annotations Using the biomaRt package" class="md-nav__link">
+    STEP3 Comparing Binding Sites to Annotations Using the biomaRt package
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-results-with-the-genome-browser" title="Viewing results with the Genome browser" class="md-nav__link">
+    Viewing results with the Genome browser
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-session" title="Advanced Session" class="md-nav__link">
+    Advanced Session
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motif-analysis" title="Motif analysis" class="md-nav__link">
+    Motif analysis
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motif-discovery-with-trawler" title="Motif discovery with Trawler" class="md-nav__link">
+    Motif discovery with Trawler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-motif-discovery-with-rsat-peak-motif" title="Optional: Motif discovery with RSAT peak-motif" class="md-nav__link">
+    Optional: Motif discovery with RSAT peak-motif
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-motif-discovery-with-meme-chip" title="Optional: Motif discovery with MEME-ChIP" class="md-nav__link">
+    Optional: Motif discovery with MEME-ChIP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>chip seq draft SL ST</h1>
+                
+                <h2 id="key-learning-outcomes">Key Learning Outcomes</h2>
+<p>After completing this practical the trainee should be able to:</p>
+<ul>
+<li>
+<p>Perform ChIP-Seq analysis, e.g. the detection of immuno-enriched
+    areas using the chosen R package: ChIP-seq processing pipeline (SPP)</p>
+</li>
+<li>
+<p>Visualize the peak regions through a genome browser, e.g. IGV or
+    Ensembl, and identify the real peak regions</p>
+</li>
+<li>
+<p>Perform functional annotation using biomaRt R package and detect
+    potential binding sites (motif) in the predicted binding regions
+    using motif discovery tool, e.g. Trawler or MEME.</p>
+</li>
+</ul>
+<h2 id="resources-youll-be-using">Resources You’ll be Using</h2>
+<h3 id="tools-used">Tools Used</h3>
+<p>SPP
+:   \
+    <a href="http://compbio.med.harvard.edu/Supplements/ChIP-seq/">http://compbio.med.harvard.edu/Supplements/ChIP-seq/</a></p>
+<p>IGV
+:   \
+    <a href="http://software.broadinstitute.org/software/igv/">http://software.broadinstitute.org/software/igv/</a></p>
+<p>Ensembl
+:   \
+    <a href="http://www.ensembl.org">http://www.ensembl.org</a></p>
+<p>Trawler
+:   \
+    <a href="https://trawler.erc.monash.edu.au/index.html">https://trawler.erc.monash.edu.au/index.html</a></p>
+<p>MEME
+:   \
+    <a href="http://meme.ebi.edu.au/meme/cgi-bin/meme.cgi">http://meme.ebi.edu.au/meme/cgi-bin/meme.cgi</a></p>
+<p>TOMTOM
+:   \
+    <a href="http://meme.ebi.edu/meme/cgi-bin/tomtom.cgi">http://meme.ebi.edu/meme/cgi-bin/tomtom.cgi</a></p>
+<p>DAVID
+:   \
+    <a href="http://david.abcc.ncifcrf.gov">http://david.abcc.ncifcrf.gov</a></p>
+<p>GOstat
+:   \
+    <a href="http://gostat.wehi.edu.au">http://gostat.wehi.edu.au</a></p>
+<h3 id="sources-of-data">Sources of Data</h3>
+<p><a href="http://www.ebi.ac.uk/arrayexpress/experiments/E-GEOD-11431">http://www.ebi.ac.uk/arrayexpress/experiments/E-GEOD-11431</a></p>
+<h2 id="introduction">Introduction</h2>
+<p>The goal of this hands-on session is to perform some basic tasks in the
+analysis of ChIP-seq data. In fact, you already performed the first
+step, alignment of the reads to the genome, in the previous session. We
+start from the aligned reads and we will find immuno-enriched areas
+using SPP. We will visualize the identified regions in a genome browser
+and perform functional annotation and motif analysis on the predicted
+binding regions.</p>
+<h2 id="prepare-the-environment">Prepare the Environment</h2>
+<p>The material for this practical can be found in the <code class="codehilite">ChIP-seq</code> directory
+on your desktop. Please make sure that this directory also contains the
+SAM/BAM files you produced during the alignment practical.</p>
+<p>If you didn’t have time to align the control file called <code class="codehilite">gfp.fastq</code>
+during the alignment practical, please do it now. Follow the same steps,
+from the bowtie alignment step, as for the <code class="codehilite">Oct4.fastq</code> file.</p>
+<p>In ChIP-seq analysis (unlike in other applications such as RNA-seq) it
+can be useful to exclude all reads that map to more than one location in
+the genome. When using Bowtie, this can be done using the <code class="codehilite">-m 1</code> option,
+which tells it to report only unique matches (See <code class="codehilite">bowtie –help</code> for
+more details).</p>
+<p>Open the Terminal and go to the <code class="codehilite">ChIP-seq</code> directory:</p>
+<div class="codehilite"><pre><span></span>cd /home/trainee/ChIP-seq
+ls
+R
+</pre></div>
+
+
+<h2 id="finding-enriched-areas-using-spp">Finding enriched areas using SPP</h2>
+<p>Terminology used in the tutorial: <code class="codehilite">fragment:</code> overlapping fragments
+obtaining in the IP (immuno precipitation) experiments. <code class="codehilite">tag:</code> sequenced
+part of the fragment which could be from one end (in case of single end
+sequencing ) or both ends in the paired end data. <code class="codehilite">alignment:</code> a process
+to determine the position of the tags, which typically should be around
+the binding site. <code class="codehilite">peaks:</code> spatial distribution of the tags densities
+around the binding sites on the genome. You would see two separate peaks
+of tags on the positive and negative strand around the binding site. The
+distance between the two peaks should reflect the size of the protected
+region.</p>
+<p>SPP is a Chip-seq processing pipeline implemented using R.</p>
+<p>The main functions of SPP include locating quality tag alignment by
+screening overall DNA-binding signals, removing or restricting certain
+positions with extremely high number of tags, estimating significant
+enrichment regions through genome-wide profiling, providing appropriate
+outputs for visualization, and determining statistically significant
+binding positions with saturation criteria assessment. Moreover, the
+processing of ChIP-seq data can require considerable amount of CPU time,
+it is often necessary to make use of parallel processing. SPP supports
+parallel processing if the cluster option is configured. Since our
+example data is relatively small, we will use single CPU and omit the
+cluster parameters for simplicity. The following steps will work you
+through the SPP pipeline.</p>
+<p>In your R terminal, load spp and biomaRt packages and make sure to set
+your working directory correctly:</p>
+<div class="codehilite"><pre><span></span>library(spp);
+library(biomaRt);
+setwd(&#39;/home/trainee/ChIP-seq&#39;);
+</pre></div>
+
+
+<p><strong>1. Loading tag data, selecting choosing alignment quality, removing
+anomalies</strong>\
+The first stage in SPP are 1) load input data; 2) choose alignment
+quality and 3) remove anomalies. SPP can read output from the following
+aligners and file formats: ELAND, MAQ, bowtie, Arachne, tagAlign format
+and BAM format (Note: because BAM standard doesn’t specify a flag for a
+uniquely-mapped read, the aligner has to generate a BAM file that would
+contain only unique reads.)</p>
+<h3 id="step1-loading-data-and-quality-filter-the-informative-tags">STEP1 Loading data and quality filter the informative tags</h3>
+<p>First load Oct4 and gfp bam files. Here GFP are the control or input
+samples, these are usually mock IP DNA where you do not expect to see
+any binding peaks.</p>
+<div class="codehilite"><pre><span></span>oct4.data&amp;lt;-read.bam.tags(&quot;Oct4.sorted.bam&quot;);
+gfp.data&amp;lt;-read.bam.tags(&quot;gfp.sorted.bam&quot;);
+</pre></div>
+
+
+<p>The statistical significance of tags clustering observed for a putative
+protein binding site depends on the expected background. Therefore, use
+of a input or control DNA is highly recommended in the experiment
+design. This provides an experimental assessment of the background tag
+distribution.</p>
+<p>The next step uses cross-correlation profile to calculate binding peak
+separation distance, and assess whether inclusion of tags with
+non-perfect alignment quality improves the cross-correlation peak. This
+is done by shifting the strands relative to each other by increasing
+distance within a given range. cross-correlation of the positive and
+negative strand tag densities is plotted. The cross-correlation plot
+should show the predominant size of the protected region.</p>
+<div class="codehilite"><pre><span></span>binding.characteristics &amp;lt;- get.binding.characteristics(oct4.data,srange=c(50,500),bin=5);
+</pre></div>
+
+
+<p>The binding.characteristics provides the estimate of the binding peak
+separation distance, cross-correlation profile itself and tag quality
+bin acceptance information. The srange parameter defines the possible
+range for the size of the protected region. It is supposed to be higher
+than tag length. However, the upper boundary (500) cannot be too high,
+which will increase the running time. The bin parameter tags within the
+specified number of base pairs to speed up calculation. The increase of
+bin size will decrease the accuracy of the determined parameters.</p>
+<p>Then, print out binding peak separation distance and we can plot
+cross-correlation profile:</p>
+<div class="codehilite"><pre><span></span>print(paste(&quot;binding peak separation distance=&quot;,binding.characteristics$peak$x));
+pdf(file=&quot;oct4.crosscorrelation.pdf&quot;,width=5,height=5);
+par(mar = c(3.5,3.5,1.0,0.5), mgp = c(2,0.65,0), cex = 0.8);
+plot(binding.characteristics$cross.correlation,type=&#39;l&#39;,xlab=&quot;strand shift&quot;,ylab=&quot;cross-correlation&quot;);
+abline(v=binding.characteristics$peak$x,lty=2,col=2);
+dev.off();
+</pre></div>
+
+
+<p>A set of tags informative about the binding positions should increase
+cross correlation magnitude whereas a randonmly mapped set of tags
+should decrease it. The following calls will select tags with acceptable
+alignment quality based on the binding characteristics:</p>
+<div class="codehilite"><pre><span></span>chip.data &amp;lt;- select.informative.tags(oct4.data,binding.characteristics);
+gfpcontrol.data &amp;lt;- select.informative.tags(gfp.data,binding.characteristics);
+</pre></div>
+
+
+<p>The last step below will scan along the chromosomes calculating local
+density of region (can be specified using window.size parameter, default
+is 200bp), removing or restricting singular positions with extremely
+high tag count relative to the neighborhood:</p>
+<div class="codehilite"><pre><span></span>chip.data &amp;lt;- remove.local.tag.anomalies(chip.data);
+gfpcontrol.data &amp;lt;- remove.local.tag.anomalies(gfpcontrol.data);
+</pre></div>
+
+
+<h3 id="step2-calculating-genome-wide-tag-density-and-tag-enrichmentdepletion-profiles">STEP2 Calculating genome-wide tag density and tag enrichment/depletion profiles</h3>
+<p>The following commands will calculate smoothed tag density and output it
+into a WIG file that can be read with genome browsers, such as IGV
+(Note: the tags are shifted by half of the peak separation distance):</p>
+<div class="codehilite"><pre><span></span>tag.shift &amp;lt;- round(binding.characteristics$peak$x/2)
+smoothed.density &amp;lt;- get.smoothed.tag.density
+(chip.data,control.tags=gfpcontrol.data,bandwidth=200,step=100,tag.shift=tag.shift);
+writewig(smoothed.density,&quot;oct4.density.wig&quot;,&quot;Smoothed, background-subtracted tag density&quot;);
+rm(smoothed.density);
+</pre></div>
+
+
+<p>To provide a rough estimate of the enrichment profile (i.e. ChIP signal
+over input), we can use the get.smoothed.enrichment.mle() method:</p>
+<div class="codehilite"><pre><span></span>smoothed.enrichment.estimate &amp;lt;- get.smoothed.enrichment.mle
+(chip.data,gfpcontrol.data,bandwidth=200,step=100,tag.shift=tag.shift);
+writewig(smoothed.enrichment.estimate,&quot;oct4.enrichment.wig&quot;,&quot;Smoothed maximum likelihood log2 enrichment estimate&quot;);
+</pre></div>
+
+
+<p>Next, we will scan ChIP and signal tag density to estimate lower bounds
+of tag enrichment (and upper bound of tag depletion if it is
+significant) along the genome. The resulting profile gives conservative
+statistical estimates of log2 fold-enrichment ratios along the genome.
+The example below uses a window of 500bp (and background windows of 1,
+5, 25 and 50 times that size) and a confidence interval corresponding to
+1%.</p>
+<div class="codehilite"><pre><span></span>enrichment.estimates &amp;lt;- get.conservative.fold.enrichment.profile(chip.data,gfpcontrol.data,fws=500,step=100,alpha=0.01);
+writewig(enrichment.estimates,&quot;oct4.Enrichment.estimates.wig&quot;,&quot;Conservative fold-enrichment/depletion estimates shown on log2 scale&quot;);
+rm(enrichment.estimates);
+</pre></div>
+
+
+<p>Also, broad regions of enrichment for a specified scale can be quickly
+identified and output in broadPeak format using the following commands:</p>
+<div class="codehilite"><pre><span></span>broad.clusters &amp;lt;- get.broad.enrichment.clusters(chip.data,gfpcontrol.data,window.size=1e3,z.thr=3,tag.shift=round(binding.characteristics$peak$x/2));
+write.broadpeak.info(broad.clusters,&quot;oct4.broadPeak&quot;);
+</pre></div>
+
+
+<p>write out in bed format</p>
+<div class="codehilite"><pre><span></span>write.table(cbind(rep(&quot;1&quot;, length(broad.clusters$chr1$s)), broad.clusters$chr1$s, broad.clusters$chr1$e), file = paste0(&quot;oct4&quot;,&quot;_enrich_broad_chr1.bed&quot;),quote = FALSE, row.names = FALSE, col.names = FALSE, sep = &quot;\t&quot;);
+</pre></div>
+
+
+<p>The tasks below will use window tag density (WTD) method to call binding
+positions, using FDR of 1% and a window size estimated by the
+binding.characteristics.</p>
+<p>We set the binding detection parameters: FDR (1%) (Note: we can use an
+E-value to the method calls below instead of the fdr), the
+binding.characteristics contains the optimized half-size for binding
+detection window:</p>
+<div class="codehilite"><pre><span></span>fdr &amp;lt;- 1e-2; 
+detection.window.halfsize &amp;lt;- binding.characteristics$whs;
+</pre></div>
+
+
+<p>Identify binding positions using WTD method and write narrow peaks in
+BED format:</p>
+<div class="codehilite"><pre><span></span>bp &amp;lt;- find.binding.positions(signal.data=chip.data,control.data=gfpcontrol.data,fdr=fdr,whs=detection.window.halfsize);
+print(paste(&quot;detected&quot;,sum(unlist(lapply(bp$npl,function(d) length(d$x)))),&quot;peaks&quot;));
+bp.short &amp;lt;- add.broad.peak.regions(chip.data,gfpcontrol.data,bp,window.size=500,z.thr=3); //set the window size to 500. 
+write.table(na.omit(data.frame(cbind(rep(&quot;1&quot;, length(bp.short$npl$chr1$rs)), bp.short$npl$chr1$rs, bp.short$npl$chr1$re))), file = paste0(&quot;oct4&quot;,&quot;_enrich_narrow_chr1.bed&quot;),quote = FALSE, row.names = FALSE, col.names = FALSE, sep = &quot;\t&quot;);
+</pre></div>
+
+
+<h3 id="step3-comparing-binding-sites-to-annotations-using-the-biomart-package">STEP3 Comparing Binding Sites to Annotations Using the biomaRt package</h3>
+<p>In order to biologically interpret the results of ChIP-seq experiments,
+it is usually recommended to look at the genes and other annotated
+elements that are located in proximity to the identified enriched
+regions. This can be easily done using the R biomaRt package, which
+serves as an interface to perform comprehensive data analysis from gene
+annotation to data mining through wealth number of biological databases
+integrated by the BioMart software suite (<a href="http://www.biomart.org">http://www.biomart.org</a>). It
+provides fast access to large amount of data without touching the
+underlying database or using complex database queries. These major
+databases including Ensembl, COSMIC, HGNC, Gramene, Wormbase and dbSNP
+mapped to Emsembl.</p>
+<p>you should make sure that ensembl has the same version of reference as
+you used in bowtie aligner.</p>
+<p>We will download the ENSEMBLE mouse genome annotations and generate a
+list of ENSEMBLE gene information on chromosome 1 including start
+position, end position, strand and description</p>
+<div class="codehilite"><pre><span></span>ensembl = useMart(host=&quot;asia.ensembl.org&quot;, &quot;ENSEMBL_MART_ENSEMBL&quot;, dataset = &quot;mmusculus_gene_ensembl&quot;);
+genes.chr1 = getBM(attributes = c(&quot;chromosome_name&quot;, &quot;start_position&quot;, &quot;end_position&quot;, &quot;strand&quot;, &quot;description&quot;), filters = &quot;chromosome_name&quot;, values= &quot;1&quot;, mart = ensembl);
+</pre></div>
+
+
+<p>Next, we’re going to take our binding sites from the bp list and use it
+to determine the set of genes that contain significantly enriched Pol II
+within 2kb of their TSS.</p>
+<p>In order to compare PolII sites to TSS sites, we need to write an
+overlap function where bs represents a binding site position, ts is the
+annotated TSS and l is the allowed distance of the binding site from the
+TSS.</p>
+<div class="codehilite"><pre><span></span>overlap = function(bs, ts, l) 
+{
+    if ((bs &amp;gt; ts - l) &amp;amp;&amp;amp; (bs &amp;lt; ts + l)) {
+        TRUE;
+    } else {
+        FALSE;
+    }
+}
+</pre></div>
+
+
+<p>Now we’ll write a function that takes a vector of binding site values,
+start positions, end positions and strands of the genes on chromosome X
+as well as our distance cutoff. l and outputs a logical vector of the
+genes that contain a Pol II site within l bp (i.e., TRUE value) or do
+not contain a Pol II site (i.e., FALSE value).</p>
+<div class="codehilite"><pre><span></span>fivePrimeGenes = function(bs, ts, te, s, l) {
+    fivePrimeVec = logical();
+    for (i in 1:length(ts)) {
+            fivePrime = FALSE;
+            for (j in 1:length(bs)) {
+                if (s[i] == 1) {
+                    fivePrime = fivePrime || overlap(bs[j], ts[i], l);
+                } else {
+                    fivePrime = fivePrime || overlap(bs[j], te[i], l);
+                }
+             }
+            fivePrimeVec = c(fivePrimeVec, fivePrime);
+    }
+     fivePrimeVec;
+}
+</pre></div>
+
+
+<p>Using the fivePrimeGenes function, generate a vector of the TSSs and
+genes that contain Pol II within .2kb of their TSS (i.e., l = 2000).</p>
+<div class="codehilite"><pre><span></span>fivePrimeGenesLogical = fivePrimeGenes(bp$npl$chr1$x, genes.chr1$start_position, genes.chr1$end_position, genes.chr1$strand, 2000);
+</pre></div>
+
+
+<p>Find the gene located on the plus strand</p>
+<div class="codehilite"><pre><span></span>fivePrimeStartsPlus = genes.chr1$start_position[fivePrimeGenesLogical &amp;amp; genes.chr1$strand == 1];
+</pre></div>
+
+
+<p>Find the gene located on the minus strand</p>
+<div class="codehilite"><pre><span></span>fivePrimeStartsMinus = genes.chr1$end_position[fivePrimeGenesLogical &amp;amp; genes.chr1$strand == -1];
+</pre></div>
+
+
+<p>Combine the start positions together</p>
+<div class="codehilite"><pre><span></span>fivePrimeStarts = sort(c(fivePrimeStartsPlus, fivePrimeStartsMinus))
+</pre></div>
+
+
+<p>Get all the gene names</p>
+<div class="codehilite"><pre><span></span>fivePrimeGenes = genes.chr1$description[fivePrimeGenesLogical]
+</pre></div>
+
+
+<h2 id="viewing-results-with-the-genome-browser">Viewing results with the Genome browser</h2>
+<p>It is often instructive to look at your data in a genome browser, which
+will allow you to get a ‘feel’ for the data, as well as detecting
+abnormalities and problems. Also, exploring the data in such a way may
+give you ideas for further analyses. Well known web-based genome
+browsers, like Ensembl or the UCSC browser do not only allow for more
+polished and flexible visualization, but also provide access to a wealth
+of annotations and external data sources. This makes it straightforward
+to relate your data with information about repeat regions, known genes,
+epigenetic features or areas of cross-species conservation, to name just
+a few. As such, they are useful tools for exploratory analysis, even
+though could be relatively slow. In this section, we will guide you
+though using IGV, a stand-alone browser, which has the advantage of
+being installed locally, easy to use and fast access to visualize your
+in-house data. We alo provide the workflow of how to use Ensembl for
+visualization. You can practise after the workshop.</p>
+<p><strong>IGV Visualization</strong></p>
+<p>Double click the IGV 2.3 icon on your Desktop. Ignore any warnings and
+when it opens you have to load the genome of interest. On the top left
+of your screen choose from the drop down menu Mouse (mm10). If it
+doesn’t appear in list, click More .., type mm10 in the Filter section,
+choose the mouse genome and press OK.</p>
+<p>We have generated bigWig files in advance for you. Instead of choosing
+the ’Load from File’ option, we are going to use ’Load from URL’ to
+upload to IGV. The first file is at the following URL:
+<a href="http://www.ebi.ac.uk/~remco/ChIP-Seq_course/Oct4.bw">http://www.ebi.ac.uk/~remco/ChIP-Seq_course/Oct4.bw</a></p>
+<p>To visualise the data:</p>
+<ul>
+<li>
+<p>Select chr1 in the chromosome drop-down box next to the ’Mouse mm10’
+    box.</p>
+</li>
+<li>
+<p>Click <strong>File</strong> then choose <strong>Load from URL&hellip;</strong></p>
+</li>
+<li>
+<p>Paste the location above in the field <strong>File URL</strong>.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong> and close the window to return to the genome browser.</p>
+</li>
+<li>
+<p>You should see Oct4.bw has been loaded in the track region below the
+    genome region.</p>
+</li>
+<li>
+<p>Move the mouse to track region over Oct4.bw.</p>
+</li>
+<li>
+<p>Right click the mouse, Change the track colour on your own
+    perference.</p>
+</li>
+<li>
+<p>Right click again, in the <strong>Windowing Function</strong>, choose <strong>Maxmum</strong>
+    and set to <strong>Autoscale</strong>.</p>
+</li>
+</ul>
+<p>Repeat the process for the gfp control sample, located at:</p>
+<p><a href="http://www.ebi.ac.uk/~remco/ChIP-Seq_course/gfp.bw">http://www.ebi.ac.uk/~remco/ChIP-Seq_course/gfp.bw</a>.</p>
+<p>Go to a region on chromosome 1 (e.g. <code class="codehilite"><span class="mi">1</span><span class="o">:</span><span class="mi">34823162</span><span class="o">-</span><span class="mi">35323161</span></code>), and zoom in
+and out to view the signal and peak regions. Be aware that the y-axis of
+each track is auto-scaled independently of each other, so bigger-looking
+peaks may not actually be bigger! Always look at the values on the left
+hand side axis.</p>
+<p>What can you say about the profile of Oct4 peaks in this region?</p>
+<p>There are no significant Oct4 peaks over the selected region.</p>
+<p>Compare it with H3K4me3 histone modification wig file we have generated
+at <a href="http://www.ebi.ac.uk/~remco/ChIP-Seq_course/H3K4me3.bw">http://www.ebi.ac.uk/~remco/ChIP-Seq_course/H3K4me3.bw</a>.</p>
+<p>H3K4me3 has a region that contains relatively high peaks than Oct4.</p>
+<p>Jump to <code class="codehilite"><span class="mi">1</span><span class="o">:</span><span class="mi">36066594</span><span class="o">-</span><span class="mi">36079728</span></code> for a sample peak. Do you think H3K4me3
+peaks regions contain one or more modification sites? What about Oct4?</p>
+<p>Yes. There are roughly three peaks, which indicate the possibility of
+having more than one modification sites in this region.</p>
+<p>For Oct4, no peak can be observed.</p>
+<h3 id="advanced-session">Advanced Session</h3>
+<p><strong>Ensembl Visualization</strong></p>
+<p>Launch a web browser and go to the Ensembl website at
+<a href="http://www.ensembl.org/index.html">http://www.ensembl.org/index.html</a>. Choose the genome of interest (in
+this case, mouse) on the left side of the page, browse to any location
+in the genome or click one of the demo links provided on the web page.
+Click on the <strong>Add your data</strong> link on the left, then choose <strong>Attach
+remote file</strong>.</p>
+<p>Wig files are large so are inconvenient for uploading directly to the
+Ensemble Genome browser. Instead, we will convert it to an indexed
+binary format and put this into a web accessible place such as on a
+HTTP, HTTPS, or FTP server. This makes all the browsing process much
+faster. Detailed instructions for generating a bigWig from a wig type
+file can be found at:</p>
+<p><a href="http://genome.ucsc.edu/goldenPath/help/bigWig.html">http://genome.ucsc.edu/goldenPath/help/bigWig.html</a>.</p>
+<p>We have generated bigWig files in advance for you to upload to the
+Ensembl browser. They are at the following URL:
+<a href="http://www.ebi.ac.uk/~remco/ChIP-Seq_course/Oct4.bw">http://www.ebi.ac.uk/~remco/ChIP-Seq_course/Oct4.bw</a></p>
+<p>To visualise the data:</p>
+<ul>
+<li>
+<p>Paste the location above in the field File URL.</p>
+</li>
+<li>
+<p>Choose data format bigWig.</p>
+</li>
+<li>
+<p>Choose some informative name and in the next window choose the
+    colour of your preference.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong> and close the window to return to the genome browser.</p>
+</li>
+</ul>
+<p>Repeat the process for the gfp control sample, located at:</p>
+<p><a href="http://www.ebi.ac.uk/~remco/ChIP-Seq_course/gfp.bw">http://www.ebi.ac.uk/~remco/ChIP-Seq_course/gfp.bw</a>.</p>
+<p>If can not see your tracks: Click on ’Configure this page’ in left
+panel. In ’Configure region Overview’ tab click on ’Ypur data’ in left
+panel. Check the boxes in ’Enable/Disable all tracks’ for you *.bw
+files by selecting ’wiggle plot in the pop up menu.</p>
+<p>After uploading, choose <strong>Configure this page</strong>, and under <strong>Your data</strong>
+tick both boxes. Closing the window will save these changes.</p>
+<p>Go to a region on chromosome 1 (e.g. <code class="codehilite"><span class="mi">1</span><span class="o">:</span><span class="mi">34823162</span><span class="o">-</span><span class="mi">35323161</span></code>), and zoom in
+and out to view the signal and peak regions. Be aware that the y-axis of
+each track is auto-scaled independently of each other, so bigger-looking
+peaks may not actually be bigger! Always look at the values on the left
+hand side axis.</p>
+<p>MACS generates its peak files in a file format called bed file. This is
+a simple text format containing genomic locations, specified by
+chromosome, begin and end positions, and some more optional information.</p>
+<p>See <a href="http://genome.ucsc.edu/FAQ/FAQformat.html#format1">http://genome.ucsc.edu/FAQ/FAQformat.html#format1</a> for details.</p>
+<p>Bed files can also be uploaded to the Ensembl browser.</p>
+<h2 id="motif-analysis">Motif analysis</h2>
+<p>It is often interesting to find out whether we can identify
+transcription factor binding sites (TFBSs) from the input DNA sequences.
+TFBSs which share a similar sequence pattern (motif) are presumed to
+have biological functions. Here we introduce three motif discovery tools
+named Trawler, RSAT peak-motifs, and MEME-ChIP, which use different
+searching algorithms. This might lead to varying results. Hence, it is
+generally a good idea to use several tools to identify TFBSs. The more
+tools confirm the same result, the better, which is also called an
+orthogonal approach. Eventually, you probably want to validate your in
+silico findings in vivo or in vitro.</p>
+<h3 id="motif-discovery-with-trawler">Motif discovery with Trawler</h3>
+<p>Trawler is a fast, yet accurate motif discovery tool that accepts both,
+BED and FASTA files as input file formats. BED files are generated when
+you process and analyse your NGS data. Thus, it is handy to use them
+directly in Trawler. Other tools do not accept BED files as input. With
+Trawler, BED files can be converted into FASTA files that can then be
+used for other motif discovery tools (e.g. RSAT peak-motifs and MEME
+ChIP).</p>
+<p>Running Trawler</p>
+<ul>
+<li>
+<p>Go to the website <a href="https://trawler.erc.monash.edu.au">https://trawler.erc.monash.edu.au</a></p>
+</li>
+<li>
+<p>Run Trawler with BED file as input, and wait for the results
+    <img alt="image" src="../Trawler1.PNG" /> <img alt="image" src="../Trawler2.PNG" /></p>
+</li>
+<li>
+<p>Download both sample and background files in FASTA format. Right
+    click and choose: ’Save the link as&hellip;’ <img alt="image" src="../Trawler3.PNG" /></p>
+</li>
+</ul>
+<p>Which motif was found to be the most similar to your motif?</p>
+<p>Sox2</p>
+<h3 id="optional-motif-discovery-with-rsat-peak-motif">Optional: Motif discovery with RSAT peak-motif</h3>
+<p>The motif discovery tool RSAT peak-motifs uses FASTA files as input. An
+optional background can be uploaded in FASTA format. RSAT peak-motifs
+automatically outputs motifs of 6 and 7 nucleotides length (two separate
+files). While still accurate, the running time is longer compared to
+Trawler (up to 20 minutes depending on the size of the files).</p>
+<p>Running RSAT peak-motifs</p>
+<ul>
+<li>
+<p>Go to the website
+    <a href="http://floresta.eead.csic.es/rsat/peak-motifs~f~orm.cgi">http://floresta.eead.csic.es/rsat/peak-motifs~f~orm.cgi</a></p>
+</li>
+<li>
+<p>Upload input and background FASTA files just downloaded from Trawler
+    <img alt="image" src="../RSAT1.PNG" /></p>
+</li>
+<li>
+<p>Wait until the discovery finishes.</p>
+</li>
+</ul>
+<h3 id="optional-motif-discovery-with-meme-chip">Optional: Motif discovery with MEME-ChIP</h3>
+<p>MEME-ChIP is a popular motif discovery tool and part of MEME Suite.
+MEME-ChIP accepts input files in FASTA format. It is not necessary to
+upload your own background because MEME-ChIP uses its own. Although
+MEME-ChIP is one of the most popular motif discovery tools, the
+identified motifs are not very accurate and the motif search might take
+up to one hour. MEME-ChIP outputs the three motifs with the lowest
+E-Value.</p>
+<p>Running MEME-ChIP</p>
+<ul>
+<li>
+<p>Go to the website <a href="http://meme-suite.org/tools/meme-chip">http://meme-suite.org/tools/meme-chip</a></p>
+</li>
+<li>
+<p>Upload input and background FASTA files just downloaded from Trawler
+    <img alt="image" src="../MEME1.PNG" /></p>
+</li>
+<li>
+<p>Wait until the discovery finishes.</p>
+</li>
+</ul>
+<h2 id="reference">Reference</h2>
+<p>Chen, X et al.: Integration of external signaling pathways with the core
+transcriptional network in embryonic stem cells. Cell 133:6, 1106-17
+(2008).</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; The authors; 2017-
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../../../js/details.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

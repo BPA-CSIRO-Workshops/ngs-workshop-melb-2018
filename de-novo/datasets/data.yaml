@@ -1,0 +1,62 @@
+btp::modules:
+  denovo:
+    dirs:
+      - 'denovo'
+      - 'denovo/data'
+    data:
+      velvet_1.2.10.tgz: 
+        source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataDeNovo'
+        targets: 
+          - 'denovo/data/velvet_1.2.10.tgz'
+      SRR022825.fastq.gz: 
+        source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataDeNovo'
+        targets: 
+          - 'denovo/data/SRR022825.fastq.gz'
+      SRR022823.fastq.gz: 
+        source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataDeNovo'
+        targets: 
+          - 'denovo/data/SRR022823.fastq.gz'
+      s_aureus_mrsa252.EB1_s_aureus_mrsa252.dna.chromosome.Chromosome.fa.gz: 
+        source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataDeNovo'
+        targets: 
+          - 'denovo/data/s_aureus_mrsa252.fa.gz'
+      SRR022852_1.fastq.gz: 
+        source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataDeNovo'
+        targets: 
+          - 'denovo/data/SRR022852_1.fastq.gz'
+      SRR022852_2.fastq.gz: 
+        source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataDeNovo'
+        targets: 
+          - 'denovo/data/SRR022852_2.fastq.gz'
+      SRR023408_1.fastq.gz: 
+        source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataDeNovo'
+        targets: 
+          - 'denovo/data/SRR023408_1.fastq.gz'
+      SRR023408_2.fastq.gz: 
+        source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataDeNovo'
+        targets: 
+          - 'denovo/data/SRR023408_2.fastq.gz'
+      SRR000892.fastq.gz: 
+        source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataDeNovo'
+        targets: 
+          - 'denovo/data/SRR000892.fastq.gz'
+      SRR000893.fastq.gz: 
+        source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataDeNovo'
+        targets: 
+          - 'denovo/data/SRR000893.fastq.gz'
+      SRR022863_1.fastq.gz: 
+        source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataDeNovo'
+        targets: 
+          - 'denovo/data/SRR022863_1.fastq.gz'
+      SRR022863_2.fastq.gz: 
+        source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataDeNovo'
+        targets: 
+          - 'denovo/data/SRR022863_2.fastq.gz'
+      SRR023408_trim1.fastq: 
+        source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataDeNovo'
+        targets: 
+          - 'denovo/data/SRR023408_trim1.fastq'
+      SRR023408_trim2.fastq: 
+        source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataDeNovo'
+        targets: 
+          - 'denovo/data/SRR023408_trim2.fastq'

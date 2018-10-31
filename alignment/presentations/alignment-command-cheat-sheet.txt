@@ -1,0 +1,31 @@
+
+
+#Alignment Oct4
+bowtie2 -x bowtie_index/mm10 -S Oct4.fastq > Oct4.sam
+
+samtools view -bSo Oct4.bam Oct4.sam
+
+samtools sort Oct4.bam Oct4.sorted
+
+samtools index Oct4.sorted.bam
+
+genomeCoverageBed -bg -ibam Oct4.sorted.bam -g \
+bowtie_index/mouse.mm10.genome > Oct4.bedgraph
+
+bedGraphToBigWig Oct4.bedgraph bowtie_index/mouse.mm10.genome Oct4.bw
+
+#Alignment gfp
+bowtie2 -x bowtie_index/mm10 gfp.fastq > gfp.sam
+samtools view -bSo gfp.bam gfp.sam
+
+samtools sort gfp.bam gfp.sorted
+
+samtools index gfp.sorted.bam
+
+genomeCoverageBed -bg -ibam gfp.sorted.bam -g \
+bowtie_index/mouse.mm10.genome > gfp.bedgraph
+
+bedGraphToBigWig gfp.bedgraph bowtie_index/mouse.mm10.genome gfp.bw
+
+
+

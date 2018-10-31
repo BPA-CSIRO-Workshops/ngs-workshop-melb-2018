@@ -1,0 +1,34 @@
+btp::modules:
+ cli:
+   dirs:
+     - 'cli'
+     - 'cli/molecules'
+   data:
+     1000gp.vcf: 
+       source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataCommandLine'
+       targets: 
+         - 'cli/1000gp.vcf'
+     cubane.pdb: 
+       source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataCommandLine'
+       targets: 
+         - 'cli/molecules/cubane.pdb'
+     ethane.pdb: 
+       source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataCommandLine'
+       targets: 
+         - 'cli/molecules/ethane.pdb'
+     methane.pdb: 
+       source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataCommandLine'
+       targets: 
+         - 'cli/molecules/methane.pdb'
+     octane.pdb: 
+       source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataCommandLine'
+       targets: 
+         - 'cli/molecules/octane.pdb'
+     pentane.pdb: 
+       source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataCommandLine'
+       targets: 
+         - 'cli/molecules/pentane.pdb'
+     propane.pdb: 
+       source: 'https://swift.rc.nectar.org.au:8888/v1/AUTH_809/NGSDataCommandLine'
+       targets: 
+         - 'cli/molecules/propane.pdb'

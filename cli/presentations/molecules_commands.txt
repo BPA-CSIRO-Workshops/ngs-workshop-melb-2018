@@ -1,0 +1,30 @@
+ls molecules
+
+cd molecules
+
+wc *.pdb
+
+wc -l *.pdb
+
+wc -l *.pdb > lengths.txt
+
+ls lengths.txt
+
+cat lengths.txt
+
+sort -n lengths.txt
+
+sort -n lengths.txt > sorted_lengths.txt
+
+head -1 sorted_lengths.txt
+
+sort -n lengths.txt | head -1
+
+wc -l *.pdb | sort -n | head -1
+
+
+grep "tane" lengths.txt
+
+grep -n "tane" lengths.txt
+
+grep -v "tane" lengths.txt

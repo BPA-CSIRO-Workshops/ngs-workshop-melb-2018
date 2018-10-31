@@ -1,0 +1,796 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="This contains all material for the Introduction to NGS workshop.">
+      
+      
+      
+        <meta name="author" content="Authors">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>De Novo - Introduction to NGS Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../css/details.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#key-learning-outcomes" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="Introduction to NGS Workshop" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Introduction to NGS Workshop
+              </span>
+              <span class="md-header-nav__topic">
+                De Novo
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="Introduction to NGS Workshop" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Introduction to NGS Workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../trainers/trainers/" title="The Trainers" class="md-nav__link">
+      The Trainers
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../preamble/preamble/" title="Workshop Information" class="md-nav__link">
+      Workshop Information
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Hands-on Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Hands-on Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cli/handout/handout/" title="Introduction to Command Line" class="md-nav__link">
+      Introduction to Command Line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../qc/handout/handout/" title="Quality Control" class="md-nav__link">
+      Quality Control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../alignment/handout/handout/" title="Read Alignment" class="md-nav__link">
+      Read Alignment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../rna-seq/handout/handout/" title="RNA-Seq" class="md-nav__link">
+      RNA-Seq
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../chip-seq/handout/handout/" title="ChIP-Seq" class="md-nav__link">
+      ChIP-Seq
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        De Novo
+      </label>
+    
+    <a href="./" title="De Novo" class="md-nav__link md-nav__link--active">
+      De Novo
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-learning-outcomes" title="Key Learning Outcomes" class="md-nav__link">
+    Key Learning Outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-youll-be-using" title="Resources You’ll be Using" class="md-nav__link">
+    Resources You’ll be Using
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools-used" title="Tools Used" class="md-nav__link">
+    Tools Used
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sources-of-data" title="Sources of Data" class="md-nav__link">
+    Sources of Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-the-environment" title="Prepare the Environment" class="md-nav__link">
+    Prepare the Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-and-compiling-velvet" title="Downloading and Compiling Velvet" class="md-nav__link">
+    Downloading and Compiling Velvet
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-learning-outcomes" title="Key Learning Outcomes" class="md-nav__link">
+    Key Learning Outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-youll-be-using" title="Resources You’ll be Using" class="md-nav__link">
+    Resources You’ll be Using
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools-used" title="Tools Used" class="md-nav__link">
+    Tools Used
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sources-of-data" title="Sources of Data" class="md-nav__link">
+    Sources of Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-the-environment" title="Prepare the Environment" class="md-nav__link">
+    Prepare the Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-and-compiling-velvet" title="Downloading and Compiling Velvet" class="md-nav__link">
+    Downloading and Compiling Velvet
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>De Novo</h1>
+                
+                <h2 id="key-learning-outcomes">Key Learning Outcomes</h2>
+<p>After completing this practical the trainee should be able to:</p>
+<ul>
+<li>
+<p>Compile velvet with appropriate compile-time parameters set for a
+    specific analysis</p>
+</li>
+<li>
+<p>Be able to choose appropriate assembly parameters</p>
+</li>
+<li>
+<p>Assemble a set of single-ended reads</p>
+</li>
+<li>
+<p>Assemble a set of paired-end reads from a single insert-size library</p>
+</li>
+<li>
+<p>Be able to visualise an assembly in AMOS Hawkeye</p>
+</li>
+<li>
+<p>Understand the importance of using paired-end libraries in <em>de novo</em>
+    genome assembly</p>
+</li>
+</ul>
+<h2 id="resources-youll-be-using">Resources You’ll be Using</h2>
+<p>Although we have provided you with an environment which contains all the
+tools and data you will be using in this module, you may like to know
+where we have sourced those tools and data from.</p>
+<h3 id="tools-used">Tools Used</h3>
+<p>Velvet
+:   \
+    <a href="http://www.ebi.ac.uk/~zerbino/velvet/">http://www.ebi.ac.uk/~zerbino/velvet/</a></p>
+<p>AMOS Hawkeye
+:   \
+    <a href="http://apps.sourceforge.net/mediawiki/amos/index.php?title=Hawkeye">http://apps.sourceforge.net/mediawiki/amos/index.php?title=Hawkeye</a></p>
+<p>gnx-tools
+:   \
+    <a href="https://github.com/mh11/gnx-tools">https://github.com/mh11/gnx-tools</a></p>
+<p>FastQC
+:   \
+    <a href="http://www.bioinformatics.bbsrc.ac.uk/projects/fastqc/">http://www.bioinformatics.bbsrc.ac.uk/projects/fastqc/</a></p>
+<p>R
+:   \
+    <a href="http://www.r-project.org/">http://www.r-project.org/</a></p>
+<h3 id="sources-of-data">Sources of Data</h3>
+<ul>
+<li>
+<p><a href="ftp://ftp.ensemblgenomes.org/pub/release-8/bacteria/fasta/Staphylococcus/s_aureus_mrsa252/dna/s_aureus_mrsa252.EB1_s_aureus_mrsa252.dna.chromosome.Chromosome.fa.gz">ftp://ftp.ensemblgenomes.org/pub/release-8/bacteria/fasta/Staphylococcus/s_aureus_mrsa252/dna/s_aureus_mrsa252.EB1_s_aureus_mrsa252.dna.chromosome.Chromosome.fa.gz</a></p>
+</li>
+<li>
+<p><a href="http://www.ebi.ac.uk/ena/data/view/SRS004748">http://www.ebi.ac.uk/ena/data/view/SRS004748</a></p>
+</li>
+<li>
+<p><a href="ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR022/SRR022825/SRR022825.fastq.gz">ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR022/SRR022825/SRR022825.fastq.gz</a></p>
+</li>
+<li>
+<p><a href="ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR022/SRR022823/SRR022823.fastq.gz">ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR022/SRR022823/SRR022823.fastq.gz</a></p>
+</li>
+<li>
+<p><a href="http://www.ebi.ac.uk/ena/data/view/SRX008042">http://www.ebi.ac.uk/ena/data/view/SRX008042</a></p>
+</li>
+<li>
+<p><a href="ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR022/SRR022852/SRR022852_1.fastq.gz">ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR022/SRR022852/SRR022852_1.fastq.gz</a></p>
+</li>
+<li>
+<p><a href="ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR022/SRR022852/SRR022852_2.fastq.gz">ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR022/SRR022852/SRR022852_2.fastq.gz</a></p>
+</li>
+<li>
+<p><a href="ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR023/SRR023408/SRR023408_1.fastq.gz">ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR023/SRR023408/SRR023408_1.fastq.gz</a></p>
+</li>
+<li>
+<p><a href="ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR023/SRR023408/SRR023408_2.fastq.gz">ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR023/SRR023408/SRR023408_2.fastq.gz</a></p>
+</li>
+<li>
+<p><a href="http://www.ebi.ac.uk/ena/data/view/SRX000181">http://www.ebi.ac.uk/ena/data/view/SRX000181</a></p>
+</li>
+<li>
+<p><a href="ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR000/SRR000892/SRR000892.fastq.gz">ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR000/SRR000892/SRR000892.fastq.gz</a></p>
+</li>
+<li>
+<p><a href="ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR000/SRR000893/SRR000893.fastq.gz">ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR000/SRR000893/SRR000893.fastq.gz</a></p>
+</li>
+<li>
+<p><a href="http://www.ebi.ac.uk/ena/data/view/SRX007709">http://www.ebi.ac.uk/ena/data/view/SRX007709</a></p>
+</li>
+<li>
+<p><a href="ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR022/SRR022863/SRR022863_1.fastq.gz">ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR022/SRR022863/SRR022863_1.fastq.gz</a></p>
+</li>
+<li>
+<p><a href="ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR022/SRR022863/SRR022863_2.fastq.gz">ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR022/SRR022863/SRR022863_2.fastq.gz</a></p>
+</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>The aim of this module is to become familiar with performing <em>de novo</em>
+genome assembly using Velvet, a de Bruijn graph based assembler, on a
+variety of sequence data.</p>
+<h2 id="prepare-the-environment">Prepare the Environment</h2>
+<p>The first exercise should get you a little more comfortable with the
+computer environment and the command line.</p>
+<p>First make sure that you are in the denovo working directory by typing:</p>
+<div class="codehilite"><pre><span></span>cd /home/trainee/denovo
+</pre></div>
+
+
+<p>and making absolutely sure you’re there by typing:</p>
+<div class="codehilite"><pre><span></span>pwd
+</pre></div>
+
+
+<p>Now create sub-directories for this and the two other velvet practicals.
+All these directories will be made as sub-directories of a directory for
+the whole course called NGS. For this you can use the following
+commands:</p>
+<div class="codehilite"><pre><span></span>mkdir -p NGS/velvet/{part1,part2,part3}
+</pre></div>
+
+
+<p>The <code class="codehilite">-p</code> tells <code class="codehilite">mkdir</code> (make directory) to make any parent directories
+if they don’t already exist. You could have created the above
+directories one-at-a-time by doing this instead:</p>
+<div class="codehilite"><pre><span></span>mkdir NGS
+mkdir NGS/velvet
+mkdir NGS/velvet/part1
+mkdir NGS/velvet/part2
+mkdir NGS/velvet/part3
+</pre></div>
+
+
+<p>After creating the directories, examine the structure and move into the
+directory ready for the first velvet exercise by typing:</p>
+<div class="codehilite"><pre><span></span>ls -R NGS
+cd NGS/velvet/part1
+pwd
+</pre></div>
+
+
+<h2 id="downloading-and-compiling-velvet">Downloading and Compiling Velvet</h2>
+<p>For the duration of this workshop, all the software you require has been
+set up for you already. This might not be the case when you return to
+“real life”. Many of the programs you will need, including velvet, are
+quite easy to set up, it might be instructive to try a couple.</p>
+<p>Although you will be using the preinstalled version of velvet, it is
+useful to know how to compile velvet as some of the parameters you might
+like to control can only be set at compile time. You can find the latest
+version of velvet at:</p>
+<p><a href="http://www.ebi.ac.uk/~zerbino/velvet/">http://www.ebi.ac.uk/~zerbino/velvet/</a></p>
+<p>You could go to this URL and download the latest velvet version, or
+equivalently, you could type the following, which will download, unpack,
+inspect, compile and execute your locally compiled version of velvet:</p>
+<div class="codehilite"><pre><span></span>cd /home/trainee/denovo/NGS/velvet/part1
+pwd
+tar xzf /home/trainee/denovo/data/velvet_1.2.10.tgz
+ls -R
+cd velvet_1.2.10
+make
+./velveth
+</pre></div>
+
+
+<p>The standout displayed to screen when ’make’ runs may contain an error
+message but it is ignored</p>
+<p>Take a look at the executables you have created. They will be displayed
+as green by the command:</p>
+<div class="codehilite"><pre><span></span>ls --color=always
+</pre></div>
+
+
+<p>The switch <code class="codehilite">–color</code>, instructs that files be coloured according to their
+type. This is often the default but we are just being explicit. By
+specifying the value <code class="codehilite">always</code>, we ensure that colouring is always
+applied, even from a script.</p>
+<p>Have a look of the output the command produces and you will see that
+<code class="codehilite">MAXKMERLENGTH=31</code> and <code class="codehilite">CATEGORIES=2</code> parameters were passed into the
+compiler.</p>
+<p>This indicates that the default compilation was set for de Bruijn graph
+k-mers of maximum size 31 and to allow a maximum of just 2 read
+categories. You can override these, and other, default configuration
+choices using command line parameters. Assume, you want to run velvet
+with a k-mer length of 41 using 3 categories, velvet needs to be
+recompiled to enable this functionality by typing:</p>
+<div class="codehilite"><pre><span></span>make clean
+make MAXKMERLENGTH=41 CATEGORIES=3
+./velveth
+</pre></div>
+
+
+<p>Discuss with the persons next to you the following questions:\
+What are the consequences of the parameters you have given make for
+velvet?</p>
+<p>MAXKMERLENGTH: increase the max k-mer length from 31 to 41</p>
+<p>CATEGORIES: paired-end data require to be put into separate categories.
+By increasing this parameter from 2 to 3 allows you to process 3 paired
+/ mate-pair libraries and unpaired data.</p>
+<p>Why does Velvet use k-mer 31 and 2 categories as default?</p>
+<p>Possibly a number of reason:\
+- odd number to avoid palindromes\
+- The first reads were very short (20-40 bp) and there were hardly any
+paired-end data\
+around so there was no need to allow for longer k-mer lengths / more
+categories.\
+- For programmers: 31 bp get stored in 64 bits (using 2bit encoding)</p>
+<p>Should you get better results by using a longer k-mer length?</p>
+<p>If you can achieve a good k-mer coverage - yes.</p>
+<p>What effect would the following compile-time parameters have on velvet:\
+<code class="codehilite">OPENMP=Y</code></p>
+<p>Turn on multithreading</p>
+<p><code class="codehilite">LONGSEQUENCES=Y</code></p>
+<p>Assembling reads / contigs longer than 32kb long</p>
+<p><code class="codehilite">BIGASSEMBLY=Y</code></p>
+<p>Using more than 2.2 billion reads</p>
+<p><code class="codehilite">VBIGASSEMBLY=Y</code></p>
+<p>Not documented yet</p>
+<p><code class="codehilite">SINGLE_COV_CAT=Y</code></p>
+<p>Merge all coverage statistics into a single variable - save memory</p>
+<p>For a further description of velvet compile and runtime parameters
+please see the velvet Manual:
+<a href="https://github.com/dzerbino/velvet/wiki/Manual">https://github.com/dzerbino/velvet/wiki/Manual</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../../chip-seq/handout/handout/" title="ChIP-Seq" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                ChIP-Seq
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../../license/" title="License" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                License
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; The authors; 2017-
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../../../js/details.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
