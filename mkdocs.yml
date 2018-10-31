@@ -57,7 +57,6 @@ nav:
     - Quality Control: qc/handout/handout.md
     - Read Alignment: alignment/handout/handout.md
     - RNA-Seq: rna-seq/handout/handout.md
-    - ChIP-Seq: chip-seq/handout/handout.md
     - De Novo: de-novo/handout/handout.md
 
 - License: license.md
