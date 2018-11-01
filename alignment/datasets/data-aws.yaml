@@ -2,50 +2,50 @@ btp::modules:
   chipseq:
     dirs:
       - 'chipseq'
-      - 'chipseq/bowtie_index'
-      - 'chipseq/data'
+      - 'alignment/bowtie_index'
+      - 'alignment/data'
     data:
       gfp.fastq: 
         source: 'https://s3-ap-southeast-2.amazonaws.com/ngs-data-chipseq'
         targets: 
-          - 'chipseq/gfp.fastq'
+          - 'alignment/gfp.fastq'
       Oct4.fastq: 
         source: 'https://s3-ap-southeast-2.amazonaws.com/ngs-data-chipseq'
         targets: 
-          - 'chipseq/Oct4.fastq'
+          - 'alignment/Oct4.fastq'
       mm10.fa: 
         source: 'https://s3-ap-southeast-2.amazonaws.com/ngs-data-chipseq'
         targets: 
-          - 'chipseq/bowtie_index/mm10.fa'
+          - 'alignment/bowtie_index/mm10.fa'
       mouse.mm10.genome: 
         source: 'https://s3-ap-southeast-2.amazonaws.com/ngs-data-chipseq'
         targets: 
-          - 'chipseq/bowtie_index/mouse.mm10.genome'
+          - 'alignment/bowtie_index/mouse.mm10.genome'
       mm10.1.bt2: 
         source: 'https://s3-ap-southeast-2.amazonaws.com/ngs-data-chipseq'
         targets: 
-          - 'chipseq/bowtie_index/mm10.1.bt2'
+          - 'alignment/bowtie_index/mm10.1.bt2'
       mm10.2.bt2: 
         source: 'https://s3-ap-southeast-2.amazonaws.com/ngs-data-chipseq'
         targets: 
-          - 'chipseq/bowtie_index/mm10.2.bt2'
+          - 'alignment/bowtie_index/mm10.2.bt2'
       mm10.3.bt2: 
         source: 'https://s3-ap-southeast-2.amazonaws.com/ngs-data-chipseq'
         targets: 
-          - 'chipseq/bowtie_index/mm10.3.bt2'
+          - 'alignment/bowtie_index/mm10.3.bt2'
       mm10.4.bt2: 
         source: 'https://s3-ap-southeast-2.amazonaws.com/ngs-data-chipseq'
         targets: 
-          - 'chipseq/bowtie_index/mm10.4.bt2'
+          - 'alignment/bowtie_index/mm10.4.bt2'
       mm10.rev.1.bt2: 
         source: 'https://s3-ap-southeast-2.amazonaws.com/ngs-data-chipseq'
         targets: 
-          - 'chipseq/bowtie_index/mm10.rev.1.bt2'
+          - 'alignment/bowtie_index/mm10.rev.1.bt2'
       mm10.rev.2.bt2: 
         source: 'https://s3-ap-southeast-2.amazonaws.com/ngs-data-chipseq'
         targets: 
-          - 'chipseq/bowtie_index/mm10.rev.2.bt2'
+          - 'alignment/bowtie_index/mm10.rev.2.bt2'
       gfp.bam: 
         source: 'https://s3-ap-southeast-2.amazonaws.com/ngs-data-chipseq'
         targets: 
-          - 'chipseq/data/gfp.bam'
+          - 'alignment/data/gfp.bam'

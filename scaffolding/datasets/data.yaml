@@ -1,0 +1,9 @@
+btp::modules:
+  scaffolding:
+    dirs:
+      - 'scaffolding'
+    data:
+      denovo_dataset.tar.bz2: 
+        source: 'https://s3-ap-southeast-2.amazonaws.com/denovo-data-scaffolding'
+        targets: 
+          - 'scaffolding/denovo_dataset.tar.bz2'

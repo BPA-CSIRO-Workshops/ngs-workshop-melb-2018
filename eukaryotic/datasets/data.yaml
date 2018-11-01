@@ -1,0 +1,29 @@
+btp::modules:
+  eukaryotic: 
+    dirs:
+      - 'eukaryotic'
+    data:
+      CS3270_A8733_GCCAAT_L001_R1.fastq: 
+        source: 'https://s3-ap-southeast-2.amazonaws.com/denovo-data-eukaryotic'
+        targets: 
+          - 'eukaryotic/CS3270_A8733_GCCAAT_L001_R1.fastq'
+      CS3270_A8733_GCCAAT_L001_R2.fastq: 
+        source: 'https://s3-ap-southeast-2.amazonaws.com/denovo-data-eukaryotic'
+        targets: 
+          - 'eukaryotic/CS3270_A8733_GCCAAT_L001_R2.fastq'
+      abyss_k71.tar.gz: 
+        source: 'https://s3-ap-southeast-2.amazonaws.com/denovo-data-eukaryotic'
+        targets: 
+          - 'eukaryotic/abyss_k71.tar.gz'
+      abyss_k27.tar.gz: 
+        source: 'https://s3-ap-southeast-2.amazonaws.com/denovo-data-eukaryotic'
+        targets: 
+          - 'eukaryotic/abyss_k27.tar.gz'
+      test_gene.fasta: 
+        source: 'https://s3-ap-southeast-2.amazonaws.com/denovo-data-eukaryotic'
+        targets: 
+          - 'eukaryotic/test_gene.fasta'
+      2014-JNP_lipopeptide.pdf: 
+        source: 'https://s3-ap-southeast-2.amazonaws.com/denovo-data-eukaryotic'
+        targets: 
+          - 'eukaryotic/2014-JNP_lipopeptide.pdf'

@@ -1,0 +1,914 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="This contains all material for the Introduction to NGS workshop.">
+      
+      
+      
+        <meta name="author" content="Authors">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>Eukaryote Genome Assembly - Introduction to NGS Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../css/details.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#key-learning-outcomes" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="Introduction to NGS Workshop" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Introduction to NGS Workshop
+              </span>
+              <span class="md-header-nav__topic">
+                Eukaryote Genome Assembly
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="Introduction to NGS Workshop" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Introduction to NGS Workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../trainers/trainers/" title="The Trainers" class="md-nav__link">
+      The Trainers
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../preamble/preamble/" title="Workshop Information" class="md-nav__link">
+      Workshop Information
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Hands-on Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Hands-on Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cli/handout/handout/" title="Introduction to Command Line" class="md-nav__link">
+      Introduction to Command Line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../qc/handout/handout/" title="Quality Control" class="md-nav__link">
+      Quality Control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../alignment/handout/handout/" title="Read Alignment" class="md-nav__link">
+      Read Alignment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../rna-seq/handout/handout/" title="RNA-Seq" class="md-nav__link">
+      RNA-Seq
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../de-novo/handout/handout/" title="De Novo" class="md-nav__link">
+      De Novo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Eukaryote Genome Assembly
+      </label>
+    
+    <a href="./" title="Eukaryote Genome Assembly" class="md-nav__link md-nav__link--active">
+      Eukaryote Genome Assembly
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-learning-outcomes" title="Key Learning Outcomes" class="md-nav__link">
+    Key Learning Outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-youll-be-using" title="Resources You’ll be Using" class="md-nav__link">
+    Resources You’ll be Using
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools-used" title="Tools Used" class="md-nav__link">
+    Tools Used
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-pass-genome-assembly" title="First Pass Genome Assembly" class="md-nav__link">
+    First Pass Genome Assembly
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fusarium-first-pass-with-a-goal" title="Fusarium first pass with a goal" class="md-nav__link">
+    Fusarium first pass with a goal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-the-environment" title="Prepare the Environment" class="md-nav__link">
+    Prepare the Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task11-first-pass-assembly-k71" title="Task1.1: First pass assembly, k=71" class="md-nav__link">
+    Task1.1: First pass assembly, k=71
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task12-first-pass-assembly-k27" title="Task1.2: First pass assembly, k=27" class="md-nav__link">
+    Task1.2: First pass assembly, k=27
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../scaffolding/handout/handout/" title="Scaffolding" class="md-nav__link">
+      Scaffolding
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-learning-outcomes" title="Key Learning Outcomes" class="md-nav__link">
+    Key Learning Outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-youll-be-using" title="Resources You’ll be Using" class="md-nav__link">
+    Resources You’ll be Using
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools-used" title="Tools Used" class="md-nav__link">
+    Tools Used
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-pass-genome-assembly" title="First Pass Genome Assembly" class="md-nav__link">
+    First Pass Genome Assembly
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fusarium-first-pass-with-a-goal" title="Fusarium first pass with a goal" class="md-nav__link">
+    Fusarium first pass with a goal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-the-environment" title="Prepare the Environment" class="md-nav__link">
+    Prepare the Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task11-first-pass-assembly-k71" title="Task1.1: First pass assembly, k=71" class="md-nav__link">
+    Task1.1: First pass assembly, k=71
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task12-first-pass-assembly-k27" title="Task1.2: First pass assembly, k=27" class="md-nav__link">
+    Task1.2: First pass assembly, k=27
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Eukaryote Genome Assembly</h1>
+                
+                <h2 id="key-learning-outcomes">Key Learning Outcomes</h2>
+<p>After completing this module the trainee should be able to:</p>
+<ul>
+<li>
+<p>Assess general assembly approach, kmer spectra and biases.</p>
+</li>
+<li>
+<p>Visually inspect the kmer spectra and KAT plots</p>
+</li>
+<li>
+<p>Run a first pass eukaryotic assembly and do goal checks</p>
+</li>
+<li>
+<p>Develop validation metrics or tools for NGS data and assembly.</p>
+</li>
+<li>
+<p>Improving methods and pipelines for genome assembly.</p>
+</li>
+<li>
+<p>Convince the lab guys to tweak protocols.</p>
+</li>
+</ul>
+<h2 id="resources-youll-be-using">Resources You’ll be Using</h2>
+<h3 id="tools-used">Tools Used</h3>
+<p>Kmer Analysis Tool kit
+:   \
+    <a href="https://github.com/TGAC/KAT">https://github.com/TGAC/KAT</a></p>
+<p>Nextclip
+:   \
+    <a href="https://github.com/richardmleggett/nextclip">https://github.com/richardmleggett/nextclip</a></p>
+<p>Abyss
+:   \
+    <a href="http://www.bcgsc.ca/platform/bioinfo/software/abyss">http://www.bcgsc.ca/platform/bioinfo/software/abyss</a></p>
+<p>Soap Denovo
+:   \
+    <a href="http://soap.genomics.org.cn/soapdenovo.html">http://soap.genomics.org.cn/soapdenovo.html</a></p>
+<p>SOAPec
+:   \
+    <a href="http://soap.genomics.org.cn/about.html">http://soap.genomics.org.cn/about.html</a></p>
+<p>BLAST
+:   \
+    <a href="http://blast.ncbi.nlm.nih.gov/Blast.cgi">http://blast.ncbi.nlm.nih.gov/Blast.cgi</a></p>
+<h2 id="first-pass-genome-assembly">First Pass Genome Assembly</h2>
+<p>Assuming by now you are familiar with the general concept of <em>de novo</em>
+assembly, kmers and the de Bruijn graph based assembler. In this
+tutorial we will use ABySS to perform the first pass assembly of a
+eukaryotic genome and look at various parameters to assess the
+information content of the input data and choice of assembly parameters.
+sequence data.\
+Genome assembly is a challenging problem requiring heavy computational
+resources, expertise and time. Before you beging the process of denovo
+assembly there are a number of points you need to consider:</p>
+<p>What is the objective of your assembly experiment? What biological
+question(s) you have?</p>
+<p>Is assembly strictly neccessary for the purpose in question?</p>
+<p>Do you have right kind of data and enough coverage to start with?</p>
+<p>Do you have suitable computaitonal resources to run this assembly?</p>
+<p>Remember that the assembly is just a probabilistic model of a genome,
+condensing the information from the experimental evidence. All the
+information is already present in the experimental results. The goal of
+the assembly is to find the right motifs, the correct number of times,
+in correct order and position.</p>
+<h3 id="fusarium-first-pass-with-a-goal">Fusarium first pass with a goal</h3>
+<p>Goal: Identify a fusarium sample is ``closer&rdquo; to <em>F. graminearum</em> or
+<em>F.pseudograminearum</em></p>
+<ul>
+<li>
+<p>Previous knowledge</p>
+<ul>
+<li><em>F. graminearum</em> has a cluster producing PKS6 and NRSP7, while
+    <em>F. pseudograminearum</em> produces PKS40 and NRPS32</li>
+</ul>
+</li>
+<li>
+<p>Data</p>
+<ul>
+<li>
+<p>Proteins sequences for:</p>
+<ul>
+<li>
+<p><em>F. graminearum</em> (non necrotrophic): PKS6 and NRSP7</p>
+</li>
+<li>
+<p><em>F. pseudograminearum</em> (necrotrophic): PKS40 and NRPS32</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Strategy:</p>
+<ul>
+<li>Check PKS6-NRSP7 and PKS40-NRPS32 cluster presence.</li>
+</ul>
+</li>
+<li>
+<p>Assembly goals:</p>
+<ul>
+<li>
+<p>Assembly goal (I): to capture a good enough representation of
+    the protein-coding space to get blast matches</p>
+</li>
+<li>
+<p>Assembly goal (II): to accurately represent the relevant whole
+    cluster loci in a single sequence.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="prepare-the-environment">Prepare the Environment</h2>
+<p>Open the Terminal. First, go to the right folder, where the data are
+stored.</p>
+<div class="codehilite"><pre><span></span>cd /home/trainee/eukaryotic
+ls
+</pre></div>
+
+
+<h2 id="task11-first-pass-assembly-k71">Task1.1: First pass assembly, k=71</h2>
+<p>Let’s assemble <em>Fusarium</em> with abyss, k=71</p>
+<div class="codehilite"><pre><span></span>cd /home/trainee/eukaryotic
+mkdir abyss_k71
+cd abyss_k71
+abyss-pe in=&quot;../CS3270_A8733_GCCAAT_L001_R1.fastq ../CS3270_A8733_GCCAAT_L001_R2.fastq&quot; k=71 name=CS3270_abyss_k71 np=4 &amp;gt; CS3270_abyss_k71.log 2&amp;gt;&amp;amp;1
+</pre></div>
+
+
+<p>Description of the arguments used in the command:</p>
+<p>k
+:   = kmer size</p>
+<p>np
+:   = number of processors to be used</p>
+<p>sequence file names
+:   = R1 and R2 reads of a paired end sequence data</p>
+<p>Let’s look at the statistics of the assembly we just did&hellip;</p>
+<p>Ok, there is no stats available in the folder, but we can always use
+<code class="codehilite">abyss-fac</code> to get the stats:</p>
+<div class="codehilite"><pre><span></span>abyss-fac CS3270_abyss_k71-*tigs.fa  | tee CS3270_abyss_k71-stats.tab
+less CS3270_abyss_k71-stats.tab
+</pre></div>
+
+
+<p>[H]</p>
+<p>lllllllllll</p>
+<p><strong>n</strong> &amp; <strong>n:500</strong> &amp; <strong>L50</strong> &amp; <strong>min</strong> &amp; <strong>N80</strong>&amp; <strong>N50</strong>&amp; <strong>N20</strong>&amp;
+<strong>E-size</strong>&amp; <strong>max</strong> &amp; <strong>sum</strong>&amp; <strong>name</strong>\
+27 &amp; 13 &amp; 2 &amp; 970 &amp; 6004 &amp; 13202 &amp; 52602 &amp; 28712 &amp; 52602 &amp; 112849 &amp;
+CS3270_abyss_k71-unitigs.fa%\
+5 &amp; 1 &amp; 1 &amp; 128429 &amp; 128429 &amp; 128429 &amp; 128429 &amp; 128429 &amp; 128429 &amp; 128429
+&amp; CS3270_abyss_k71-contigs.fa%\</p>
+<p>[tab:fusariumk71]</p>
+<p>How many unitigs/contigs do you have in the assembly?\</p>
+<p>27/5\</p>
+<p>What are the length statistics of your assembly?\</p>
+<p>in the table above\</p>
+<p>Does it match what you think before the assembly and why?\</p>
+<p>No\</p>
+<p>The assembly is looking strange! It’s time for some analysis:</p>
+<p>Check frequencies for kmers kept/discarded/etc.</p>
+<p>Check spectra-cn and compare with expectations. Let’s do this by the
+following commands:</p>
+<div class="codehilite"><pre><span></span>less CS3270_abyss_k71.log 
+less coverage.hist
+</pre></div>
+
+
+<p>We will now plot the values from the <code class="codehilite">coverage.hist</code>:</p>
+<div class="codehilite"><pre><span></span>gnuplot &amp;lt;Press enter&amp;gt;
+gnuplot&amp;gt; set xrange [0:200]
+gnuplot&amp;gt; set yrange [0:5000]
+gnuplot&amp;gt; plot &quot;coverage.hist&quot;
+Type exit or quit to leave the gnuplot
+gnuplot&amp;gt; exit
+</pre></div>
+
+
+<p>Looks like we are not assembling this bit, let’s have another look at
+the spectra</p>
+<div class="codehilite"><pre><span></span>kat comp -o reads_vs_abyss_k71 -t 4 -C -D --d1_bins 2000 &#39;../*.fastq&#39; CS3270_abyss_k71-contigs.fa
+</pre></div>
+
+
+<p>Description of the arguments used in the command:</p>
+<p>o
+:   = Path prefix for files generated by this program.</p>
+<p>t
+:   = The number of threads to use.</p>
+<p>C
+:   = Whether the jellyfish hash for input 1 contains K-mers produced
+    for both strands</p>
+<p>D
+:   = Whether the jellyfish hash for input 2 contains K-mers produced
+    for both strands</p>
+<p>–d1_bins
+:   = Number of bins for the first dataset. i.e. number of rows in the
+    matrix</p>
+<!-- -->
+
+<div class="codehilite"><pre><span></span>kat plot spectra-cn -y 600 -x 2000 -o reads_vs_abyss1-main.mx.spectra-cn_2000.png reads_vs_abyss_k71-main.mx
+</pre></div>
+
+
+<p>Description of the arguments used in the command:</p>
+<p>x
+:   = Maximum value for the x-axis (default value auto calculated from
+    matrix, otherwise 1000)</p>
+<p>y
+:   = Maximum value for the y-axis (default value auto calculated from
+    matrix if possible, otherwise, 1000000)</p>
+<p>o
+:   = The path to the output file</p>
+<p>The kmer spectra for <em>Fusarium</em> assembly with abyss, k=71 should be
+looking like this:</p>
+<p>[H] <img alt="image" src="../images/abyss-k71.png" /> [fig:fusariumk71]</p>
+<p>Take the output and BLAST it in NCBI. What is it? Surprising?</p>
+<p>Choosing a wrong k value (too large in this case) and just running a
+typical assembly job, we can end up with something quite more
+interesting. It is easy by comparison to spot some missing content,
+alongside duplications and triplications (and quadruplications and so
+on) that should not be there. This assembly will get us nowhere, let’s
+choose a lower K to gain coverage and start again.</p>
+<h2 id="task12-first-pass-assembly-k27">Task1.2: First pass assembly, k=27</h2>
+<p>We now assemble <em>fusarium</em> with <code class="codehilite">abyss</code> and k=27:</p>
+<div class="codehilite"><pre><span></span>cd /home/trainee/eukaryotic
+mkdir abyss_k27
+cd abyss_k27
+abyss-pe in=&quot;../CS3270_A8733_GCCAAT_L001_R1.fastq ../CS3270_A8733_GCCAAT_L001_R2.fastq&quot; k=27 name=CS3270_abyss_k27 np=4 &amp;gt; CS3270_abyss_k27.log 2&amp;gt;&amp;amp;1
+</pre></div>
+
+
+<p>Let’s look at the stats by doing:</p>
+<div class="codehilite"><pre><span></span>less CS3270_abyss_k27-stats.tab
+</pre></div>
+
+
+<p>Stats look better:</p>
+<p>[H]</p>
+<p>lllllllllll</p>
+<p><strong>n</strong> &amp; <strong>n:500</strong> &amp; <strong>L50</strong> &amp; <strong>min</strong> &amp; <strong>N80</strong>&amp; <strong>N50</strong>&amp; <strong>N20</strong>&amp;
+<strong>E-size</strong>&amp; <strong>max</strong> &amp; <strong>sum</strong>&amp; <strong>name</strong>\
+30645 &amp; 2717 &amp; 430 &amp; 502 &amp; 11354 &amp; 25336 &amp; 47966 &amp; 31027 &amp; 147694 &amp;
+36.14e6 &amp; CS3270_abyss_k27-unitigs.fa\
+21511 &amp; 350 &amp; 33 &amp; 527 &amp; 157565 &amp; 338989 &amp; 630228 &amp; 407098 &amp; 1265237 &amp;
+36.52e6 &amp; CS3270_abyss_k27-contigs.fa\
+21327 &amp; 205 &amp; 17 &amp; 527 &amp; 332444 &amp; 716132 &amp; 1265237 &amp; 791882 &amp; 1880850 &amp;
+36.51e6 &amp; CS3270_abyss_k27-scaffolds.fa\</p>
+<p>[tab:fusariumk27]</p>
+<p>Let’s check a bit anyway:</p>
+<div class="codehilite"><pre><span></span>less CS3270_abyss_k27.log
+less coverage.hist
+</pre></div>
+
+
+<p>How is the coverage plot looking now?</p>
+<div class="codehilite"><pre><span></span>gnuplot
+gnuplot&amp;gt; set xrange [0:50]
+gnuplot&amp;gt; set xrange [0:4000000]
+gnuplot&amp;gt; plot &quot;coverage.hist&quot;
+gnuplot&amp;gt; exit
+</pre></div>
+
+
+<p>K-mer spectrum:</p>
+<div class="codehilite"><pre><span></span>kat plot spectra-cn -y 1000 -x 1000 -o reads_vs_abyss1-main.mx.spectra-cn_noabsent.png reads_vs_abyss1-main.mx
+kat comp -o reads_vs_abyss_k27 -t 4 -C -D &#39;../*.fastq&#39; CS3270_abyss_k27-scaffolds.fa
+</pre></div>
+
+
+<p>[H] <img alt="image" src="../images/abyss-k27.png" /> [fig:fusariumk27]</p>
+<p>Any tools you can use to check kmer spectra at any K before assembling?\</p>
+<p>KAT\</p>
+<p>Can you predict what will happen if you use KAT with larger K values?\</p>
+<p>Will the assembly answer the biological question?</p>
+<p>Use BLAST or BLAT and the databases to check&hellip;</p>
+<div class="codehilite"><pre><span></span>makeblastdb -in CS3270_abyss_k27-scaffolds.fa -dbtype nucl
+blat –t=dnax –q=prot –minIdentity=90 CS3270_abyss_k27-scaffolds.fa test_genes.fasta out.psl
+</pre></div>
+
+
+<h2 id="references">References</h2>
+<ol>
+<li>De novo genome assembly: what every biologist should know Nature
+    Methods 9, 333 – 337 (2012) doi:10.1038/nmeth.1935</li>
+</ol>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../../de-novo/handout/handout/" title="De Novo" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                De Novo
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../../scaffolding/handout/handout/" title="Scaffolding" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Scaffolding
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; The authors; 2017-
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../../../js/details.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

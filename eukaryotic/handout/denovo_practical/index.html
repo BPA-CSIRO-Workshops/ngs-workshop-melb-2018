@@ -1,0 +1,870 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="This contains all material for the Introduction to NGS workshop.">
+      
+      
+      
+        <meta name="author" content="Authors">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>Denovo practical - Introduction to NGS Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../css/details.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#commands-for-denovo-training" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="Introduction to NGS Workshop" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Introduction to NGS Workshop
+              </span>
+              <span class="md-header-nav__topic">
+                Denovo practical
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="Introduction to NGS Workshop" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Introduction to NGS Workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../trainers/trainers/" title="The Trainers" class="md-nav__link">
+      The Trainers
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../preamble/preamble/" title="Workshop Information" class="md-nav__link">
+      Workshop Information
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Hands-on Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Hands-on Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cli/handout/handout/" title="Introduction to Command Line" class="md-nav__link">
+      Introduction to Command Line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../qc/handout/handout/" title="Quality Control" class="md-nav__link">
+      Quality Control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../alignment/handout/handout/" title="Read Alignment" class="md-nav__link">
+      Read Alignment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../rna-seq/handout/handout/" title="RNA-Seq" class="md-nav__link">
+      RNA-Seq
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../de-novo/handout/handout/" title="De Novo" class="md-nav__link">
+      De Novo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../handout/" title="Eukaryote Genome Assembly" class="md-nav__link">
+      Eukaryote Genome Assembly
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../scaffolding/handout/handout/" title="Scaffolding" class="md-nav__link">
+      Scaffolding
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="commands-for-denovo-training">Commands for DeNovo Training</h1>
+<hr />
+<h1 id="exercise-1-fusarium-first-pass-with-a-goal">Exercise #1: Fusarium first pass with a goal</h1>
+<h2 id="goal-identify-a-fusarium-sample-is-closer-to-f-graminearum-or-fpseudograminearum">Goal: Identify a fusarium sample is &ldquo;closer&rdquo; to F. graminearum or F.pseudograminearum</h2>
+<p>Previous knowledge:</p>
+<ul>
+<li>F. graminareum has a cluster producing PKS6 and NRSP7, while F. pseudograminareum produces PKS40 and NRPS32</li>
+</ul>
+<p>Data:</p>
+<ul>
+<li>Proteins sequences for:</li>
+<li>F. graminareum (non necrotrophic): PKS6 and NRSP7</li>
+<li>F. pseudograminareum (necrotrophic): PKS40 and NRPS32</li>
+<li>Blast database of cereal pathogen proteins.</li>
+</ul>
+<p>Strategy:</p>
+<ul>
+<li>Check PKS6-NRSP7 and PKS40-NRPS32 cluster presence.</li>
+</ul>
+<p>Assembly goals:</p>
+<ul>
+<li>Assembly goal (I): to capture a good enough representation of the protein-coding space to get blast matches</li>
+<li>Assembly goal (II): to accurately represent the relevant whole cluster loci in a single sequence.</li>
+</ul>
+<h2 id="task-11-first-pass-assembly-k71">Task 1.1: First pass assembly, k=71</h2>
+<p>First, assembly:</p>
+<div class="codehilite"><pre><span></span>cd denovo/fusarium
+mkdir abyss_k71
+cd abyss_k71
+abyss-pe in=&quot;../CS3270_A8733_GCCAAT_L001_R1.fastq ../CS3270_A8733_GCCAAT_L001_R2.fastq&quot; k=71 name=CS3270_abyss_k71 np=4 &gt; CS3270_abyss_k71.log 2&gt;&amp;1
+</pre></div>
+
+<p>Stats&hellip; Ok, no stats, but we can always use abyss-fac</p>
+<p><div class="codehilite"><pre><span></span>abyss-fac CS3270_abyss_k71-contigs.fa
+</pre></div>
+n   |n:500  |L50    |min    |N80    |N50    |N20    |E-size |max    |sum    |name
+------  |------ |------ |------ |------ |------ |------ |------ |------ |------ |------
+27  |13 |2  |970    |6004   |13202  |52602  |28712  |52602  |112849 |CS3270_abyss_k71-unitigs.fa
+5   |1  |1  |128429 |128429 |128429 |128429 |128429 |128429 |128429 |CS3270_abyss_k71-contigs.fa</p>
+<p>Strange! Time for some analysis:</p>
+<ul>
+<li>Check frequencies for kmers kept/discarded/etc.</li>
+<li>Check spectra-cn and compare with expectations.</li>
+</ul>
+<p><div class="codehilite"><pre><span></span>less CS3270_abyss_k71.log 
+less coverage.hist
+
+gnuplot
+gnuplot&gt; set xrange [0:50]
+gnuplot&gt; set yrange [0:4000000]
+gnuplot&gt; plot &quot;coverage.hist&quot;
+
+gnuplot
+gnuplot&gt; set xrange [0:200]
+gnuplot&gt; set yrange [0:5000]
+gnuplot&gt; plot &quot;coverage.hist&quot;
+
+kat comp -o reads_vs_abyss_k71 -t 4 -C -D &#39;../*.fastq&#39; CS3270_abyss_k71-contigs.fa
+</pre></div>
+Looks like we are not assembling this bit, let&rsquo;s have another look at the spectra
+<div class="codehilite"><pre><span></span>kat comp -o reads_vs_abyss_k71 -t 4 -C -D --d1_bins 2000 &#39;../*.fastq&#39; CS3270_abyss_k71-contigs.fa
+kat plot spectra-cn -y 600 -x 2000 -o reads_vs_abyss1-main.mx.spectra-cn_2000.png reads_vs_abyss_k71-main.mx
+</pre></div></p>
+<p>Take the output and blast it in NCBI. What is it? Surprising?</p>
+<p>This assembly will get us nowhere, let&rsquo;s choose a lower K to gain coverage and start again.</p>
+<h2 id="task-12-first-pass-assembly-k27">Task 1.2: First pass assembly, k=27</h2>
+<div class="codehilite"><pre><span></span>cd denovo/fusarium
+mkdir abyss_k27
+cd abyss_k27
+abyss-pe in=&quot;../CS3270_A8733_GCCAAT_L001_R1.fastq ../CS3270_A8733_GCCAAT_L001_R2.fastq&quot; k=27 name=CS3270_abyss_k27 np=4 &gt; CS3270_abyss_k27.log 2&gt;&amp;1
+</pre></div>
+
+<p>Stats look better:</p>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>n:500</th>
+<th>L50</th>
+<th>min</th>
+<th>N80</th>
+<th>N50</th>
+<th>N20</th>
+<th>E-size</th>
+<th>max</th>
+<th>sum</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30645</td>
+<td>2717</td>
+<td>430</td>
+<td>502</td>
+<td>11354</td>
+<td>25336</td>
+<td>47966</td>
+<td>31027</td>
+<td>147694</td>
+<td>36.14e6</td>
+<td>CS3270_abyss_k27-unitigs.fa</td>
+</tr>
+<tr>
+<td>21511</td>
+<td>350</td>
+<td>33</td>
+<td>527</td>
+<td>157565</td>
+<td>338989</td>
+<td>630228</td>
+<td>407098</td>
+<td>1265237</td>
+<td>36.52e6</td>
+<td>CS3270_abyss_k27-contigs.fa</td>
+</tr>
+<tr>
+<td>21327</td>
+<td>205</td>
+<td>17</td>
+<td>527</td>
+<td>332444</td>
+<td>716132</td>
+<td>1265237</td>
+<td>791882</td>
+<td>1880850</td>
+<td>36.51e6</td>
+<td>CS3270_abyss_k27-scaffolds.fa</td>
+</tr>
+</tbody>
+</table>
+<p>Let&rsquo;s check a bit anyway:</p>
+<div class="codehilite"><pre><span></span>less CS3270_abyss_k27.log
+less coverage.hist
+gnuplot
+gnuplot&gt; set xrange [0:50]
+gnuplot&gt; set yrange [0:4000000]
+gnuplot&gt; plot &quot;coverage.hist&quot;
+
+kat comp -o reads_vs_abyss_k27 -t 4 -C -D &#39;../*.fastq&#39; CS3270_abyss_k27-scaffolds.fa
+</pre></div>
+
+<h3 id="question-any-tools-you-can-use-to-check-kmer-spectra-at-any-k-before-assembling">Question: any tools you can use to check kmer spectra at any K before assembling?</h3>
+<h3 id="question-can-you-predict-what-will-happen-if-you-use-kat-with-larger-k-values">Question: can you predict what will happen if you use KAT with larger K values?</h3>
+<h2 id="task-13-will-the-assembly-answer-the-biological-question">Task 1.3: Will the assembly answer the biological question?</h2>
+<p>Use blast and the proteins to check&hellip;</p>
+<hr />
+<h1 id="exercise-2-chalara-scaffolding-using-lmp">Exercise #2: Chalara scaffolding using LMP</h1>
+<h2 id="task-21-lets-have-a-look-at-the-pe-assembly">Task 2.1: let&rsquo;s have a look at the PE assembly</h2>
+<div class="codehilite"><pre><span></span>abyss-pe name=cha1 k=27 in=&quot;../LIB2570_raw_R1.fastq ../LIB2570_raw_R2.fastq&quot; np=4
+</pre></div>
+
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>n:500</th>
+<th>L50</th>
+<th>min</th>
+<th>N80</th>
+<th>N50</th>
+<th>N20</th>
+<th>E-size</th>
+<th>max</th>
+<th>sum</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>394789</td>
+<td>11681</td>
+<td>2094</td>
+<td>500</td>
+<td>2880</td>
+<td>6254</td>
+<td>12303</td>
+<td>7936</td>
+<td>44414</td>
+<td>44.07e6</td>
+<td>cha1-unitigs.fa</td>
+</tr>
+<tr>
+<td>394199</td>
+<td>11673</td>
+<td>2097</td>
+<td>500</td>
+<td>2887</td>
+<td>6255</td>
+<td>12303</td>
+<td>7937</td>
+<td>44414</td>
+<td>44.11e6</td>
+<td>cha1-contigs.fa</td>
+</tr>
+<tr>
+<td>394161</td>
+<td>11647</td>
+<td>2095</td>
+<td>500</td>
+<td>2898</td>
+<td>6269</td>
+<td>12303</td>
+<td>7944</td>
+<td>44414</td>
+<td>44.12e6</td>
+<td>cha1-scaffolds.fa</td>
+</tr>
+<tr>
+<td><div class="codehilite"><pre><span></span>abyss-pe name=cha2 k=61 in=&quot;../LIB2570_raw_R1.fastq ../LIB2570_raw_R2.fastq&quot; np=4
+</pre></div></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>n</td>
+<td>n:500</td>
+<td>L50</td>
+<td>min</td>
+<td>N80</td>
+<td>N50</td>
+<td>N20</td>
+<td>E-size</td>
+<td>max</td>
+<td>sum</td>
+<td>name</td>
+</tr>
+<tr>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&mdash;</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>130547</td>
+<td>12596</td>
+<td>1770</td>
+<td>500</td>
+<td>3352</td>
+<td>8379</td>
+<td>16380</td>
+<td>10518</td>
+<td>54300</td>
+<td>50.75e6</td>
+<td>cha2-unitigs.fa</td>
+</tr>
+<tr>
+<td>130210</td>
+<td>12575</td>
+<td>1771</td>
+<td>500</td>
+<td>3363</td>
+<td>8382</td>
+<td>16380</td>
+<td>10525</td>
+<td>54300</td>
+<td>50.78e6</td>
+<td>cha2-contigs.fa</td>
+</tr>
+<tr>
+<td>130182</td>
+<td>12555</td>
+<td>1769</td>
+<td>500</td>
+<td>3377</td>
+<td>8394</td>
+<td>16380</td>
+<td>10534</td>
+<td>54300</td>
+<td>50.78e6</td>
+<td>cha2-scaffolds.fa</td>
+</tr>
+</tbody>
+</table>
+<p>Contiguity is worse than fusarium, why?</p>
+<p>Answers:</p>
+<ul>
+<li>Genome characteristics.</li>
+<li>Data:</li>
+<li>Coverage</li>
+<li>Error distributions</li>
+<li>Read sizes</li>
+<li>Fragment sizes</li>
+<li>Kmer spectra</li>
+</ul>
+<hr />
+<h2 id="task-22-lets-put-some-lmp-in-there">Task 2.2: Let&rsquo;s put some LMP in there.</h2>
+<p><div class="codehilite"><pre><span></span>abyss-pe name=chalmp1 k=61 in=&quot;../LIB2570_raw_R1.fastq ../LIB2570_raw_R2.fastq&quot; mp=&quot;lmp1&quot; lmp1=&quot;../LIB8209_raw_R1.fastq ../LIB8209_raw_R2.fastq&quot; np=4
+</pre></div>
+n       |n:500  |L50   |min  |N80   |N50   |N20    |E-size  |max    |sum      |name
+&mdash;     |&mdash;    |&mdash;   |&mdash;  |&mdash;   |&mdash;   |&mdash;    |&mdash;     |&mdash;    |&mdash;      |&mdash;
+130548  |12596  |1770  |500  |3352  |8379  |16380  |10518   |54300  |50.75e6  |chalmp1-unitigs.fa
+130211  |12575  |1771  |500  |3363  |8382  |16380  |10525   |54300  |50.78e6  |chalmp1-contigs.fa
+130148  |12545  |1769  |500  |3380  |8400  |16380  |10535   |54300  |50.78e6  |chalmp1-scaffolds.fa</p>
+<p>So&hellip; what happened?</p>
+<p>Data:</p>
+<ul>
+<li>Kmer spectra</li>
+<li>Fragment sizes</li>
+<li>Any hints on the protocol?</li>
+</ul>
+<p>A not-so-obvious property:</p>
+<div class="codehilite"><pre><span></span>kat plot spectra-mx --intersection -x 30 -y 15000000 -o pe_vs_lmp-main.mx.spectra-mx.png pe_vs_lmp-main.mx
+</pre></div>
+
+<p>LMP require pre-processing, right?</p>
+<hr />
+<h2 id="task-23-lets-try-with-processed-lmp">Task 2.3: Let&rsquo;s try with processed LMP</h2>
+<p>Prior task (already made) preprocess the LMP with nextclip.</p>
+<div class="codehilite"><pre><span></span>abyss-pe name=chalmpproc1 k=61 in=&quot;../../cha_raw/LIB2570_raw_R1.fastq ../../cha_raw/LIB2570_raw_R2.fastq&quot; mp=&quot;proclmp1&quot; proclmp1=&quot;../LIB8209_preproc_R1.fastq ../LIB8209_preproc_R2.fastq&quot; np=4
+</pre></div>
+
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>n:500</th>
+<th>L50</th>
+<th>min</th>
+<th>N80</th>
+<th>N50</th>
+<th>N20</th>
+<th>E-size</th>
+<th>max</th>
+<th>sum</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>130548</td>
+<td>12596</td>
+<td>1770</td>
+<td>500</td>
+<td>3352</td>
+<td>8379</td>
+<td>16380</td>
+<td>10518</td>
+<td>54300</td>
+<td>50.75e6</td>
+<td>chalmpproc1-unitigs.fa</td>
+</tr>
+<tr>
+<td>130211</td>
+<td>12575</td>
+<td>1771</td>
+<td>500</td>
+<td>3363</td>
+<td>8382</td>
+<td>16380</td>
+<td>10525</td>
+<td>54300</td>
+<td>50.78e6</td>
+<td>chalmpproc1-contigs.fa</td>
+</tr>
+<tr>
+<td>122061</td>
+<td>6679</td>
+<td>167</td>
+<td>500</td>
+<td>18609</td>
+<td>87510</td>
+<td>187171</td>
+<td>106178</td>
+<td>397967</td>
+<td>51.15e6</td>
+<td>chalmpproc1-scaffolds.fa</td>
+</tr>
+</tbody>
+</table>
+<p>That&rsquo;s much better!</p>
+<hr />
+<h1 id="excercise-3-chalara-beyond-first-pass">Excercise #3: Chalara: beyond first pass</h1>
+<p>Do you remember these?</p>
+<ul>
+<li>Genome characteristics.</li>
+<li>Data:</li>
+<li>Coverage</li>
+<li>Error distributions</li>
+<li>Read sizes</li>
+<li>Fragment sizes</li>
+<li>Kmer spectra</li>
+</ul>
+<p>Let&rsquo;s think a bit and try to improve the assembly&hellip;</p>
+<h3 id="question-if-you-look-at-the-pre-processed-lmp-do-you-notice-anything-peculiar">Question: if you look at the pre-processed LMP, do you notice anything peculiar?</h3>
+<h2 id="example-testing-the-inclussion-of-heavily-pre-procesed-lmp-coverage-into-the-dbg">Example: Testing the inclussion of heavily pre-procesed LMP coverage into the DBG</h2>
+<div class="codehilite"><pre><span></span>abyss-pe name=chalmp2 k=61 se=&quot;../LIB8209_preproc_single.fastq&quot; lib=&quot;lmp1&quot; lmp1=&quot;../LIB8209_preproc_R1.fastq ../LIB8209_preproc_R2.fastq&quot; np=4 &gt;chaproclmp2.log 2&gt;&amp;1
+</pre></div>
+
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>n:500</th>
+<th>L50</th>
+<th>min</th>
+<th>N80</th>
+<th>N50</th>
+<th>N20</th>
+<th>E-size</th>
+<th>max</th>
+<th>sum</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>128306</td>
+<td>10150</td>
+<td>1182</td>
+<td>500</td>
+<td>4954</td>
+<td>12585</td>
+<td>24777</td>
+<td>15693</td>
+<td>68684</td>
+<td>51.03e6</td>
+<td>chaproclmp4-unitigs.fa</td>
+</tr>
+<tr>
+<td>118939</td>
+<td>5772</td>
+<td>362</td>
+<td>500</td>
+<td>15717</td>
+<td>41870</td>
+<td>82033</td>
+<td>52819</td>
+<td>252066</td>
+<td>52.24e6</td>
+<td>chaproclmp4-contigs.fa</td>
+</tr>
+<tr>
+<td>116139</td>
+<td>4014</td>
+<td>141</td>
+<td>500</td>
+<td>41145</td>
+<td>109273</td>
+<td>224986</td>
+<td>133450</td>
+<td>460979</td>
+<td>52.56e6</td>
+<td>chaproclmp4-scaffolds.fa</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; The authors; 2017-
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../../../js/details.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

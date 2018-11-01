@@ -1,0 +1,841 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="This contains all material for the Introduction to NGS workshop.">
+      
+      
+      
+        <meta name="author" content="Authors">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>Scaffolding - Introduction to NGS Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../css/details.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#key-learning-outcomes" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="Introduction to NGS Workshop" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Introduction to NGS Workshop
+              </span>
+              <span class="md-header-nav__topic">
+                Scaffolding
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="Introduction to NGS Workshop" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Introduction to NGS Workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../trainers/trainers/" title="The Trainers" class="md-nav__link">
+      The Trainers
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../preamble/preamble/" title="Workshop Information" class="md-nav__link">
+      Workshop Information
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Hands-on Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Hands-on Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cli/handout/handout/" title="Introduction to Command Line" class="md-nav__link">
+      Introduction to Command Line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../qc/handout/handout/" title="Quality Control" class="md-nav__link">
+      Quality Control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../alignment/handout/handout/" title="Read Alignment" class="md-nav__link">
+      Read Alignment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../rna-seq/handout/handout/" title="RNA-Seq" class="md-nav__link">
+      RNA-Seq
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../de-novo/handout/handout/" title="De Novo" class="md-nav__link">
+      De Novo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../eukaryotic/handout/handout/" title="Eukaryote Genome Assembly" class="md-nav__link">
+      Eukaryote Genome Assembly
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Scaffolding
+      </label>
+    
+    <a href="./" title="Scaffolding" class="md-nav__link md-nav__link--active">
+      Scaffolding
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-learning-outcomes" title="Key Learning Outcomes" class="md-nav__link">
+    Key Learning Outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-youll-be-using" title="Resources You’ll be Using" class="md-nav__link">
+    Resources You’ll be Using
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools-used" title="Tools Used" class="md-nav__link">
+    Tools Used
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scaffolding-with-long-mate-pair-libraries-chalara-scaffolding-using-lmp" title="Scaffolding with long mate pair libraries: Chalara scaffolding using LMP" class="md-nav__link">
+    Scaffolding with long mate pair libraries: Chalara scaffolding using LMP
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pair-end-assembly-using-chalara-dataset" title="Pair-end assembly using Chalara dataset" class="md-nav__link">
+    Pair-end assembly using Chalara dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chalara-scaffolding-using-long-mate-pair-readslmp" title="Chalara scaffolding using long mate-pair reads(LMP)" class="md-nav__link">
+    Chalara scaffolding using long mate-pair reads(LMP)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chalara-beyond-first-pass" title="Chalara: beyond first pass" class="md-nav__link">
+    Chalara: beyond first pass
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-learning-outcomes" title="Key Learning Outcomes" class="md-nav__link">
+    Key Learning Outcomes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-youll-be-using" title="Resources You’ll be Using" class="md-nav__link">
+    Resources You’ll be Using
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools-used" title="Tools Used" class="md-nav__link">
+    Tools Used
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scaffolding-with-long-mate-pair-libraries-chalara-scaffolding-using-lmp" title="Scaffolding with long mate pair libraries: Chalara scaffolding using LMP" class="md-nav__link">
+    Scaffolding with long mate pair libraries: Chalara scaffolding using LMP
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pair-end-assembly-using-chalara-dataset" title="Pair-end assembly using Chalara dataset" class="md-nav__link">
+    Pair-end assembly using Chalara dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chalara-scaffolding-using-long-mate-pair-readslmp" title="Chalara scaffolding using long mate-pair reads(LMP)" class="md-nav__link">
+    Chalara scaffolding using long mate-pair reads(LMP)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chalara-beyond-first-pass" title="Chalara: beyond first pass" class="md-nav__link">
+    Chalara: beyond first pass
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Scaffolding</h1>
+                
+                <h2 id="key-learning-outcomes">Key Learning Outcomes</h2>
+<p>After completing this module the trainee should be able to:</p>
+<ul>
+<li>
+<p>Run an assembly using long mate pair (LMP) reads.</p>
+</li>
+<li>
+<p>Compare results of LMP assemblies with those from the short reads.</p>
+</li>
+<li>
+<p>Run scaffolding and assess the assembly statistics`</p>
+</li>
+</ul>
+<h2 id="resources-youll-be-using">Resources You’ll be Using</h2>
+<h3 id="tools-used">Tools Used</h3>
+<p>Kmer Analysis Tool kit
+:   \
+    <a href="https://github.com/TGAC/KAT">https://github.com/TGAC/KAT</a></p>
+<p>Nextclip
+:   \
+    <a href="https://github.com/richardmleggett/nextclip">https://github.com/richardmleggett/nextclip</a></p>
+<p>Abyss
+:   \
+    <a href="http://www.bcgsc.ca/platform/bioinfo/software/abyss">http://www.bcgsc.ca/platform/bioinfo/software/abyss</a></p>
+<p>Soap Denovo
+:   \
+    <a href="http://soap.genomics.org.cn/soapdenovo.html">http://soap.genomics.org.cn/soapdenovo.html</a></p>
+<p>SOAPec
+:   \
+    <a href="http://soap.genomics.org.cn/about.html">http://soap.genomics.org.cn/about.html</a></p>
+<h2 id="scaffolding-with-long-mate-pair-libraries-chalara-scaffolding-using-lmp">Scaffolding with long mate pair libraries: Chalara scaffolding using LMP</h2>
+<p>Scaffold is made of two or more contigs joined together using the read
+pair information. In the absence of a high-quality reference genome, new
+genome assemblies are often evaluated on the basis of the number of
+scaffolds and contigs required to represent the genome. Other criteria
+such as the alignment of reads back to assemblies, N50, and the length
+of contigs and scaffolds relative to the size of the genome can also be
+used to assess the quality of assemblies. In this excercise we will be
+using a long mate pair data to perform assembly and scaffolding and we
+will focus on how using LMP reads can affect the assemblies. Most part
+of this tutorial has been precomputed and made available to you in
+interest of time. We will spend more time exploring and discussing the
+results.</p>
+<h3 id="pair-end-assembly-using-chalara-dataset">Pair-end assembly using Chalara dataset</h3>
+<p>Before doing a scaffolding, we need to build an assembly using the
+pair-end reads first.</p>
+<p>Lets go to the correct location where the files are:</p>
+<div class="codehilite"><pre><span></span>cd /home/trainee/scaffolding/cha_raw/test_1
+</pre></div>
+
+
+<p>You DO NOT need to run this command. This has already been done for you.</p>
+<div class="codehilite"><pre><span></span>abyss-pe name=cha1 k=27 in=&quot;../LIB2570_raw_R1.fastq ../LIB2570_raw_R2.fastq&quot; np=4
+</pre></div>
+
+
+<p>Let’s look at the stats by doing:</p>
+<div class="codehilite"><pre><span></span>less cha1-stats.tab
+</pre></div>
+
+
+<p>[H]</p>
+<p>lllllllllll</p>
+<p><strong>n</strong> &amp; <strong>n:500</strong> &amp; <strong>L50</strong> &amp; <strong>min</strong> &amp; <strong>N80</strong>&amp; <strong>N50</strong>&amp; <strong>N20</strong>&amp;
+<strong>E-size</strong>&amp; <strong>max</strong> &amp; <strong>sum</strong>&amp; <strong>name</strong>\
+394789 &amp; 11681 &amp; 2094 &amp; 500 &amp; 2880 &amp; 6254 &amp; 12303 &amp; 7936 &amp; 44414 &amp;
+44.07e6 &amp; cha1-unitigs.fa\
+394199 &amp; 11673 &amp; 2097 &amp; 500 &amp; 2887 &amp; 6255 &amp; 12303 &amp; 7937 &amp; 44414 &amp;
+44.11e6 &amp; cha1-contigs.fa\
+394161 &amp; 11647 &amp; 2095 &amp; 500 &amp; 2898 &amp; 6269 &amp; 12303 &amp; 7944 &amp; 44414 &amp;
+44.12e6 &amp; cha1-scaffolds.fa\</p>
+<p>[tab:chak27]</p>
+<div class="codehilite"><pre><span></span>cd /home/trainee/scaffolding/cha_raw/test_2
+</pre></div>
+
+
+<p>This is also a pre-computed example for you:</p>
+<div class="codehilite"><pre><span></span>abyss-pe name=cha2 k=61 in=&quot;../LIB2570_raw_R1.fastq ../LIB2570_raw_R2.fastq&quot; np=4
+</pre></div>
+
+
+<p>Again, we need to look at the statstics of our new assembly using k=61:</p>
+<div class="codehilite"><pre><span></span>less cha2-stats.tab
+</pre></div>
+
+
+<p>It should be looking like this:</p>
+<p>[H]</p>
+<p>lllllllllll</p>
+<p><strong>n</strong> &amp; <strong>n:500</strong> &amp; <strong>L50</strong> &amp; <strong>min</strong> &amp; <strong>N80</strong>&amp; <strong>N50</strong>&amp; <strong>N20</strong>&amp;
+<strong>E-size</strong>&amp; <strong>max</strong> &amp; <strong>sum</strong>&amp; <strong>name</strong>\
+130547 &amp; 12596 &amp; 1770 &amp; 500 &amp; 3352 &amp; 8379 &amp; 16380 &amp; 10518 &amp; 54300 &amp;
+50.75e6 &amp; cha2-unitigs.fa\
+130210 &amp; 12575 &amp; 1771 &amp; 500 &amp; 3363 &amp; 8382 &amp; 16380 &amp; 10525 &amp; 54300 &amp;
+50.78e6 &amp; cha2-contigs.fa\
+130182 &amp; 12555 &amp; 1769 &amp; 500 &amp; 3377 &amp; 8394 &amp; 16380 &amp; 10534 &amp; 54300 &amp;
+50.78e6 &amp; cha2-scaffolds.fa\</p>
+<p>[tab:chak61]</p>
+<p>The assembly contiguity is worse than fusarium, why?</p>
+<p>Genome characteristics.</p>
+<p>Data:</p>
+<p>Coverage</p>
+<p>Error distributions</p>
+<p>Read sizes</p>
+<p>Fragment sizes</p>
+<p>Kmer spectra</p>
+<h3 id="chalara-scaffolding-using-long-mate-pair-readslmp">Chalara scaffolding using long mate-pair reads(LMP)</h3>
+<p>Let’s put some LMP in there.</p>
+<div class="codehilite"><pre><span></span>cd /home/trainee/scaffolding/cha_raw/test_3
+</pre></div>
+
+
+<p>This is also a pre-computed example for you:</p>
+<div class="codehilite"><pre><span></span>abyss-pe name=chalmp1 k=61 in=&quot;../LIB2570_raw_R1.fastq ../LIB2570_raw_R2.fastq&quot; mp=&quot;lmp1&quot; lmp1=&quot;../LIB8209_raw_R1.fastq ../LIB8209_raw_R2.fastq&quot; np=4
+
+less chalmp1-stats.tab
+</pre></div>
+
+
+<p>[H]</p>
+<p>lllllllllll</p>
+<p><strong>n</strong> &amp; <strong>n:500</strong> &amp; <strong>L50</strong> &amp; <strong>min</strong> &amp; <strong>N80</strong>&amp; <strong>N50</strong>&amp; <strong>N20</strong>&amp;
+<strong>E-size</strong>&amp; <strong>max</strong> &amp; <strong>sum</strong>&amp; <strong>name</strong>\
+130548 &amp; 12596 &amp; 1770 &amp; 500 &amp; 3352 &amp; 8379 &amp; 16380 &amp; 10518 &amp; 54300 &amp;
+50.75e6 &amp; chalmp1-unitigs.fa\
+130211 &amp; 12575 &amp; 1771 &amp; 500 &amp; 3363 &amp; 8382 &amp; 16380 &amp; 10525 &amp; 54300 &amp;
+50.78e6 &amp; chalmp1-contigs.fa\
+130148 &amp; 12545 &amp; 1769 &amp; 500 &amp; 3380 &amp; 8400 &amp; 16380 &amp; 10535 &amp; 54300 &amp;
+50.78e6 &amp; chalmp1-scaffolds.fa\</p>
+<p>[tab:chak27]</p>
+<p>So&hellip; what happened? Let’s check the data by:</p>
+<p>Kmer spectra</p>
+<p>Fragment sizes</p>
+<p>Any hints on the protocol? And a not-so-obvious property:</p>
+<div class="codehilite"><pre><span></span>kat plot spectra-mx --intersection -x 30 -y 15000000 -o pe_vs_lmp-main.mx.spectra-mx.png pe_vs_lmp-main.mx
+</pre></div>
+
+
+<p>Do you remember LMP require pre-processing? Let’s try with processed
+LMP.</p>
+<p>Prior task (already made) preprocess the LMP with nextclip.</p>
+<div class="codehilite"><pre><span></span>cd /home/trainee/scaffolding/cha_proc/test_1
+</pre></div>
+
+
+<p>This is also a pre-computed example for you:</p>
+<div class="codehilite"><pre><span></span>abyss-pe name=chalmpproc1 k=61 in=&quot;../../cha_raw/LIB2570_raw_R1.fastq ../../cha_raw/LIB2570_raw_R2.fastq&quot; mp=&quot;proclmp1&quot; proclmp1=&quot;../LIB8209_preproc_R1.fastq ../LIB8209_preproc_R2.fastq&quot; np=4
+
+less chalmpproc1-stats.tab
+</pre></div>
+
+
+<p>[H]</p>
+<p>lllllllllll</p>
+<p><strong>n</strong> &amp; <strong>n:500</strong> &amp; <strong>L50</strong> &amp; <strong>min</strong> &amp; <strong>N80</strong>&amp; <strong>N50</strong>&amp; <strong>N20</strong>&amp;
+<strong>E-size</strong>&amp; <strong>max</strong> &amp; <strong>sum</strong>&amp; <strong>name</strong>\
+130548 &amp; 12596 &amp; 1770 &amp; 500 &amp; 3352 &amp; 8379 &amp; 16380 &amp; 10518 &amp; 54300 &amp;
+50.75e6 &amp; chalmpproc1-unitigs.fa\
+130211 &amp; 12575 &amp; 1771 &amp; 500 &amp; 3363 &amp; 8382 &amp; 16380 &amp; 10525 &amp; 54300 &amp;
+50.78e6 &amp; chalmpproc1-contigs.fa\
+122061 &amp; 6679 &amp; 167 &amp; 500 &amp; 18609 &amp; 87510 &amp; 187171 &amp; 106178 &amp; 397967 &amp;
+51.15e6 &amp; chalmpproc1-scaffolds.fa\</p>
+<p>[tab:chaklmpk61]</p>
+<p>That’s much better!</p>
+<h2 id="chalara-beyond-first-pass">Chalara: beyond first pass</h2>
+<p>Do you remember these?</p>
+<p>Genome characteristics. Data:</p>
+<ul>
+<li>
+<p>Coverage</p>
+</li>
+<li>
+<p>Error distributions</p>
+</li>
+<li>
+<p>Read sizes</p>
+</li>
+<li>
+<p>Fragment sizes</p>
+</li>
+<li>
+<p>Kmer spectra</p>
+</li>
+</ul>
+<p>Let’s think a bit and try to improve the assembly&hellip;</p>
+<p>If you look at the pre-processed LMP, do you notice anything peculiar?\</p>
+<p>Needs to fill</p>
+<p>Testing the inclussion of heavily pre-procesed LMP coverage into the DBG</p>
+<div class="codehilite"><pre><span></span>cd /home/trainee/scaffolding/cha_proc/test_2
+</pre></div>
+
+
+<p>This is also a pre-computed example for you:</p>
+<div class="codehilite"><pre><span></span>abyss-pe name=chalmp2 k=61 se=&quot;../LIB8209_preproc_single.fastq&quot; lib=&quot;lmp1&quot; lmp1=&quot;../LIB8209_preproc_R1.fastq ../LIB8209_preproc_R2.fastq&quot; np=4 &amp;gt;chaproclmp2.log 2&amp;gt;&amp;amp;1
+
+less chalmp2-stats.tab
+</pre></div>
+
+
+<p>Let’s look at the stats.</p>
+<p>[H]</p>
+<p>lllllllllll</p>
+<p><strong>n</strong> &amp; <strong>n:500</strong> &amp; <strong>L50</strong> &amp; <strong>min</strong> &amp; <strong>N80</strong>&amp; <strong>N50</strong>&amp; <strong>N20</strong>&amp;
+<strong>E-size</strong>&amp; <strong>max</strong> &amp; <strong>sum</strong>&amp; <strong>name</strong>\
+128306 &amp; 10150 &amp; 1182 &amp; 500 &amp; 4954 &amp; 12585 &amp; 24777 &amp; 15693 &amp; 68684 &amp;
+51.03e6 &amp; chaproclmp4-unitigs.fa\
+118939 &amp; 5772 &amp; 362 &amp; 500 &amp; 15717 &amp; 41870 &amp; 82033 &amp; 52819 &amp; 252066 &amp;
+52.24e6 &amp; chaproclmp4-contigs.fa\
+116139 &amp; 4014 &amp; 141 &amp; 500 &amp; 41145 &amp; 109273 &amp; 224986 &amp; 133450 &amp; 460979 &amp;
+52.56e6 &amp; chaproclmp4-scaffolds.fa\</p>
+<p>[tab:chaklmp2-k61]</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Robert Ekblom* andJochen B. W. Wolf. &ldquo;A field guide to whole-genome
+    sequencing, assembly and annotation&rdquo; Evolutionary Applications
+    Special Issue: Evolutionary Conservation Volume 7, Issue 9, pages
+    1026 – 1042, November 2014</p>
+</li>
+<li>
+<p>De novo genome assembly: what every biologist should know Nature
+    Methods 9, 333 – 337 (2012) doi:10.1038/nmeth.1935</p>
+</li>
+</ol>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../../eukaryotic/handout/handout/" title="Eukaryote Genome Assembly" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Eukaryote Genome Assembly
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../../license/" title="License" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                License
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; The authors; 2017-
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+        <script src="../../../js/details.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
