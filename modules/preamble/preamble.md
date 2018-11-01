@@ -1,5 +1,3 @@
-\newpage 
-
 Providing Feedback
 ==================
 
