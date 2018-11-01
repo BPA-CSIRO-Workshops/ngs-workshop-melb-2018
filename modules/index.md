@@ -45,6 +45,17 @@ The workshop provides hands-on computational experience in analysis of NGS data 
 |10:50-11:20 am|Scaffolding|Practice/ discussion|
 |11:20-12:30 pm|Long read assembly|Lecture + Practice|
 |12:30-1:30 pm|Break|
+| | |||
+|-----|--------|-----|-----|
+|1:30-1:45 pm|Intro to Alignment| |Lecture|
+|1:45-2:15 pm|Alignment and processing bams|AS/CD|Practice|
+|2:15-3pm|RNAseq: align reads from two conditions|AS/CD|Practice|
+|3-3:15 pm|break| | |
+|3:15-3:30 pm|Quick refresher on RNAseq experiment|SA|Lecture|
+|3:30-4 pm|Align Reads.  Visualise and explore bam files|AS/CD|Practice|
+|4-4:20 pm|RNAseq: transcript assembly|AS/CD|Practice| 
+|4:20 - 4:45 pm|RNAseq: DE using edgeR|AS/CD|Practice|
+|4:45-5 pm|Wrap up| |
 
 
 ## Workshop Content
