@@ -57,7 +57,8 @@ nav:
     - Quality Control: qc/handout/handout.md
     - Read Alignment: alignment/handout/handout.md
     - RNA-Seq: rna-seq/handout/handout.md
-    - De Novo: de-novo/handout/handout.md
+    - De Novo Genome Assembly: denovo/handout/handout.md
+    - De Novo Canu: denovo-canu/handout/handout.md
     - Eukaryote Genome Assembly: eukaryotic/handout/handout.md
     - Scaffolding: scaffolding/handout/handout.md
 

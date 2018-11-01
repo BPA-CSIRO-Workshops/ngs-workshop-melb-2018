@@ -10,8 +10,8 @@
 [submodule "modules/post-workshop"]
 	path = modules/post-workshop
 	url = https://github.com/BPA-CSIRO-Workshops/btp-module-nectar.git
-[submodule "modules/de-novo"]
-	path = modules/de-novo
+[submodule "modules/denovo"]
+	path = modules/denovo
 	url = https://github.com/BPA-CSIRO-Workshops/btp-module-velvet.git
 [submodule "modules/cli"]
 	path = modules/cli
@@ -28,3 +28,6 @@
 [submodule "orchestration"]
 	path = orchestration
 	url = https://github.com/BPA-CSIRO-Workshops/btp-orchestration.git
+[submodule "modules/denovo-canu"]
+	path = modules/denovo-canu
+	url = https://github.com/BPA-CSIRO-Workshops/btp-module-denovo-canu.git
