@@ -1,4 +1,5 @@
-\newpage
+\newpage 
+
 Providing Feedback
 ==================
 
@@ -43,13 +44,6 @@ tutorial documents. We have done this for two reasons: 1) you will have
 something to take away with you at the end of the workshop, and 2) you
 can save time (mis)typing commands on the command line by using
 copy-and-paste.
-
-*We advise you to use Acrobat Reader to view the PDF. This is because it
-properly supports some features we have implemented to ensure that
-copy-and-paste of commands works as expected. This includes the
-appropriate copy-and-paste of special characters like tilde and hyphens
-as well as skipping line numbers for easy copy-and-past of whole code
-blocks.*
 
 While you could fly through the hands-on sessions doing copy-and-paste
 you will learn more if you take the time, saved from not having to type
