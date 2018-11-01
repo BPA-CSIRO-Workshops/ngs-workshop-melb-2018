@@ -9,15 +9,15 @@ The workshop provides hands-on computational experience in analysis of NGS data 
 ## Workshop Content
 Topics covered by this workshop include:
 
-* An introduction to the command line interface and NGS file formats
+* An introduction to the command line interface and NGS file formats \
 
-* Assessment of the quality of NGS sequence reads
+* Assessment of the quality of NGS sequence reads \
 
-* Sequence alignment algorithms
+* Sequence alignment algorithms \
 
-* Basic RNA-Seq analysis
+* Basic RNA-Seq analysis \
 
-* Short and long read de novo genome assembly
+* Short and long read de novo genome assembly \
 
 
 This workshop will be delivered using a mixture of lectures, hands-on practical sessions, and open discussions.
