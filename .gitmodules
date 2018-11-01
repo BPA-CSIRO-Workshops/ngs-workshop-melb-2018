@@ -25,3 +25,6 @@
 [submodule "modules/scaffolding"]
 	path = modules/scaffolding
 	url = https://github.com/BPA-CSIRO-Workshops/denovo-module-scaffolding.git
+[submodule "orchestration"]
+	path = orchestration
+	url = https://github.com/BPA-CSIRO-Workshops/btp-orchestration.git
