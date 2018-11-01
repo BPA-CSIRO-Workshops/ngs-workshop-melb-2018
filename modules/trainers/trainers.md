@@ -1,17 +1,17 @@
 The Trainers
 ============
 
-![image](photos/test.jpg) <br>
+![image](photos/generic.jpg) <br>
 **Mr Simon Michnowichz** <br>
 HPC Team <br>
 Monash eResearch Centre <br>
 
-![image](photos/test.jpg) <br>
+![image](photos/generic.jpg) <br>
 **Mr Jerico Revote** <br>
 Cloud Team <br>
 Monash eResearch Centre <br>
 
-![image](photos/test.jpg) <br>
+![image](photos/generic.jpg) <br>
 **Ms Gulrez Chahal** <br>
 ARMI <br>
 Monash University <br>
