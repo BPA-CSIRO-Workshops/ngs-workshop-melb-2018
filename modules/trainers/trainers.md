@@ -1,20 +1,23 @@
 The Trainers
 ============
 
-\newlength{\trainerIconWidth}
-\setlength{\trainerIconWidth}{2.0cm}
-+:----------------------------------+:----------------------------------+
-| ![image](photos/test.jpg){widt | **Mr Simon Michnowichz**           |
-| h="\trainerIconWidth"}            | HPC team                         |
-|                                   | Monash eResearch Centre           |
-+-----------------------------------+-----------------------------------+
-| ![image](photos/test.jpg){wi |     **Ms. Gulrez Chahal **            |
-| dth="\trainerIconWidth"}          | ARMI      |
-|                                   | Monash University                 |
-+-----------------------------------+-----------------------------------+
-+-----------------------------------+-----------------------------------+
-| ![image](photos/Tyagi.jpg){width= | **Dr. Sonika Tyagi**              |
-| "\trainerIconWidth"}              | Bioinformatics Lab Head        |
-|                                   | School of Biological Sciences        |
-|                                   | Monash University      |
-+-----------------------------------+-----------------------------------+
+![image](photos/generic.jpg) <br>
+**Mr Simon Michnowichz** <br>
+HPC Team <br>
+Monash eResearch Centre <br>
+
+![image](photos/generic.jpg) <br>
+**Mr Jerico Revote** <br>
+Cloud Team <br>
+Monash eResearch Centre <br>
+
+![image](photos/generic.jpg) <br>
+**Ms Gulrez Chahal** <br>
+ARMI <br>
+Monash University <br>
+
+![image](photos/Tyagi.jpg) <br>
+**Dr. Sonika Tyagi** <br>
+Bioinformatics Lab Head <br>
+School of Biological Sciences <br>
+Monash University <br>
