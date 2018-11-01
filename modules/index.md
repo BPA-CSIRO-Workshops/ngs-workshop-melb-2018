@@ -1,16 +1,24 @@
-# Welcome to the Introduction to NGS Workshop
+# Welcome to the Introduction to NGS Workshop (5-7 Nov 2018)
 <br>
 
-The Introduction to NGS Data Analysis is a three-day, hands-on workshop that offers attendees a basic understanding of NGS data analysis workflows. The workshop provides hands-on computational experience in analysis of NGS data using common analytical approaches for ChIP-Seq, RNA-Seq data and de novo genome assembly.
+The Introduction to NGS Data Analysis is a three-day, hands-on workshop that offers attendees a basic understanding of NGS data analysis workflows. 
+The workshop provides hands-on computational experience in analysis of NGS data using common analytical approaches for ChIP-Seq (optional), RNA-Seq data and de novo genome assembly.
+
+## Time Table
 
 ## Workshop Content
 Topics covered by this workshop include:
+
 * An introduction to the command line interface and NGS file formats
+
 * Assessment of the quality of NGS sequence reads
+
 * Sequence alignment algorithms
-* Basic ChIP-Seq analysis
+
 * Basic RNA-Seq analysis
+
 * Short and long read de novo genome assembly
+
 
 This workshop will be delivered using a mixture of lectures, hands-on practical sessions, and open discussions.
 
