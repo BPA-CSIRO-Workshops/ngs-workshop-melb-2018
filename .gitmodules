@@ -19,3 +19,6 @@
 [submodule "modules/qc"]
 	path = modules/qc
 	url = https://github.com/BPA-CSIRO-Workshops/btp-module-ngs-qc.git
+[submodule "modules/eukaryotic"]
+	path = modules/eukaryotic
+	url = https://github.com/BPA-CSIRO-Workshops/denovo-module-euk.git
