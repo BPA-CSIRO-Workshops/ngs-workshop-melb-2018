@@ -59,5 +59,6 @@ nav:
     - RNA-Seq: rna-seq/handout/handout.md
     - De Novo: de-novo/handout/handout.md
     - Eukaryote Genome Assembly: eukaryotic/handout/handout.md
+    - Scaffolding: scaffolding/handout/handout.md
 
 - License: license.md
