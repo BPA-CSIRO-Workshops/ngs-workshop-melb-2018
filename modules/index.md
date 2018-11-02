@@ -46,30 +46,30 @@ The workshop provides hands-on computational experience in analysis of NGS data 
 |11:20-12:30 pm|Long read assembly|Lecture + Practice|
 |12:30-1:30 pm|Break|
 | | |||
-|-----|--------|-----|-----|
-|1:30-1:45 pm|Intro to Alignment| |Lecture|
-|1:45-2:15 pm|Alignment and processing bams|AS/CD|Practice|
-|2:15-3pm|RNAseq: align reads from two conditions|AS/CD|Practice|
+|-----|--------|-----|
+|1:30-1:45 pm|Intro to Alignment|Lecture|
+|1:45-2:15 pm|Alignment and processing bams|Practice|
+|2:15-3pm|RNAseq: align reads from two conditions|Practice|
 |3-3:15 pm|break| | |
-|3:15-3:30 pm|Quick refresher on RNAseq experiment|SA|Lecture|
-|3:30-4 pm|Align Reads.  Visualise and explore bam files|AS/CD|Practice|
-|4-4:20 pm|RNAseq: transcript assembly|AS/CD|Practice| 
-|4:20 - 4:45 pm|RNAseq: DE using edgeR|AS/CD|Practice|
+|3:15-3:30 pm|Quick refresher on RNAseq experiment|Lecture|
+|3:30-4 pm|Align Reads.  Visualise and explore bam files|Practice|
+|4-4:20 pm|RNAseq: transcript assembly|Practice| 
+|4:20 - 4:45 pm|RNAseq: DE using edgeR|Practice|
 |4:45-5 pm|Wrap up| |
 
 
 ## Workshop Content
 Topics covered by this workshop include:
 
-* An introduction to the command line interface and NGS file formats \
+* An introduction to the command line interface and NGS file formats 
 
-* Assessment of the quality of NGS sequence reads \
+* Assessment of the quality of NGS sequence reads 
 
-* Sequence alignment algorithms \
+* Sequence alignment algorithms 
 
-* Basic RNA-Seq analysis \
+* Basic RNA-Seq analysis 
 
-* Short and long read de novo genome assembly \
+* Short and long read de novo genome assembly 
 
 
 This workshop will be delivered using a mixture of lectures, hands-on practical sessions, and open discussions.
