@@ -750,34 +750,27 @@
 </ul>
 <h2 id="author-information">Author Information</h2>
 <p><em>Primary Author(s):</em>
-Sonika Tyagi <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#111;&#110;&#105;&#107;&#97;&#46;&#116;&#121;&#97;&#103;&#105;&#64;&#109;&#111;&#110;&#97;&#115;&#104;&#46;&#101;&#100;&#117;">&#115;&#111;&#110;&#105;&#107;&#97;&#46;&#116;&#121;&#97;&#103;&#105;&#64;&#109;&#111;&#110;&#97;&#115;&#104;&#46;&#101;&#100;&#117;</a> \
-Susan Corley UNSW\</p>
+Sonika Tyagi, Monash University and  Susan Corley UNSW</p>
+<p><em>Contributor)s)</em>
+Myrto Kostadima EBI UK</p>
 <h2 id="resources-youll-be-using">Resources You’ll be Using</h2>
 <h3 id="tools-used">Tools Used</h3>
 <p>Tophat
-: <br />
-<a href="https://ccb.jhu.edu/software/tophat/index.shtml">https://ccb.jhu.edu/software/tophat/index.shtml</a></p>
+:   <a href="https://ccb.jhu.edu/software/tophat/index.shtml">https://ccb.jhu.edu/software/tophat/index.shtml</a></p>
 <p>Stringtie
-: <br />
-<a href="http://https://ccb.jhu.edu/software/stringtie/">http://https://ccb.jhu.edu/software/stringtie/</a></p>
+:  <a href="http://https://ccb.jhu.edu/software/stringtie/">http://https://ccb.jhu.edu/software/stringtie/</a></p>
 <p>Samtools
-: <br />
-<a href="http://www.htslib.org/">http://www.htslib.org/</a></p>
+:    <a href="http://www.htslib.org/">http://www.htslib.org/</a></p>
 <p>BEDTools
-: <br />
-<a href="https://github.com/arq5x/bedtools2">https://github.com/arq5x/bedtools2</a></p>
+:   <a href="https://github.com/arq5x/bedtools2">https://github.com/arq5x/bedtools2</a></p>
 <p>UCSC tools
-: <br />
-<a href="http://hgdownload.cse.ucsc.edu/admin/exe/">http://hgdownload.cse.ucsc.edu/admin/exe/</a></p>
+:    <a href="http://hgdownload.cse.ucsc.edu/admin/exe/">http://hgdownload.cse.ucsc.edu/admin/exe/</a></p>
 <p>IGV
-: <br />
-<a href="http://www.broadinstitute.org/igv/">http://www.broadinstitute.org/igv/</a></p>
+:   <a href="http://www.broadinstitute.org/igv/">http://www.broadinstitute.org/igv/</a></p>
 <p>FeatureCount
-: <br />
-<a href="http://subread.sourceforge.net/">http://subread.sourceforge.net/</a></p>
+:    <a href="http://subread.sourceforge.net/">http://subread.sourceforge.net/</a></p>
 <p>edgeR pakcage
-: <br />
-<a href="https://bioconductor.org/packages/release/bioc/html/edgeR.html">https://bioconductor.org/packages/release/bioc/html/edgeR.html</a></p>
+:    <a href="https://bioconductor.org/packages/release/bioc/html/edgeR.html">https://bioconductor.org/packages/release/bioc/html/edgeR.html</a></p>
 <h3 id="sources-of-data">Sources of Data</h3>
 <p><a href="http://www.ebi.ac.uk/ena/data/view/ERR022484">http://www.ebi.ac.uk/ena/data/view/ERR022484</a>\
 <a href="http://www.ebi.ac.uk/ena/data/view/ERR022485">http://www.ebi.ac.uk/ena/data/view/ERR022485</a>\
@@ -814,18 +807,14 @@ the following:</p>
     These files are based on RNA-seq data of zebrafish embryos 6h post
     fertilization</p>
 <p>Open the Terminal and go to the <code class="codehilite">rnaseq</code> working directory:</p>
-<div class="codehilite"><pre><span></span>cd /home/trainee/rnaseq/
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> /home/trainee/rnaseq/ 
 </pre></div>
-
 
 <p>All commands entered into the terminal for this tutorial should be from
 within the <strong><code class="codehilite">/home/trainee/rnaseq</code></strong> directory.</p>
 <p>Check that the <code class="codehilite">data</code> directory contains the above-mentioned files by
 typing:</p>
-<div class="codehilite"><pre><span></span>ls data
-</pre></div>
-
-
+<p><code class="codehilite">shellls data</code></p>
 <h2 id="alignment">Alignment</h2>
 <p>There are numerous tools for performing short read alignment and the
 choice of aligner should be carefully made according to the analysis
@@ -837,20 +826,16 @@ small. The the index for the <code class="codehilite">Danio rerio</code> genome 
 you.</p>
 <p>The command to create an index is as follows. You DO NOT need to run
 this command yourself - we have done this for you.</p>
-<div class="codehilite"><pre><span></span>bowtie2-build genome/Danio_rerio.Zv9.66.dna.fa genome/ZV9
+<p><div class="codehilite"><pre><span></span> - bowtie2-build genome/Danio_rerio.Zv9.66.dna.fa genome/ZV9
 </pre></div>
-
-
-<p>Tophat2 has a number of parameters in order to perform the alignment. To
+Tophat2 has a number of parameters in order to perform the alignment. To
 view them all type:</p>
 <div class="codehilite"><pre><span></span>tophat2 --help
 </pre></div>
 
-
 <p>The general format of the tophat2 command is:</p>
-<div class="codehilite"><pre><span></span>tophat2 [options]* &amp;lt;index_base&amp;gt; &amp;lt;reads_1&amp;gt; &amp;lt;reads_2&amp;gt;
+<div class="codehilite"><pre><span></span>tophat2 <span class="o">[</span>options<span class="o">]</span>* &lt;index_base&gt; &lt;reads_1&gt; &lt;reads_2&gt;
 </pre></div>
-
 
 <p>Where the last two arguments are the <code class="codehilite"><span class="na">.fastq</span></code> files of the paired end
 reads, and the argument before is the basename of the indexed genome.</p>
@@ -859,49 +844,52 @@ Phred+33 encoded. We explicitly tell tophat of this fact by using the
 command line argument <code class="codehilite">–solexa-quals</code>.</p>
 <p>You can look at the first few reads in the file <code class="codehilite">data/2cells_1.fastq</code>
 with:</p>
-<div class="codehilite"><pre><span></span>head -n 20 data/2cells_1.fastq
-</pre></div>
+<div class="codehilite"><pre><span></span>head -n <span class="m">20</span> data/2cells_1.fastq
 
+Some other parameters that we are going to use to run Tophat are listed
+below:
 
-<p>Some other parameters that we are going to use to run Tophat are listed
-below:</p>
-<p>-g
+-g
 :   Maximum number of multihits allowed. Short reads are likely to map
     to more than one location in the genome even though these reads can
     have originated from only one of these regions. In RNA-seq we allow
-    for a limited number of multihits, and in this case we ask Tophat to
-    report only reads that map at most onto 2 different loci.</p>
-<p>–library-type
-:   Before performing any type of RNA-seq analysis you need to know a
-    few things about the library preparation. Was it done using a
+    <span class="k">for</span> a limited number of multihits, and in this <span class="k">case</span> we ask Tophat to
+    report only reads that map at most onto <span class="m">2</span> different loci.
+
+–library-type
+:   Before performing any <span class="nb">type</span> of RNA-seq analysis you need to know a
+    few things about the library preparation. Was it <span class="k">done</span> using a
     strand-specific protocol or not? If yes, which strand? In our data
-    the protocol was NOT strand specific.</p>
-<p>-j
+    the protocol was NOT strand specific.
+
+-j
 :   Improve spliced alignment by providing Tophat with annotated splice
     junctions. Pre-existing genome annotation is an advantage when
     analysing RNA-seq data. This file contains the coordinates of
     annotated splice junctions from Ensembl. These are stored under the
-    sub-directory <code class="codehilite">annotation</code> in a file called <code class="codehilite">ZV9.spliceSites</code>.</p>
-<p>-o
-:   This specifies in which subdirectory Tophat should save the output
-    files. Given that for every run the name of the output files is the
-    same, we specify different directories for each run.</p>
-<p>It takes some time (approx. 20 min) to perform tophat spliced
-alignments, even for this subset of reads. Therefore, we have
-pre-aligned the <code class="codehilite">2cells</code> data for you using the following command:</p>
-<p>You DO NOT need to run this command yourself - we have done this for
-you.</p>
-<div class="codehilite"><pre><span></span>tophat2 --solexa-quals -g 2 --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_2cells genome/ZV9 data/2cells_1.fastq data/2cells_2.fastq
-</pre></div>
+    sub-directory <span class="sb">`</span>annotation<span class="sb">`</span> in a file called <span class="sb">`</span>ZV9.spliceSites<span class="sb">`</span>.
 
+-o
+:   This specifies in which subdirectory Tophat should save the output
+    files. Given that <span class="k">for</span> every run the name of the output files is the
+    same, we specify different directories <span class="k">for</span> each run.
+
+It takes some <span class="nb">time</span> <span class="o">(</span>approx. <span class="m">20</span> min<span class="o">)</span> to perform tophat spliced
+alignments, even <span class="k">for</span> this subset of reads. Therefore, we have
+pre-aligned the <span class="sb">`</span>2cells<span class="sb">`</span> data <span class="k">for</span> you using the following command:
+
+You DO NOT need to run this <span class="nb">command</span> yourself - we have <span class="k">done</span> this <span class="k">for</span>
+you.
+
+<span class="sb">```</span>bash
+tophat2 --solexa-quals -g <span class="m">2</span> --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_2cells genome/ZV9 data/2cells_1.fastq data/2cells_2.fastq
+</pre></div>
 
 <p>Align the <code class="codehilite">6h</code> data yourself using the following command:</p>
-<div class="codehilite"><pre><span></span># Takes approx. 20mins
-tophat2 --solexa-quals -g 2 --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_6h genome/ZV9 data/6h_1.fastq data/6h_2.fastq
+<p><div class="codehilite"><pre><span></span>    <span class="c1"># Takes approx. 20mins</span>
+    tophat2 --solexa-quals -g <span class="m">2</span> --library-type fr-unstranded -j annotation/Danio_rerio.Zv9.66.spliceSites -o tophat/ZV9_6h genome/ZV9 data/6h_1.fastq data/6h_2.fastq
 </pre></div>
-
-
-<p>The <code class="codehilite">6h</code> read alignment will take approx. 20 min to complete. Therefore,
+The <code class="codehilite">6h</code> read alignment will take approx. 20 min to complete. Therefore,
 we’ll take a look at some of the files, generated by tophat, for the
 pre-computed <code class="codehilite">2cells</code> data.</p>
 <p>Tophat generates several files in the specified output directory. The
@@ -980,7 +968,6 @@ alignments found in the BAM file and then index the sorted BAM file.</p>
 samtools index tophat/ZV9_6h/accepted_hits.sorted.bam
 </pre></div>
 
-
 <p>Load the sorted BAM file into IGV, as described previously, and rename
 the track appropriately.</p>
 <h3 id="generating-gene-counts">Generating Gene Counts</h3>
@@ -993,7 +980,6 @@ utility called <code class="codehilite">FeatureCounts</code> that comes with the
 <div class="codehilite"><pre><span></span>mkdir gene_counts
 featureCounts -a annotation/Danio_rerio.Zv9.66.gtf -t exon -g gene_id -o gene_counts/gene_counts.txt tophat/ZV9_6h/accepted_hits.sorted.bam tophat/ZV9_2cells/accepted_hits.sorted.bam
 </pre></div>
-
 
 <h2 id="isoform-expression-and-transcriptome-assembly">Isoform Expression and Transcriptome Assembly</h2>
 <p>For non-model organisms and genomes with draft assemblies and incomplete
@@ -1043,7 +1029,10 @@ annotations, for the <code class="codehilite">2cells</code> and <code class="cod
 <p>Prior to running a merge function within stringtie:
 We need to create a mergelist.txt file before utilising the merge function. This is a list of all .gtf files created by stringtie in the above step and can be made in a text editor such as vi or nano. For this exercise, there is a file pre-made for you. The txt file will direct the merge function to look for the names of all the .gtf files that we want to merge.</p>
 <p>To merge StringTie files</p>
-<div class="codehilite"><pre><span></span>stringtie --merge -p 8 -G annotation/Danio_rerio.Zv9.66.gtf -o stringtie/stringtie_merged.gtf stringtie/mergelist.txt
+<div class="codehilite"><pre><span></span>ls stringtie/*.gtf &amp;gt;mergelist.txt
+less mergelist.txt
+
+stringtie --merge -p 8 -G annotation/Danio_rerio.Zv9.66.gtf -o stringtie/stringtie_merged.gtf mergelist.txt
 </pre></div>
 
 
@@ -1062,12 +1051,12 @@ To compare how merged annotation compares to reference</p>
 <p>:   -o = all output of gffcompare has a gffcmp. prefix, unless otherwise defined by user</p>
 <p>Now that we are happy with our merged annotation, we need to estimate the abundance of each transcript within each sample. Stringtie is designed to create output files that are immediately usable in next step of our RNA sequencing pipeline. In this next example, we can direct stringtie to simultaneously create a .ctab file required for ballgown.</p>
 <p>To estimate abundances and create table counts for 2cell </p>
-<div class="codehilite"><pre><span></span>stringtie -e -B -p 8 -G stringtie/stringtie_merged.gtf -0 ballgown/ZV9_6h.gtf tophat/ZV9_6h/accepted_hits.sorted.bam
+<div class="codehilite"><pre><span></span>stringtie -e -B -p 8 -G stringtie/stringtie_merged.gtf -o ballgown/ZV9_6h.gtf tophat/ZV9_6h/accepted_hits.sorted.bam
 </pre></div>
 
 
 <p>To estimate abundances and create table counts for 2cell </p>
-<div class="codehilite"><pre><span></span>stringtie -e -B -p 8 -G stringtie/stringtie_merged.gtf -0 ballgown/ZV9_2cells.gtf tophat/ZV9_2cells/accepted_hits.sorted.bam
+<div class="codehilite"><pre><span></span>stringtie -e -B -p 8 -G stringtie/stringtie_merged.gtf -o ballgown/ZV9_2cells.gtf tophat/ZV9_2cells/accepted_hits.sorted.bam
 </pre></div>
 
 
@@ -1080,7 +1069,7 @@ To compare how merged annotation compares to reference</p>
 <li>
 <p>Go back to IGV and load the pre-computed, GTF-guided transcriptome
     assembly for the <code class="codehilite">2cells</code> data
-    (<code class="codehilite">cufflinks/ZV9_2cells_gtf_guided/transcripts.gtf</code>).</p>
+    (<code class="codehilite">stringtie/ZV9_2cells.gtf</code>).</p>
 </li>
 <li>
 <p>Rename the track as “2cells GTF-Guided Transcripts”.</p>
