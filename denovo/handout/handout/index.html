@@ -729,11 +729,11 @@ CATEGORIES: paired-end data require to be put into separate categories. By incre
 <details><summary><strong>Answer</strong></summary><p>If you can achieve a good k-mer coverage - yes.</p>
 </details>
 </div>
-<p>What effect would the following compile-time parameters have on velvet:</p>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
+<p>What effect would the following compile-time parameters have on velvet:
+OPENMP=Y</p>
 </div>
-<p>OPENMP=Y</p>
 <div class="admonition success">
 <details><summary><strong>Answer</strong></summary><p>Turn on multithreading</p>
 </details>
@@ -1234,15 +1234,14 @@ surely, is to run <code class="codehilite">velvetg</code> with the <code class="
 order to use <code class="codehilite">-cov_cutoff</code> and <code class="codehilite">-exp_cov</code> sensibly, you need to
 investigate with R, as you did in the previous exercise, what parameter
 values to use. Start up R and produce the weighted histograms:</p>
-<div class="codehilite"><pre><span></span>R --no-save
-library(plotrix) 
-data &amp;lt;- read.table(&quot;run_21/stats.txt&quot;, header=TRUE) 
-data2 &amp;lt;- read.table(&quot;run_21trim/stats.txt&quot;, header=TRUE) 
-par(mfrow=c(1,2))
-weighted.hist(data$short1_cov, data$lgth, breaks=0:50)
-weighted.hist(data2$short1_cov, data2$lgth, breaks=0:50)
+<div class="codehilite"><pre><span></span>    R <span class="o">--</span>no<span class="o">-</span><span class="kp">save</span>
+    <span class="kn">library</span><span class="p">(</span>plotrix<span class="p">)</span> 
+    data <span class="o">&lt;-</span>read.table<span class="p">(</span><span class="s">&quot;run_21/stats.txt&quot;</span><span class="p">,</span> header<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> 
+    data2 <span class="o">&lt;-</span> read.table<span class="p">(</span><span class="s">&quot;run_21trim/stats.txt&quot;</span><span class="p">,</span> header<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> 
+    par<span class="p">(</span>mfrow<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">))</span>
+    weighted.hist<span class="p">(</span>data<span class="o">$</span>short1_cov<span class="p">,</span> data<span class="o">$</span>lgth<span class="p">,</span> breaks<span class="o">=</span><span class="m">0</span><span class="o">:</span><span class="m">50</span><span class="p">)</span>
+    weighted.hist<span class="p">(</span>data2<span class="o">$</span>short1_cov<span class="p">,</span> data2<span class="o">$</span>lgth<span class="p">,</span> breaks<span class="o">=</span><span class="m">0</span><span class="o">:</span><span class="m">50</span><span class="p">)</span>
 </pre></div>
-
 
 <p>Weighted k-mer coverage histograms of the paired-end reads pre-trimmed (left) and post-trimmed
 (right).</p>
