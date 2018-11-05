@@ -576,24 +576,18 @@
 </ul>
 <h2 id="resources-youll-be-using">Resources You’ll be Using</h2>
 <h3 id="tools-used">Tools Used</h3>
-<p>Kmer Analysis Tool kit
-:   \
-    <a href="https://github.com/TGAC/KAT">https://github.com/TGAC/KAT</a></p>
-<p>Nextclip
-:   \
-    <a href="https://github.com/richardmleggett/nextclip">https://github.com/richardmleggett/nextclip</a></p>
-<p>Abyss
-:   \
-    <a href="http://www.bcgsc.ca/platform/bioinfo/software/abyss">http://www.bcgsc.ca/platform/bioinfo/software/abyss</a></p>
-<p>Soap Denovo
-:   \
-    <a href="http://soap.genomics.org.cn/soapdenovo.html">http://soap.genomics.org.cn/soapdenovo.html</a></p>
-<p>SOAPec
-:   \
-    <a href="http://soap.genomics.org.cn/about.html">http://soap.genomics.org.cn/about.html</a></p>
-<p>BLAST
-:   \
-    <a href="http://blast.ncbi.nlm.nih.gov/Blast.cgi">http://blast.ncbi.nlm.nih.gov/Blast.cgi</a></p>
+<p>Kmer Analysis Tool kit:  <br />
+<a href="https://github.com/TGAC/KAT">https://github.com/TGAC/KAT</a></p>
+<p>Nextclip: <br />
+<a href="https://github.com/richardmleggett/nextclip">https://github.com/richardmleggett/nextclip</a></p>
+<p>Abyss: <br />
+<a href="http://www.bcgsc.ca/platform/bioinfo/software/abyss">http://www.bcgsc.ca/platform/bioinfo/software/abyss</a></p>
+<p>Soap Denovo: <br />
+<a href="http://soap.genomics.org.cn/soapdenovo.html">http://soap.genomics.org.cn/soapdenovo.html</a></p>
+<p>SOAPec: <br />
+<a href="http://soap.genomics.org.cn/about.html">http://soap.genomics.org.cn/about.html</a></p>
+<p>BLAST: <br />
+<a href="http://blast.ncbi.nlm.nih.gov/Blast.cgi">http://blast.ncbi.nlm.nih.gov/Blast.cgi</a></p>
 <h2 id="first-pass-genome-assembly">First Pass Genome Assembly</h2>
 <p>Assuming by now you are familiar with the general concept of <em>de novo</em>
 assembly, kmers and the de Bruijn graph based assembler. In this
@@ -679,12 +673,9 @@ abyss-pe in=&quot;../CS3270_A8733_GCCAAT_L001_R1.fastq ../CS3270_A8733_GCCAAT_L0
 
 
 <p>Description of the arguments used in the command:</p>
-<p>k
-:   = kmer size</p>
-<p>np
-:   = number of processors to be used</p>
-<p>sequence file names
-:   = R1 and R2 reads of a paired end sequence data</p>
+<p>k :   = kmer size</p>
+<p>np :   = number of processors to be used</p>
+<p>sequence file names :   = R1 and R2 reads of a paired end sequence data</p>
 <p>Let’s look at the statistics of the assembly we just did&hellip;</p>
 <p>Ok, there is no stats available in the folder, but we can always use
 <code class="codehilite">abyss-fac</code> to get the stats:</p>
@@ -693,21 +684,76 @@ less CS3270_abyss_k71-stats.tab
 </pre></div>
 
 
-<p>[H]</p>
-<p>lllllllllll</p>
-<p><strong>n</strong> &amp; <strong>n:500</strong> &amp; <strong>L50</strong> &amp; <strong>min</strong> &amp; <strong>N80</strong>&amp; <strong>N50</strong>&amp; <strong>N20</strong>&amp;
-<strong>E-size</strong>&amp; <strong>max</strong> &amp; <strong>sum</strong>&amp; <strong>name</strong>\
-27 &amp; 13 &amp; 2 &amp; 970 &amp; 6004 &amp; 13202 &amp; 52602 &amp; 28712 &amp; 52602 &amp; 112849 &amp;
-CS3270_abyss_k71-unitigs.fa%\
-5 &amp; 1 &amp; 1 &amp; 128429 &amp; 128429 &amp; 128429 &amp; 128429 &amp; 128429 &amp; 128429 &amp; 128429
-&amp; CS3270_abyss_k71-contigs.fa%\</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>n</strong></th>
+<th align="center"><strong>n:500</strong></th>
+<th align="center"><strong>L50</strong></th>
+<th align="center"><strong>min</strong></th>
+<th align="center"><strong>N80</strong></th>
+<th align="left"><strong>N50</strong></th>
+<th align="center"><strong>N20</strong></th>
+<th align="center"><strong>E-size</strong></th>
+<th align="center"><strong>max</strong></th>
+<th align="center"><strong>sum</strong></th>
+<th align="center"><strong>name</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">27</td>
+<td align="center">13</td>
+<td align="center">2</td>
+<td align="center">970</td>
+<td align="center">6004</td>
+<td align="left">13202</td>
+<td align="center">52602</td>
+<td align="center">28712</td>
+<td align="center">52602</td>
+<td align="center">112849</td>
+<td align="center">CS3270_abyss_k71-unitigs.fa</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">128429</td>
+<td align="center">128429</td>
+<td align="left">128429</td>
+<td align="center">128429</td>
+<td align="center">128429</td>
+<td align="center">128429</td>
+<td align="center">128429</td>
+<td align="center">CS3270_abyss_k71-contigs.fa</td>
+</tr>
+</tbody>
+</table>
 <p>[tab:fusariumk71]</p>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
 <p>How many unitigs/contigs do you have in the assembly?\</p>
-<p>27/5\</p>
-<p>What are the length statistics of your assembly?\</p>
-<p>in the table above\</p>
+</div>
+<div class="admonition success">
+<details><summary><strong>Answer</strong></summary></details>
+<p>27/5</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
+<p>What are the length statistics of your assembly? </p>
+</div>
+<div class="admonition success">
+<details><summary><strong>Answer</strong></summary></details>
+<p>in the table above</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
 <p>Does it match what you think before the assembly and why?\</p>
-<p>No\</p>
+</div>
+<div class="admonition success">
+<details><summary><strong>Answer</strong></summary></details>
+<p>No</p>
+</div>
 <p>The assembly is looking strange! It’s time for some analysis:</p>
 <p>Check frequencies for kmers kept/discarded/etc.</p>
 <p>Check spectra-cn and compare with expectations. Let’s do this by the
@@ -787,16 +833,64 @@ abyss-pe in=&quot;../CS3270_A8733_GCCAAT_L001_R1.fastq ../CS3270_A8733_GCCAAT_L0
 
 
 <p>Stats look better:</p>
-<p>[H]</p>
-<p>lllllllllll</p>
-<p><strong>n</strong> &amp; <strong>n:500</strong> &amp; <strong>L50</strong> &amp; <strong>min</strong> &amp; <strong>N80</strong>&amp; <strong>N50</strong>&amp; <strong>N20</strong>&amp;
-<strong>E-size</strong>&amp; <strong>max</strong> &amp; <strong>sum</strong>&amp; <strong>name</strong>\
-30645 &amp; 2717 &amp; 430 &amp; 502 &amp; 11354 &amp; 25336 &amp; 47966 &amp; 31027 &amp; 147694 &amp;
-36.14e6 &amp; CS3270_abyss_k27-unitigs.fa\
-21511 &amp; 350 &amp; 33 &amp; 527 &amp; 157565 &amp; 338989 &amp; 630228 &amp; 407098 &amp; 1265237 &amp;
-36.52e6 &amp; CS3270_abyss_k27-contigs.fa\
-21327 &amp; 205 &amp; 17 &amp; 527 &amp; 332444 &amp; 716132 &amp; 1265237 &amp; 791882 &amp; 1880850 &amp;
-36.51e6 &amp; CS3270_abyss_k27-scaffolds.fa\</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>n</strong></th>
+<th align="center"><strong>n:500</strong></th>
+<th align="center"><strong>L50</strong></th>
+<th align="center"><strong>min</strong></th>
+<th align="center"><strong>N80</strong></th>
+<th align="left"><strong>N50</strong></th>
+<th align="center"><strong>N20</strong></th>
+<th align="center"><strong>E-size</strong></th>
+<th align="center"><strong>max</strong></th>
+<th align="center"><strong>sum</strong></th>
+<th align="center"><strong>name</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">30645</td>
+<td align="center">2717</td>
+<td align="center">430</td>
+<td align="center">502</td>
+<td align="center">11354</td>
+<td align="left">25336</td>
+<td align="center">47966</td>
+<td align="center">31027</td>
+<td align="center">147694</td>
+<td align="center">36.14e6</td>
+<td align="center">CS3270_abyss_k27-unitigs.fa</td>
+</tr>
+<tr>
+<td align="center">21511</td>
+<td align="center">350</td>
+<td align="center">33</td>
+<td align="center">527</td>
+<td align="center">157565</td>
+<td align="left">338989</td>
+<td align="center">630228</td>
+<td align="center">407098</td>
+<td align="center">1265237</td>
+<td align="center">36.52e6</td>
+<td align="center">CS3270_abyss_k27-contigs.fa</td>
+</tr>
+<tr>
+<td align="center">21327</td>
+<td align="center">205</td>
+<td align="center">17</td>
+<td align="center">527</td>
+<td align="center">332444</td>
+<td align="left">716132</td>
+<td align="center">1265237</td>
+<td align="center">791882</td>
+<td align="center">1880850</td>
+<td align="center">36.51e6</td>
+<td align="center">CS3270_abyss_k27-scaffolds.fa</td>
+</tr>
+</tbody>
+</table>
 <p>[tab:fusariumk27]</p>
 <p>Let’s check a bit anyway:</p>
 <div class="codehilite"><pre><span></span>less CS3270_abyss_k27.log
@@ -820,10 +914,22 @@ kat comp -o reads_vs_abyss_k27 -t 4 -C -D &#39;../*.fastq&#39; CS3270_abyss_k27-
 
 
 <p>[H] <img alt="image" src="../images/abyss-k27.png" /> [fig:fusariumk27]</p>
-<p>Any tools you can use to check kmer spectra at any K before assembling?\</p>
-<p>KAT\</p>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
+<p>Any tools you can use to check kmer spectra at any K before assembling?</p>
+</div>
+<div class="admonition success">
+<details><summary><strong>Answer</strong></summary></details>
+<p>KAT</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
 <p>Can you predict what will happen if you use KAT with larger K values?\</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
 <p>Will the assembly answer the biological question?</p>
+</div>
 <p>Use BLAST or BLAT and the databases to check&hellip;</p>
 <div class="codehilite"><pre><span></span>makeblastdb -in CS3270_abyss_k27-scaffolds.fa -dbtype nucl
 blat –t=dnax –q=prot –minIdentity=90 CS3270_abyss_k27-scaffolds.fa test_genes.fasta out.psl
