@@ -1090,19 +1090,23 @@ replicate RNA samples were collected from LNCaP cells treated with an
 androgen hormone (DHT). Four replicates were collected from cells
 treated with an inactive compound. Each of the seven samples was run on
 a lane (7 lanes) of an Illumina flow cell to produce 35 bp reads. The
-experimental design was therefore:</p>
-<p>[H]</p>
-<p>rrr</p>
-<p><strong>Lane</strong> &amp; <strong>Treatment</strong> &amp; <strong>Label</strong>\
-1 &amp; Control &amp; Con1\
-2 &amp; Control &amp; Con2\
-3 &amp; Control &amp; Con3\
-4 &amp; Control &amp; Con4\
-5 &amp; DHT &amp; DHT1\
-6 &amp; DHT &amp; DHT2\
-7 &amp; DHT &amp; DHT3\</p>
-<p>[tab:experimental<sub>d</sub>esign]</p>
-<p>This workflow requires raw gene count files and these can be generated
+experimental design was therefore:
+<div class="codehilite"><pre><span></span><span class="k">[H]</span>
+
+<span class="na">rrr</span>
+
+<span class="na">**Lane** &amp; **Treatment** &amp; **Label**\</span>
+<span class="na">1 &amp; Control &amp; Con1\</span>
+<span class="na">2 &amp; Control &amp; Con2\</span>
+<span class="na">3 &amp; Control &amp; Con3\</span>
+<span class="na">4 &amp; Control &amp; Con4\</span>
+<span class="na">5 &amp; DHT &amp; DHT1\</span>
+<span class="na">6 &amp; DHT &amp; DHT2\</span>
+<span class="na">7 &amp; DHT &amp; DHT3\</span>
+
+<span class="k">[tab:experimental~d~esign]</span>
+</pre></div>
+This workflow requires raw gene count files and these can be generated
 using a utility called featureCounts as demonstrated above. We are using
 a pre-computed gene counts data (stored in <code class="codehilite">pnas_expression.txt</code>) for
 this exercise.</p>
@@ -1136,39 +1140,31 @@ useful to have other annotations such as the gene symbol and entrez id.
 Next we will add in these annotations. We will use the BiomaRt package
 to do this.</p>
 <p>We start by using the useMart function of BiomaRt to access the human
-data base of ensemble gene ids.</p>
-<div class="codehilite"><pre><span></span>human&amp;lt;-useMart(host=&quot;www.ensembl.org&quot;, &quot;ENSEMBL_MART_ENSEMBL&quot;, dataset=&quot;hsapiens_gene_ensembl&quot;) attributes=c(&quot;ensembl_gene_id&quot;, &quot;entrezgene&quot;,&quot;hgnc_symbol&quot;)
+data base of ensemble gene ids.
+<div class="codehilite"><pre><span></span>    human<span class="o">&lt;-</span>useMart<span class="p">(</span>host<span class="o">=</span><span class="s">&quot;www.ensembl.org&quot;</span><span class="p">,</span> <span class="s">&quot;ENSEMBL_MART_ENSEMBL&quot;</span><span class="p">,</span> dataset<span class="o">=</span><span class="s">&quot;hsapiens_gene_ensembl&quot;</span><span class="p">)</span> attributes<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;ensembl_gene_id&quot;</span><span class="p">,</span> <span class="s">&quot;entrezgene&quot;</span><span class="p">,</span><span class="s">&quot;hgnc_symbol&quot;</span><span class="p">)</span>
 </pre></div>
-
-
-<p>We create a vector of our ensemble gene ids.</p>
-<div class="codehilite"><pre><span></span>ensembl_names&amp;lt;-rownames(data)
-head(ensembl_names)
+We create a vector of our ensemble gene ids.
+<div class="codehilite"><pre><span></span>    ensembl_names<span class="o">&lt;-</span><span class="kp">rownames</span><span class="p">(</span>data<span class="p">)</span>
+    <span class="kp">head</span><span class="p">(</span>ensembl_names<span class="p">)</span>
 </pre></div>
-
-
-<p>We then use the function getBM to get the gene symbol data we want.This
-takes about a minute.</p>
-<div class="codehilite"><pre><span></span>genemap&amp;lt;-getBM(attributes, filters=&quot;ensembl_gene_id&quot;, values=ensembl_names, mart=human)
+We then use the function getBM to get the gene symbol data we want.This
+takes about a minute.
+<div class="codehilite"><pre><span></span>    genemap<span class="o">&lt;-</span>getBM<span class="p">(</span><span class="kp">attributes</span><span class="p">,</span> filters<span class="o">=</span><span class="s">&quot;ensembl_gene_id&quot;</span><span class="p">,</span> values<span class="o">=</span>ensembl_names<span class="p">,</span> mart<span class="o">=</span>human<span class="p">)</span>
 </pre></div>
-
-
-<p>Have a look at the start of the genemap dataframe.</p>
+Have a look at the start of the genemap dataframe.</p>
 <div class="codehilite"><pre><span></span>head(genemap)
 </pre></div>
 
 
-<p>We then match the data we have retrieved to our dataset.</p>
-<div class="codehilite"><pre><span></span>idx &amp;lt;-match(ensembl_names, genemap$ensembl_gene_id)
-data$entrezgene &amp;lt;-genemap$entrezgene [ idx ]
-data$hgnc_symbol &amp;lt;-genemap$hgnc_symbol [ idx ]
-Ann &amp;lt;- cbind(rownames(data), data$hgnc_symbol, data$entrezgene)
-colnames(Ann)&amp;lt;-c(&quot;Ensembl&quot;, &quot;Symbol&quot;, &quot;Entrez&quot;)
-Ann&amp;lt;-as.data.frame(Ann)
+<p>We then match the data we have retrieved to our dataset.
+<div class="codehilite"><pre><span></span>    idx <span class="o">&lt;-</span><span class="kp">match</span><span class="p">(</span>ensembl_names<span class="p">,</span> genemap<span class="o">$</span>ensembl_gene_id<span class="p">)</span>
+    data<span class="o">$</span>entrezgene <span class="o">&lt;-</span>genemap<span class="o">$</span>entrezgene <span class="p">[</span> idx <span class="p">]</span>
+    data<span class="o">$</span>hgnc_symbol <span class="o">&lt;-</span>genemap<span class="o">$</span>hgnc_symbol <span class="p">[</span> idx <span class="p">]</span>
+    Ann <span class="o">&lt;-</span> <span class="kp">cbind</span><span class="p">(</span><span class="kp">rownames</span><span class="p">(</span>data<span class="p">),</span> data<span class="o">$</span>hgnc_symbol<span class="p">,</span> data<span class="o">$</span>entrezgene<span class="p">)</span>
+    <span class="kp">colnames</span><span class="p">(</span>Ann<span class="p">)</span><span class="o">&lt;-</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;Ensembl&quot;</span><span class="p">,</span> <span class="s">&quot;Symbol&quot;</span><span class="p">,</span> <span class="s">&quot;Entrez&quot;</span><span class="p">)</span>
+    Ann<span class="o">&lt;-</span><span class="kp">as.data.frame</span><span class="p">(</span>Ann<span class="p">)</span>
 </pre></div>
-
-
-<p>Let’s check and see that this additional information is there.</p>
+Let’s check and see that this additional information is there.</p>
 <div class="codehilite"><pre><span></span>head(data)
 </pre></div>
 

@@ -763,17 +763,15 @@ less coverage.hist
 </pre></div>
 
 
-<p>We will now plot the values from the <code class="codehilite">coverage.hist</code>:</p>
-<div class="codehilite"><pre><span></span>gnuplot &amp;lt;Press enter&amp;gt;
-gnuplot&amp;gt; set xrange [0:200]
-gnuplot&amp;gt; set yrange [0:5000]
-gnuplot&amp;gt; plot &quot;coverage.hist&quot;
-Type exit or quit to leave the gnuplot
-gnuplot&amp;gt; exit
+<p>We will now plot the values from the <code class="codehilite">coverage.hist</code>:
+<div class="codehilite"><pre><span></span>    gnuplot &lt;Press enter&gt;
+    gnuplot&gt; set xrange [0:200]
+    gnuplot&gt; set yrange [0:5000]
+    gnuplot&gt; plot &quot;coverage.hist&quot;
+    Type exit or quit to leave the gnuplot
+    gnuplot&gt; exit
 </pre></div>
-
-
-<p>Looks like we are not assembling this bit, let’s have another look at
+Looks like we are not assembling this bit, let’s have another look at
 the spectra</p>
 <div class="codehilite"><pre><span></span>kat comp -o reads_vs_abyss_k71 -t 4 -C -D --d1_bins 2000 &#39;../*.fastq&#39; CS3270_abyss_k71-contigs.fa
 </pre></div>
