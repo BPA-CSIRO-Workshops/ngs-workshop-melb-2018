@@ -1124,14 +1124,12 @@ library(&quot;org.Hs.eg.db&quot;)
 
 
 <h3 id="read-in-data">Read in Data</h3>
-<p>Read in count table and experimental design:</p>
-<div class="codehilite"><pre><span></span>data &amp;lt;- read.delim(&quot;pnas_expression.txt&quot;, row.names=1, header=T)
-targets &amp;lt;- read.delim(&quot;Targets.txt&quot;, header=T)
-colnames(data) &amp;lt;-targets$Label
-head(data, n=20)
-</pre></div>
-
-
+<p>Read in count table and experimental design:
+<div class="codehilite"><pre><span></span>    data <span class="o">&lt;-</span> read.delim<span class="p">(</span><span class="s">&quot;pnas_expression.txt&quot;</span><span class="p">,</span> row.names<span class="o">=</span><span class="m">1</span><span class="p">,</span> header<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+    targets <span class="o">&lt;-</span> read.delim<span class="p">(</span><span class="s">&quot;Targets.txt&quot;</span><span class="p">,</span> header<span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+    <span class="kp">colnames</span><span class="p">(</span>data<span class="p">)</span> <span class="o">&lt;-</span>targets<span class="o">$</span>Label
+    <span class="kp">head</span><span class="p">(</span>data<span class="p">,</span> n<span class="o">=</span><span class="m">20</span><span class="p">)</span>
+</pre></div></p>
 <h3 id="add-gene-annotation">Add Gene annotation</h3>
 <p>The data set only includes the Ensembl gene id and the counts. It is
 useful to have other annotations such as the gene symbol and entrez id.
@@ -1190,38 +1188,30 @@ y &amp;lt;-DGEList(counts=data[,1:7], group=treatment, genes=Ann)
 <p>We see we have 37435 rows (i.e. genes) and 7 columns (samples).</p>
 <p>Now we will filter out genes with low counts by only keeping those rows
 where the count per million (cpm) is at least 1 in at least three
-samples:</p>
-<div class="codehilite"><pre><span></span>keep &amp;lt;-rowSums( cpm(y)&amp;gt;1) &amp;gt;=3
-y &amp;lt;- y[keep, ]
+samples:
+<div class="codehilite"><pre><span></span>    keep <span class="o">&lt;-</span><span class="kp">rowSums</span><span class="p">(</span> cpm<span class="p">(</span>y<span class="p">)</span><span class="o">&gt;</span><span class="m">1</span><span class="p">)</span> <span class="o">&gt;=</span><span class="m">3</span>
+    y <span class="o">&lt;-</span> y<span class="p">[</span>keep<span class="p">,</span> <span class="p">]</span>
 </pre></div>
-
-
-<p>How many rows (genes) are retained now</p>
+How many rows (genes) are retained now</p>
 <p>dim(y) would give you 16494</p>
 <p>How many genes were filtered out?</p>
 <p>do 37435-16494.</p>
 <p>As we have removed the lowly expressed genes the total number of counts
 per sample has not changed greatly. Let us check the total number of
 reads per sample in the original data (data) and now after filtering.</p>
-<p>Before:</p>
-<div class="codehilite"><pre><span></span>colSums(data[,1:7])
-After filtering:
-colSums(y$counts)
+<p>Before:
+<div class="codehilite"><pre><span></span>    colSums(data[,1:7])
+    After filtering:
+    colSums(y$counts)
 </pre></div>
-
-
-<p>We will now perform normalization to take account of different library
-size:</p>
-<div class="codehilite"><pre><span></span>y&amp;lt;-calcNormFactors(y)
+We will now perform normalization to take account of different library
+size:
+<div class="codehilite"><pre><span></span>    y<span class="o">&lt;-</span>calcNormFactors<span class="p">(</span>y<span class="p">)</span>
 </pre></div>
-
-
-<p>We will check the calculated normalization factors:</p>
-<div class="codehilite"><pre><span></span>y$samples
+We will check the calculated normalization factors:
+<div class="codehilite"><pre><span></span>    y$samples
 </pre></div>
-
-
-<p>Lets have a look at whether the samples cluster by condition. (You
+Lets have a look at whether the samples cluster by condition. (You
 should produce a plot as shown in Figure 4):</p>
 <div class="codehilite"><pre><span></span>plotMDS(y, col=as.numeric(y$samples$group))
 </pre></div>
@@ -1277,30 +1267,24 @@ two conditions, androgen treatment and placebo treatment we can use the
 exact test for the negative binomial distribution (Robinson and Smyth,
 2008).</p>
 <h3 id="testing-for-differential-expression">Testing for Differential Expression</h3>
-<p>We now test for differentially expressed BCV genes:</p>
-<div class="codehilite"><pre><span></span>et &amp;lt;- exactTest(y)
+<p>We now test for differentially expressed BCV genes:
+<div class="codehilite"><pre><span></span>    et <span class="o">&lt;-</span> exactTest<span class="p">(</span>y<span class="p">)</span>
 </pre></div>
-
-
-<p>Now we will use the topTags function to adjust for multiple testing. We
+Now we will use the topTags function to adjust for multiple testing. We
 will use the Benjimini Hochberg (&ldquo;BH&rdquo;) method and we will produce a
-table of results:</p>
-<div class="codehilite"><pre><span></span>res &amp;lt;- topTags(et, n=nrow(y$counts), adjust.method=&quot;BH&quot;)$table
+table of results:
+<div class="codehilite"><pre><span></span>    res <span class="o">&lt;-</span> topTags<span class="p">(</span>et<span class="p">,</span> n<span class="o">=</span><span class="kp">nrow</span><span class="p">(</span>y<span class="o">$</span>counts<span class="p">),</span> adjust.method<span class="o">=</span><span class="s">&quot;BH&quot;</span><span class="p">)</span><span class="o">$</span><span class="kp">table</span>
 </pre></div>
-
-
-<p>Let’s have a look at the first rows of the table:</p>
+Let’s have a look at the first rows of the table:</p>
 <div class="codehilite"><pre><span></span>head(res)
 </pre></div>
 
 
 <p>To get a summary of the number of differentially expressed genes we can
-use the decideTestsDGE function.</p>
-<div class="codehilite"><pre><span></span>summary(de &amp;lt;- decideTestsDGE(et))
+use the decideTestsDGE function.
+<div class="codehilite"><pre><span></span>    <span class="kp">summary</span><span class="p">(</span>de <span class="o">&lt;-</span> decideTestsDGE<span class="p">(</span>et<span class="p">))</span>
 </pre></div>
-
-
-<p>This tells us that 2096 genes are downregulated and 2339 genes are
+This tells us that 2096 genes are downregulated and 2339 genes are
 upregulated at 5% FDR.We will now make subsets of the most significant
 upregulated and downregulated genes.</p>
 <div class="codehilite"><pre><span></span>alpha=0.05
