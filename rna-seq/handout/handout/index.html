@@ -1170,13 +1170,11 @@ Let’s check and see that this additional information is there.</p>
 
 
 <h3 id="data-checks">Data checks</h3>
-<p>Create DGEList object:</p>
-<div class="codehilite"><pre><span></span>treatment &amp;lt;-factor(c(rep(&quot;Control&quot;,4), rep(&quot;DHT&quot;,3)), levels=c(&quot;Control&quot;, &quot;DHT&quot;))
-y &amp;lt;-DGEList(counts=data[,1:7], group=treatment, genes=Ann)
+<p>Create DGEList object:
+<div class="codehilite"><pre><span></span>    treatment <span class="o">&lt;-</span><span class="kp">factor</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="kp">rep</span><span class="p">(</span><span class="s">&quot;Control&quot;</span><span class="p">,</span><span class="m">4</span><span class="p">),</span> <span class="kp">rep</span><span class="p">(</span><span class="s">&quot;DHT&quot;</span><span class="p">,</span><span class="m">3</span><span class="p">)),</span> levels<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;Control&quot;</span><span class="p">,</span> <span class="s">&quot;DHT&quot;</span><span class="p">))</span>
+    y <span class="o">&lt;-</span>DGEList<span class="p">(</span>counts<span class="o">=</span>data<span class="p">[,</span><span class="m">1</span><span class="o">:</span><span class="m">7</span><span class="p">],</span> group<span class="o">=</span>treatment<span class="p">,</span> genes<span class="o">=</span>Ann<span class="p">)</span>
 </pre></div>
-
-
-<p>Check the dimensions of the object:</p>
+Check the dimensions of the object:</p>
 <div class="codehilite"><pre><span></span>dim(y)
 </pre></div>
 
