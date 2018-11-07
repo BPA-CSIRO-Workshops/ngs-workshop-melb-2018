@@ -299,12 +299,18 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#useful-links" title="Useful Links" class="md-nav__link">
     Useful Links
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#sources-of-data" title="Sources of Data" class="md-nav__link">
@@ -340,13 +346,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overview-of-the-process" title="Overview of the Process" class="md-nav__link">
-    Overview of the Process
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#alignment" title="Alignment" class="md-nav__link">
     Alignment
   </a>
@@ -354,15 +353,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#manipulating-sam-output" title="Manipulating SAM output" class="md-nav__link">
-    Manipulating SAM output
+  <a href="#manipulate-sam-output" title="Manipulate SAM output" class="md-nav__link">
+    Manipulate SAM output
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#post-alignment-visualisation-option" title="Post Alignment Visualisation option" class="md-nav__link">
-    Post Alignment Visualisation option
+  <a href="#visualize-alignments-in-igv" title="Visualize alignments in IGV" class="md-nav__link">
+    Visualize alignments in IGV
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-makes-perfect" title="Practice Makes Perfect!" class="md-nav__link">
+    Practice Makes Perfect!
   </a>
   
 </li>
@@ -495,12 +501,18 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#useful-links" title="Useful Links" class="md-nav__link">
     Useful Links
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#sources-of-data" title="Sources of Data" class="md-nav__link">
@@ -536,13 +548,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overview-of-the-process" title="Overview of the Process" class="md-nav__link">
-    Overview of the Process
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#alignment" title="Alignment" class="md-nav__link">
     Alignment
   </a>
@@ -550,15 +555,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#manipulating-sam-output" title="Manipulating SAM output" class="md-nav__link">
-    Manipulating SAM output
+  <a href="#manipulate-sam-output" title="Manipulate SAM output" class="md-nav__link">
+    Manipulate SAM output
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#post-alignment-visualisation-option" title="Post Alignment Visualisation option" class="md-nav__link">
-    Post Alignment Visualisation option
+  <a href="#visualize-alignments-in-igv" title="Visualize alignments in IGV" class="md-nav__link">
+    Visualize alignments in IGV
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-makes-perfect" title="Practice Makes Perfect!" class="md-nav__link">
+    Practice Makes Perfect!
   </a>
   
 </li>
@@ -586,286 +598,286 @@
 <p>After completing this practical the trainee should be able to:</p>
 <ul>
 <li>
-<p>Perform the simple NGS data alignment task against reference data.</p>
+<p>Perform a simple NGS data alignment task, with Bowtie2, against one
+    interested reference data</p>
 </li>
 <li>
-<p>Learn about the SAM/BAM formats for further manipulation.</p>
+<p>Interpret and manipulate the mapping output using SAMtools</p>
 </li>
 <li>
-<p>Be able to sort and index BAM format for visualisation purposes.</p>
+<p>Visualise the alignment via a standard genome browser, e.g. IGV
+    browser</p>
 </li>
 </ul>
-<hr />
 <h2 id="resources-youll-be-using">Resources You’ll be Using</h2>
 <h3 id="tools-used">Tools Used</h3>
-<p>BWA Burrows-Wheeler Algorithm:<br />
-<a href="http://bio-bwa.sourceforge.net">http://bio-bwa.sourceforge.net</a></p>
+<p>Bowtie2:<br />
+<a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">http://bowtie-bio.sourceforge.net/bowtie2/index.shtml</a></p>
 <p>Samtools:<br />
-<a href="http://picard.sourceforge.net/">http://picard.sourceforge.net/</a></p>
-<h3 id="useful-links">Useful Links</h3>
+<a href="http://broadinstitute.github.io/picard">http://broadinstitute.github.io/picard</a></p>
+<p>BEDTools:<br />
+<a href="http://code.google.com/p/bedtools/">http://code.google.com/p/bedtools/</a></p>
+<p>UCSC tools:<br />
+<a href="http://hgdownload.cse.ucsc.edu/admin/exe/">http://hgdownload.cse.ucsc.edu/admin/exe/</a></p>
+<p>IGV genome browser:<br />
+<a href="http://www.broadinstitute.org/igv/">http://www.broadinstitute.org/igv/</a></p>
+<h2 id="useful-links">Useful Links</h2>
 <p>SAM Specification:<br />
 <a href="http://samtools.sourceforge.net/SAM1.pdf">http://samtools.sourceforge.net/SAM1.pdf</a></p>
 <p>Explain SAM Flags:<br />
 <a href="https://broadinstitute.github.io/picard/explain-flags.html">https://broadinstitute.github.io/picard/explain-flags.html</a></p>
 <h3 id="sources-of-data">Sources of Data</h3>
-<p><a href="http://sra.dnanexus.com/studies/ERP001071">http://sra.dnanexus.com/studies/ERP001071</a></p>
-<hr />
+<p><a href="http://www.ebi.ac.uk/arrayexpress/experiments/E-GEOD-11431">http://www.ebi.ac.uk/arrayexpress/experiments/E-GEOD-11431</a></p>
 <h2 id="author-information">Author Information</h2>
-<p><em>Primary Author(s):</em><br />
-Sonika Tyagi <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#111;&#110;&#105;&#107;&#97;&#46;&#116;&#121;&#97;&#103;&#105;&#64;&#97;&#103;&#114;&#102;&#46;&#111;&#114;&#103;&#46;&#97;&#117;">&#115;&#111;&#110;&#105;&#107;&#97;&#46;&#116;&#121;&#97;&#103;&#105;&#64;&#97;&#103;&#114;&#102;&#46;&#111;&#114;&#103;&#46;&#97;&#117;</a><br />
-Gayle Philip <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#103;&#107;&#112;&#104;&#105;&#108;&#105;&#112;&#64;&#117;&#110;&#105;&#109;&#101;&#108;&#98;&#46;&#101;&#100;&#117;&#46;&#97;&#117;">&#103;&#107;&#112;&#104;&#105;&#108;&#105;&#112;&#64;&#117;&#110;&#105;&#109;&#101;&#108;&#98;&#46;&#101;&#100;&#117;&#46;&#97;&#117;</a></p>
-<p><em>Contributor(s):</em></p>
-<hr />
+<p><em>Primary Author(s):</em>
+    Myrto Kostadima <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#107;&#111;&#115;&#116;&#97;&#100;&#105;&#109;&#64;&#101;&#98;&#105;&#46;&#97;&#99;&#46;&#117;&#107;">&#107;&#111;&#115;&#116;&#97;&#100;&#105;&#109;&#64;&#101;&#98;&#105;&#46;&#97;&#99;&#46;&#117;&#107;</a></p>
+<p><em>Contributor(s):</em>
+    Xi (Sean) Li <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#97;&#110;&#46;&#108;&#105;&#64;&#99;&#115;&#105;&#114;&#111;&#46;&#97;&#117;">&#115;&#101;&#97;&#110;&#46;&#108;&#105;&#64;&#99;&#115;&#105;&#114;&#111;&#46;&#97;&#117;</a></p>
 <h2 id="introduction">Introduction</h2>
-<p>The goal of this hands-on session is to perform an NGS alignment on the
-sequencing data coming from a tumour and normal group of samples. We
-will align raw sequencing data to the human genome using the BWA aligner
-and then we will discuss the sequence alignment and mapping format
-(SAM). SAM to BAM conversion, indexing and sorting will also be
-demonstrated. These are important and essential steps for downstream
-processing of the aligned BAM files.</p>
-<p>This data is the whole genome sequencing of a lung adenocarcinoma
-patient AK55. It was <a href="http://sra.dnanexus.com/studies/ERP001071">downloaded</a> from
-<code class="codehilite">ERP001071</code>. Only the HiSeq2000 data for <code class="codehilite">Blood</code> and <code class="codehilite">liverMets</code> were analysed.</p>
-<p>Accession numbers associated with read data are assigned by the European
-Bioinformatics Institute (EBI) and start with ’ER’. e.g. ERP is the study ID
-and ERR is the run ID. The original FASTQ files downloaded had the ERR
-number in front of each read name in the FASTQ file (e.g. @ERRxx HWI-ST478_xxxx). The read name had
-to be edited to remove the ERR number at the start of the name. This had
-caused problems for downstream programs such as Picard for marking
-optical duplicates.</p>
-<p>We have used 4 Blood samples (8 paired-end (PE) <code class="codehilite">*.fastq.gz</code> files) and 5 Liver
-samples (10 PE <code class="codehilite">*.fastq.gz</code> files) data from this study to perform the
-whole genome alignment using the BWA aligner. The whole process took
->150K CPU seconds per sample and the precomputed alignment will be used
-in different sections of this workshop.</p>
-<hr />
+<p>The goal of this hands-on session is to perform an unspliced alignment
+for a small subset of raw reads. We will align raw sequencing data to
+the mouse genome using Bowtie2 and then we will manipulate the SAM
+output in order to visualize the alignment on the IGV browser.</p>
 <h2 id="prepare-the-environment">Prepare the Environment</h2>
-<p>By now you know about the raw sequence FASTQ format generated by the
-Illumina sequencers. Next we will see how FASTQ files are aligned to
-the reference genome and what the resulting standard alignment
-format is. In the interest of time, we have selected only 1 million paired
-reads from a <code class="codehilite">Blood</code> sample to demonstrate a <code class="codehilite">BWA</code> command. The remaining
-alignments have already been performed for you and will be required in
-the subsequent modules of the workshop.</p>
-<p>The input data for this section can be found in the <code class="codehilite">alignment</code>
-directory on your desktop. Please follow the commands below to go to the
-right folder and view the top 10 lines of the input FASTQ file:</p>
+<p>We will use one data set in this practical, which can be found in the
+<code class="codehilite">ChIP-seq</code> directory on your desktop.</p>
 <p>Open the Terminal.</p>
 <p>First, go to the right folder, where the data are stored.</p>
-<div class="codehilite"><pre><span></span>cd /home/trainee/alignment
-ls
-zless input/SM_Blood_ID_ERR059356.subset_R1.fastq.gz
+<div class="codehilite"><pre><span></span>cd /home/trainee/chipseq
 </pre></div>
 
 
-<p>Press <code class="codehilite">q</code> to stop the <code class="codehilite">zless</code> command.</p>
-<hr />
-<h2 id="overview-of-the-process">Overview of the Process</h2>
-<p><img alt="image" src="../images/alignment_steps.png" /></p>
-<p><strong>Figure 1:</strong> A flow diagram showing the steps that will be performed in this practical. </p>
-<hr />
+<p>The <code class="codehilite"><span class="na">.fastq</span></code> file that we will align is called <code class="codehilite">Oct4.fastq</code>. This file
+is based on Oct4 ChIP-seq data published by Chen <em>et al.</em> (2008). For
+the sake of time, we will align these reads to a single mouse
+chromosome.</p>
 <h2 id="alignment">Alignment</h2>
 <p>You already know that there are a number of competing tools for short
 read alignment, each with its own set of strengths, weaknesses, and
-caveats. Here we will use <code class="codehilite">BWA</code>, a widely used aligner based on the
-Burrows-Wheeler Algorithm. The alignment involves two steps:  </p>
-<p>1) Indexing the genome.<br />
-2) Running the alignment command.  </p>
-<p>BWA is a software package for mapping low-divergent sequences against a large
-reference genome, such as the human genome. It consists of three
-algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is
-designed for Illumina sequence reads up to 100bp, while the other two are for
-longer sequences ranging from 70bp to 1Mbp. BWA-MEM and BWA-SW share
-similar features such as long-read support and split alignment, but
-BWA-MEM, which is the latest, is generally recommended for high-quality
-queries as it is faster and more accurate. BWA-MEM also has better
-performance than BWA-backtrack for 70-100bp Illumina reads. For more details see
-the <a href="http://bio-bwa.sourceforge.net/bwa.shtml">BWA manual</a>.</p>
-<p>BWA has a number of parameters in order to perform the alignment. To
-view them all, type</p>
-<div class="codehilite"><pre><span></span>bwa &amp;lt;press enter&amp;gt;
+caveats. Here we will try Bowtie2, a widely used ultrafast, memory
+efficient short read aligner.</p>
+<p>Bowtie2 has a number of parameters in order to perform the alignment. To
+view them all type</p>
+<div class="codehilite"><pre><span></span>bowtie2 --help
 </pre></div>
 
 
-<p><br>
-BWA uses an indexed genome for the alignment in order to keep its memory
-footprint small. Indexing a genome is similar in concept to indexing a book.
-If you want to know on which page a certain word appears or a chapter begins,
-it is much more efficient/faster to look it up in a pre-built index than going
-through every page of the book until you find it. Indices allow the aligner to narrow
-down the potential origin of a query sequence within the genome, saving both time and memory.  </p>
-<p>Due to time constraints, we will <strong>NOT</strong> be running the
-indexing command. It is run only once for a version of a genome, and the
-complete command to index the human genome version hg19 is given below.</p>
+<p>Bowtie2 uses indexed genome for the alignment in order to keep its
+memory footprint small. Because of time constraints we will build the
+index only for one chromosome of the mouse genome. For this we need the
+chromosome sequence in FASTA format. This is stored in a file named
+<code class="codehilite">mm10</code>, under the subdirectory <code class="codehilite">bowtie_index</code>.</p>
 <div class="admonition failure">
 <p class="admonition-title">STOP</p>
-<p>You <strong>DO NOT</strong> need to run this command. This has already been run for you.</p>
-<p><code class="codehilite">bwa index -p bwaIndex/human_g1k_v37.fasta -a bwtsw human_g1k_v37.fasta</code></p>
+<p>DO NOT run this command. This has already been run for you.</p>
+<p>** bowtie2-build bowtie_index/mm10.fa bowtie_index/mm10 **</p>
 </div>
-<p>We have used the following arguments for the indexing of the genome.</p>
-<blockquote>
-<p><strong>-p</strong>:  Prefix of the output database [same as db filename].  <br />
-<strong>-a</strong>:  Algorithm for constructing BWT index. This method works with the
-    whole human genome.<br />
-<strong>Ref genome filename</strong>: the last argument is the name of the reference genome
-file in the fasta format.</p>
-</blockquote>
 <p>This command will output 6 files that constitute the index. These files
-have the prefix <code class="codehilite">human_g1k_v37.fasta</code> and are stored in the <code class="codehilite">bwaIndex</code>
-subdirectory. To view the precomputed index files, type:</p>
-<div class="codehilite"><pre><span></span>ls -l bwaIndex
+that have the prefix <code class="codehilite">mm10</code> are stored in the <code class="codehilite">bowtie_index</code>
+subdirectory. To view if they files have been successfully created type:</p>
+<div class="codehilite"><pre><span></span>ls -l bowtie_index
 </pre></div>
 
 
-<p><br>
-Now that the genome is indexed we can move on to the actual alignment.  </p>
-<p>Make a directory to store the output from your aligner.</p>
-<div class="codehilite"><pre><span></span>mkdir outputs
-</pre></div>
-
-
-<p>The first argument for <code class="codehilite">bwa</code> is the basename of the index for the genome
-to be searched. In our case this is <code class="codehilite">human_g1k_v37.fasta</code>.</p>
-<p>Align the reads from the <code class="codehilite">Blood</code> sample using the following command:</p>
-<div class="codehilite"><pre><span></span><span class="nt">bwa</span> <span class="nt">mem</span> <span class="nt">-M</span> <span class="nt">-t</span> <span class="nt">4</span> <span class="nt">-R</span> <span class="s1">&#39;@RG\tSM:Blood\tID:ERR059356.subset\tLB:lb\tPL:ILLUMINA&#39;</span> <span class="nt">bwaIndex</span><span class="o">/</span><span class="nt">human_g1k_v37</span><span class="p">.</span><span class="nc">fasta</span> <span class="nt">input</span><span class="o">/</span><span class="nt">SM_Blood_ID_ERR059356</span><span class="p">.</span><span class="nc">subset_R1</span><span class="p">.</span><span class="nc">fastq</span><span class="p">.</span><span class="nc">gz</span> <span class="nt">input</span><span class="o">/</span><span class="nt">SM_Blood_ID_ERR059356</span><span class="p">.</span><span class="nc">subset_R2</span><span class="p">.</span><span class="nc">fastq</span><span class="p">.</span><span class="nc">gz</span> <span class="o">&amp;</span><span class="nt">gt</span><span class="o">;</span> <span class="nt">outputs</span><span class="o">/</span><span class="nt">SM_Blood_ID_ERR059356</span><span class="p">.</span><span class="nc">subset</span><span class="p">.</span><span class="nc">sam</span>
+<p>Now that the genome is indexed we can move on to the actual alignment.
+The first argument for <code class="codehilite">bowtie2</code> is the basename of the index for the
+genome to be searched; in our case this is <code class="codehilite">mm10</code>. We also want to make
+sure that the output is in SAM format using the <code class="codehilite">-S</code> parameter. The last
+argument is the name of the FASTQ file.</p>
+<p>Align the Oct4 reads using Bowtie2:</p>
+<div class="codehilite"><pre><span></span>bowtie2 -x bowtie_index/mm10 -q Oct4.fastq &amp;gt; Oct4.sam
 </pre></div>
 
 
 <p>The above command outputs the alignment in SAM format and stores them in
-the file <code class="codehilite">SM_Blood_ID_ERR059356.subset.sam</code> in the subdirectory <code class="codehilite">outputs</code>.</p>
-<p>We have used the following arguments for the alignment of the reads.</p>
-<blockquote>
-<p><strong>mem</strong>: fast mode of high quality input such the Illumina<br />
-<strong>-M</strong>: flags extra hits as secondary. This is needed for compatibility with
-  other tools downstream.<br />
-<strong>-t</strong>: Number of threads.<br />
-<strong>-R</strong>: Complete read group header line.</p>
-</blockquote>
-<p><br>
-The <a href="https://samtools.github.io/hts-specs/SAMv1.pdf">SAM (Sequence Alignment/Map)</a>
-format is currently the de facto standard for storing large nucleotide
-sequence alignments. It is a TAB-delimited text format consisting of a header section, which is
-optional, and an alignment section. If present, the header must be prior
-to the alignments. Header lines start with <code class="codehilite">@</code>, while alignment lines do
-not. Each alignment line has 11 mandatory fields with essential alignment
-information such as mapping position.</p>
-<p>Navigate into your <code class="codehilite">outputs</code> directory and look at the top 10 lines of the SAM file by typing:</p>
-<div class="codehilite"><pre><span></span>cd outputs
-head -n 10 SM_Blood_ID_ERR059356.subset.sam
+the file <code class="codehilite">Oct4.sam</code>.</p>
+<p>In general before you run Bowtie2, you have to know what quality
+encoding your FASTQ files are in. The available FASTQ encodings for
+bowtie are:</p>
+<p>–phred33-quals
+:   Input qualities are Phred+33 (default).</p>
+<p>–phred64-quals
+:   Input qualities are Phred+64 (same as <code class="codehilite">–solexa1.3-quals</code>).</p>
+<p>–solexa-quals
+:   Input qualities are from GA Pipeline ver. &lt; 1.3.</p>
+<p>–solexa1.3-quals
+:   Input qualities are from GA Pipeline ver. &gt;= 1.3.</p>
+<p>–integer-quals
+:   Qualities are given as space-separated integers (not ASCII).</p>
+<p>The FASTQ files we are working with are Sanger encoded (Phred+33), which
+is the default for Bowtie2.</p>
+<p>Bowtie2 will take 2-3 minutes to align the file. This is fast compared
+to other aligners which sacrifice some speed to obtain higher
+sensitivity.</p>
+<p>Look at the top 10 lines of the SAM file using head (record lines are
+wrapped). Then try the second command, note use arrow navigation and to
+exit type ’q’.</p>
+<div class="codehilite"><pre><span></span>head  Oct4.sam
+less -S Oct4.sam
 </pre></div>
 
 
-<p><br></p>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
-<p>Can you distinguish between the header of the SAM format and the actual
-alignments?</p>
-<div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>The header line starts with the letter ‘@’ i.e.<br />
-<div class="codehilite"><pre><span></span>@SQ SN:GL000192.1   LN:547496
-@RG SM:Blood    ID:ERR059356    LB:lb   PL:ILLUMINA
-@PG ID:bwa  PN:bwa  VN:0.7.15-r1140 CL:bwa mem -M -t 4 -R @RG\tSM:Blood\tID:ERR059356.subset\tLB:lb\tPL:ILLUMINA bwaIndex/human_g1k_v37.fasta input/SM_Blood_ID_ERR059356.subset_R1.fastq.gz input/SM_Blood_ID_ERR059356.subset_R2.fastq.gz
-</pre></div></p>
-<p>The actual alignments start with read ID i.e.<br />
-<div class="codehilite"><pre><span></span>HWI-ST478_0133:3:1101:1374:2056#0   147 11
-HWI-ST478_0133:3:1101:1352:2070#0   163 14
-</pre></div></p>
+<p>Can you distinguish between the header of the SAM format and the actual alignments?</p>
+</div>
+<details><summary><strong>Answer</strong></summary><div class="admonition success">
+<p class="admonition-title">Answer</p>
+<p>The header line starts with the letter ‘@’, i.e.:</p>
+<hr />
+<p>@HD   VN:1.0       SO:unsorted             <br />
+@SQ   SN:chr1      LN:195471971            <br />
+@PG   ID:Bowtie2   PN:bowtie2     VN:2.2.4   CL:“/tools/bowtie2/bowtie2-default/bowtie2-align-s –wrapper basic-0 -x bowtie_index/mm10 -q Oct4.fastq”</p>
+<hr />
+</div>
 </details>
-</div>
-</div>
+<p>While, the actual alignments start with read id, i.e.:</p>
+<hr />
+<p>SRR002012.45   0    etc  <br />
+  SRR002012.48   16   chr1   etc</p>
+<hr />
 <div class="admonition note">
 <p class="admonition-title">Question</p>
 <p>What kind of information does the header provide?</p>
-<div class="admonition success">
-<details><summary><strong>Answer</strong></summary><ul>
+</div>
+<details><summary><strong>Answer</strong></summary><div class="admonition success">
+<p class="admonition-title">Answer</p>
+</div>
+<ul>
 <li>
-<p>@HD: Header line; VN: Format version; SO: the sort order of
-    alignments.</p>
+<p>@HD: Header line; VN: Format version; SO: the sort order of alignments.</p>
 </li>
 <li>
-<p>@SQ: Reference sequence information; SN: reference sequence name;
-    LN: reference sequence length.</p>
+<p>@SQ: Reference sequence information; SN: reference sequence name; LN: reference sequence length.</p>
 </li>
 <li>
-<p>@PG: Program; ID: Program record identifier; VN: Program
-    version; CL: the command line that produces the alignment.</p>
+<p>@PG: Read group information; ID: Read group identifier; VN: Program version; CL: the command line that produces the alignment.</p>
 </li>
 </ul>
 </details>
-</div>
-</div>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
 <p>To which chromosome are the reads mapped?</p>
-<div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>All chromosomes are represented (look at the 3<sup>rd</sup> field).<br />
-grep -v &ldquo;^@&rdquo; SM_Blood_ID_ERR059356.subset.sam  | cut -f3 | sort | uniq</p>
+</div>
+<details><summary><strong>Answer</strong></summary><div class="admonition success">
+<p class="admonition-title">Answer</p>
+<p>Chromosome 1.</p>
+</div>
 </details>
-</div>
-</div>
-<hr />
-<h2 id="manipulating-sam-output">Manipulating SAM output</h2>
+<h2 id="manipulate-sam-output">Manipulate SAM output</h2>
 <p>SAM files are rather big and when dealing with a high volume of NGS
 data, storage space can become an issue. As we have already seen, we can
 convert SAM to BAM files (their binary equivalent that are not human
 readable) that occupy much less space.</p>
 <p>Convert SAM to BAM using <code class="codehilite">samtools view</code> and store the output in the
-file <code class="codehilite">SM_Blood_ID_ERR059356.subset.bam</code>. You have to instruct <code class="codehilite">samtools view</code> that the input
-is in SAM format (<code class="codehilite">-S</code>), the output should be in BAM format (<code class="codehilite">-b</code>) and
-that you want the output to be stored in the file specified by the <code class="codehilite">-o</code>
+file <code class="codehilite">Oct4.bam</code>. You have to instruct <code class="codehilite">samtools view</code> that the input is
+in SAM format (<code class="codehilite">-S</code>), the output should be in BAM format (<code class="codehilite">-b</code>) and that
+you want the output to be stored in the file specified by the <code class="codehilite">-o</code>
 option:</p>
-<div class="codehilite"><pre><span></span>samtools view -bSo SM_Blood_ID_ERR059356.subset.bam SM_Blood_ID_ERR059356.subset.sam
+<div class="codehilite"><pre><span></span>samtools view -bSo Oct4.bam Oct4.sam
 </pre></div>
 
 
-<p>BAM files are not human-readable but can be viewed with the <code class="codehilite">samtools view</code> command.</p>
-<p><br></p>
-<div class="admonition note">
-<p class="admonition-title"><em>Advanced exercise</em><p>Compute summary stats for the Flag values associated with the alignments
- using:
- <div class="codehilite"><pre><span></span>samtools flagstat SM_Blood_ID_ERR059356.subset.bam
-</pre></div></p>
-</p>
-</div>
-<hr />
-<h2 id="post-alignment-visualisation-option">Post Alignment Visualisation option</h2>
-<p>IGV is a stand-alone genome browser that can be used to visualise the
-BAM outputs. Please check their <a href="http://www.broadinstitute.org/igv/">website</a>
-for all the formats that IGV can display.</p>
-<p>We will be using IGV later in the workshop for viewing a BAM file in the
-genome browser. It requires the index of the BAM file to be in the same
-folder as where the BAM file is. The index file should have the same
-name as the BAM file and the suffix <code class="codehilite"><span class="na">.bai</span></code>. Finally, to create the index
-of a BAM file you need to make sure that the file is sorted according to
-chromosomal coordinates.</p>
+<p>Compute summary stats for the Flag values associated with the alignments
+using:</p>
+<div class="codehilite"><pre><span></span>samtools flagstat Oct4.bam
+</pre></div>
+
+
+<h2 id="visualize-alignments-in-igv">Visualize alignments in IGV</h2>
+<p>IGV is a stand-alone genome browser. Please check their website
+(<a href="http://www.broadinstitute.org/igv/">http://www.broadinstitute.org/igv/</a>) for all the formats that IGV can
+display. For our visualization purposes we will use the BAM and bigWig
+formats.</p>
+<p>When uploading a BAM file into the genome browser, the browser will look
+for the index of the BAM file in the same folder where the BAM files is.
+The index file should have the same name as the BAM file and the suffix
+<code class="codehilite"><span class="na">.bai</span></code>. Finally, to create the index of a BAM file you need to make sure
+that the file is sorted according to chromosomal coordinates.</p>
 <p>Sort alignments according to chromosomal position and store the result
-in the file with the prefix <code class="codehilite">SM_Blood_ID_ERR059356.subset.sorted</code>:</p>
-<div class="codehilite"><pre><span></span>samtools sort SM_Blood_ID_ERR059356.subset.bam SM_Blood_ID_ERR059356.subset.sorted
+in the file with the prefix <code class="codehilite">Oct4.sorted</code>:</p>
+<div class="codehilite"><pre><span></span>samtools sort Oct4.bam -o Oct4.sorted.bam
 </pre></div>
 
 
-<p><br>
-Index the sorted file.</p>
-<div class="codehilite"><pre><span></span>samtools index SM_Blood_ID_ERR059356.subset.sorted.bam
+<p>Index the sorted file.</p>
+<div class="codehilite"><pre><span></span>samtools index Oct4.sorted.bam
 </pre></div>
 
 
-<p>The indexing will create a file called <code class="codehilite">SM_Blood_ID_ERR059356.subset.sorted.bam.bai</code>. Note that
+<p>The indexing will create a file called <code class="codehilite">Oct4.sorted.bam.bai</code>. Note that
 you don’t have to specify the name of the index file when running
 <code class="codehilite">samtools index</code>, it simply appends a <code class="codehilite"><span class="na">.bai</span></code> suffix to the input BAM
-file.<br />
-<br></p>
+file.</p>
+<p>Another way to visualize the alignments is to convert the BAM file into
+a bigWig file. The bigWig format is for display of dense, continuous
+data and the data will be displayed as a graph. The resulting bigWig
+files are in an indexed binary format.</p>
+<p>The BAM to bigWig conversion takes place in two steps. Firstly, we
+convert the BAM file into a bedgraph, called <code class="codehilite">Oct4.bedgraph</code>, using the
+tool <code class="codehilite">genomeCoverageBed</code> from BEDTools. Then we convert the bedgraph
+into a bigWig binary file called <code class="codehilite">Oct4.bw</code>, using <code class="codehilite">bedGraphToBigWig</code>
+from the UCSC tools:</p>
+<div class="codehilite"><pre><span></span>genomeCoverageBed -bg -ibam Oct4.sorted.bam -g bowtie_index/mouse.mm10.genome &amp;gt; Oct4.bedgraph
+bedGraphToBigWig Oct4.bedgraph bowtie_index/mouse.mm10.genome Oct4.bw
+</pre></div>
+
+
+<p>Both of the commands above take as input a file called
+<code class="codehilite">mouse.mm10.genome</code> that is stored under the subdirectory
+<code class="codehilite">bowtie_index</code>. These genome files are tab-delimited and describe the
+size of the chromosomes for the organism of interest. When using the
+UCSC Genome Browser, Ensembl, or Galaxy, you typically indicate which
+species/genome build you are working with. The way you do this for
+BEDTools is to create a “genome” file, which simply lists the names of
+the chromosomes (or scaffolds, etc.) and their size (in basepairs).</p>
+<p>BEDTools includes pre-defined genome files for human and mouse in the
+<code class="codehilite">genomes</code> subdirectory included in the BEDTools distribution.</p>
+<p>Now we will load the data into the IGV browser for visualization. In
+order to launch IGV double click on the <code class="codehilite">IGV 2.3</code> icon on your Desktop.
+Ignore any warnings and when it opens you have to load the genome of
+interest.</p>
+<p>On the top left of your screen choose from the drop down menu
+<code class="codehilite">Mouse (mm10)</code>. If it doesn’t appear in list, click <code class="codehilite">More ..</code>, type
+<code class="codehilite">mm10</code> in the Filter section, choose the mouse genome and press OK. Then
+in order to load the desire files go to:</p>
+<div class="codehilite"><pre><span></span>File &amp;gt; Load from File
+</pre></div>
+
+
+<p>On the pop up window navigate to Desktop -&gt; chipseq folder and select
+the file <code class="codehilite">Oct4.sorted.bam</code>.</p>
+<p>Repeat these steps in order to load <code class="codehilite">Oct4.bw</code> as well.</p>
+<p>Select <code class="codehilite">chr1</code> from the drop down menu on the top left. Right click on
+the name of <code class="codehilite">Oct4.bw</code> and choose Maximum under the Windowing Function.
+Right click again and select Autoscale.</p>
+<p>In order to see the aligned reads of the BAM file, you need to zoom in
+to a specific region. For example, look for gene <code class="codehilite">Lemd1</code> in the search
+box.</p>
 <div class="admonition note">
 <p class="admonition-title">Question</p>
-<p>How can you quickly find out whether a BAM file is already coordinate
-sorted or not?</p>
-<div class="admonition success">
-<details><summary><strong>Answer</strong></summary><p>Use <code class="codehilite">samtools view -h</code> command to look at the SAM header.
-It will have an SO field (e.g. SO:coordinate)</p>
+<p>What is the main difference between the visualization of BAM and bigWig files?</p>
+</div>
+<details><summary><strong>Answer</strong></summary><div class="admonition success">
+<p class="admonition-title">Answer</p>
+<p>The actual alignment of reads that stack to a particular region can be displayed using the information stored in a BAM format. The bigWig format is for display of dense, continuous data that will be displayed in the Genome Browser as a graph.</p>
+</div>
 </details>
+<p>Using the <code class="codehilite">+</code> button on the top right, zoom in to see more of the
+details of the alignments.</p>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
+<p>What do you think the different colors mean?</p>
 </div>
+<details><summary><strong>Answer</strong></summary><div class="admonition success">
+<p class="admonition-title">Answer</p>
+<p>The different color represents four nucleotides, e.g. blue is Cytidine (C), red is Thymidine (T).</p>
 </div>
+</details>
+<h2 id="practice-makes-perfect">Practice Makes Perfect!</h2>
+<p>In the chipseq folder you will find the file <code class="codehilite">gfp.fastq</code>. Follow the
+above described analysis, from the bowtie2 alignment step, for this
+dataset as well. You will need these files for the ChIP-Seq module.</p>
                 
                   
                 
